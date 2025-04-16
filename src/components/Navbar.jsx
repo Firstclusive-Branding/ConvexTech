@@ -5,6 +5,7 @@ import "../styles/Navbar.css";
 import "../styles/HamburgerIcon.css";
 import logo from "../assets/ConvexTech Logo.png";
 import logo2 from "../assets/ConvexTech Logo 2.png";
+import navDropdownImg from "../assets/Navbar assets/nav-dropdown-img.jpg";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +14,8 @@ const Navbar = () => {
   const hamburgerRef = useRef();
   const location = useLocation();
   const currentPath = location.pathname;
+  const [isScrolled, setIsScrolled] = useState(false);
+  const navRef = useRef(null);
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
@@ -39,9 +42,22 @@ const Navbar = () => {
     };
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollThreshold = window.innerHeight * 0.25;
+      setIsScrolled(window.scrollY > scrollThreshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} ref={navRef}>
         <Link to="/" className="navbar-logo">
           <img
             src={logo}
@@ -58,7 +74,9 @@ const Navbar = () => {
         <div className="navbar-links desktop-only">
           <Link
             to="/"
-            className={`nav-item ${currentPath === "/" ? "active-link" : ""}`}
+            className={`nav-item ${currentPath === "/" ? "active-link" : ""} ${
+              isScrolled ? "scrolled" : ""
+            }`}
           >
             Home
           </Link>
@@ -66,27 +84,28 @@ const Navbar = () => {
             to="/about"
             className={`nav-item ${
               currentPath === "/about" ? "active-link" : ""
-            }`}
+            } ${isScrolled ? "scrolled" : ""}`}
           >
             About
           </Link>
 
-          {/* <div
+          <div
             className="dropdown-wrapper"
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
             <div
               className={`dropdown-trigger ${
-                currentPath === "/services" ? "active-link" : ""
-              }`}
+                currentPath.startsWith("/services") ? "active-link" : ""
+              } `}
             >
-              <span className="nav-item">Services</span>
-              <FiChevronDown size={24} style={{ marginLeft: "4px" }} />
+              <span className={`nav-item ${isScrolled ? "scrolled" : ""}`}>
+                Services
+              </span>
+              <FiChevronDown size={20} className="dropdown-icon" />
             </div>
-
-            {isDropdownOpen && (
-              <ul className="dropdown-menu">
+            <div className={`dropdown-menu ${isDropdownOpen ? "open" : ""}`}>
+              <ul className="dropdown-links">
                 <li>
                   <Link to="/services/sap">SAP Solutions</Link>
                 </li>
@@ -114,57 +133,17 @@ const Navbar = () => {
                   <Link to="/services/non-it">Non-IT Services</Link>
                 </li>
               </ul>
-            )}
-          </div> */}
-          <div
-            className="dropdown-wrapper"
-            onMouseEnter={() => setIsDropdownOpen(true)}
-            onMouseLeave={() => setIsDropdownOpen(false)}
-          >
-            <div
-              className={`dropdown-trigger ${
-                currentPath.startsWith("/services") ? "active-link" : ""
-              }`}
-            >
-              <span className="nav-item">Services</span>
-              <FiChevronDown size={20} style={{ marginLeft: "6px" }} />
+              <div className="dropdown-image">
+                <img src={navDropdownImg} alt="Menu Showcase" />
+              </div>
             </div>
-
-            <ul className={`dropdown-menu ${isDropdownOpen ? "open" : ""}`}>
-              <li>
-                <Link to="/services/sap">SAP Solutions</Link>
-              </li>
-              <li>
-                <Link to="/services/software">Software Development</Link>
-              </li>
-              <li>
-                <Link to="/services/ai">Artificial Intelligence</Link>
-              </li>
-              <li>
-                <Link to="/services/data-science">Data Science</Link>
-              </li>
-              <li>
-                <Link to="/services/branding">
-                  Branding & Digital Marketing
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/staffing">Staffing & Recruitment</Link>
-              </li>
-              <li>
-                <Link to="/services/healthcare">Healthcare & Clinical</Link>
-              </li>
-              <li>
-                <Link to="/services/non-it">Non-IT Services</Link>
-              </li>
-            </ul>
           </div>
 
           <Link
             to="/contact"
             className={`nav-item ${
               currentPath === "/contact" ? "active-link" : ""
-            }`}
+            } ${isScrolled ? "scrolled" : ""}`}
           >
             Contact
           </Link>

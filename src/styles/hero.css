@@ -1,39 +1,47 @@
 .hero {
   height: 100vh;
-  background: linear-gradient(to right, #121212, #1e1e2f);
+  background: url("../assets//Hero Assets/hero-bg.png") no-repeat center
+    center/cover;
   color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   animation: fadeIn 1s ease-in-out;
+  position: relative;
 }
-
+.hero-content {
+  padding: 2rem;
+  padding-top: 8rem;
+  max-width: 50%;
+  z-index: 4;
+}
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
-  animation: slideUp 1s ease forwards;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
-  animation: slideUp 1.4s ease forwards;
+  max-width: 60%;
 }
 
-.btn-primary {
-  background-color: #007aff;
+.hero-btn-primary {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 119, 255, 1) 0%,
+    rgba(0, 82, 193, 1) 100%
+  );
   color: white;
   padding: 12px 28px;
   border: none;
   border-radius: 5px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.btn-primary:hover {
-  background-color: #0051c7;
-  cursor: pointer;
+.hero-btn-primary:hover {
+  transform: translateY(-4px);
 }
 
 @keyframes fadeIn {
@@ -45,13 +53,104 @@
   }
 }
 
-@keyframes slideUp {
+.hero-avatar {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  max-height: 800px;
+  animation: slideIn 1s ease-in-out;
+  z-index: 3;
+}
+
+@keyframes slideIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateX(100px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-content {
+    max-width: 80%;
+    padding-top: 5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    max-width: 70%;
+  }
+
+  .hero-avatar {
+    position: absolute;
+    max-height: 80%;
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
+  .hero-content {
+    max-width: 85%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .hero-btn-primary {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .hero-avatar {
+    max-height: 70%;
+    right: 2%;
+    top: 15%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    height: 65vh;
+  }
+
+  .hero-content {
+    max-width: 65%;
+  }
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    max-width: 95%;
+    margin-bottom: 1rem;
+  }
+
+  .hero-btn-primary {
+    max-width: 40%;
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .hero-avatar {
+    position: absolute;
+    max-height: 50%;
+    right: 0;
+    top: 18%;
   }
 }
