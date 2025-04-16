@@ -51,7 +51,7 @@
 
 .hero-avatar {
   position: absolute;
-  top: 10%;
+  top: 15%;
   right: 10%;
   height: 700px;
   animation: slideIn 1s ease-in-out;
@@ -89,7 +89,7 @@
     position: absolute;
     max-height: 80%;
     right: 0;
-    top: 12%;
+    top: 15%;
   }
 }
 
