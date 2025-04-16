@@ -48,7 +48,7 @@
   text-align: left;
   overflow: hidden;
   color: #1a1a18;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
   cursor: default;
 }
 
@@ -71,7 +71,6 @@
   line-height: 1.5;
 }
 
-/* Icon */
 .service-icon-wrapper {
   display: inline-block;
 }
@@ -79,7 +78,7 @@
 .service-icon {
   font-size: 2.5rem;
   color: #36308a;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .section-1 .service-card {
