@@ -37,10 +37,10 @@
   width: 300px !important;
   box-shadow: none !important;
   z-index: 3;
-  transition: transform 0.3s ease;
+  transition: transform 3s ease;
 }
 .butterfly-img:hover {
-  transform: scale(1.1);
+  transform: translate(350%, 50%);
 }
 .who-quote-icon {
   color: #3ed4ef;
@@ -81,11 +81,14 @@
 }
 
 @media (max-width: 1024px) {
+  .who-wrapper {
+    padding: 3rem 2rem;
+  }
   .who-we-are-img {
     width: 500px;
   }
   .butterfly-img {
-    top: -5%;
+    top: -10;
     left: 0;
   }
 
@@ -95,6 +98,9 @@
 }
 
 @media (max-width: 768px) {
+  .who-wrapper {
+    padding: 1rem 2rem;
+  }
   .who-container {
     flex-direction: column;
     width: 80%;
@@ -106,7 +112,7 @@
   }
   .butterfly-img {
     width: 300px !important;
-    top: -10%;
+    top: -20%;
     left: 10%;
   }
 
@@ -129,14 +135,15 @@
 
 @media (max-width: 480px) {
   .who-wrapper {
-    padding: 3rem 1.2rem;
+    padding: 0 1rem;
+    padding-bottom: 2rem;
   }
   .who-container {
     width: 95%;
   }
   .butterfly-img {
-    width: 250px !important;
-    top: -15%;
+    width: 200px !important;
+    top: -20%;
     left: 0;
   }
   .who-text h2 {
