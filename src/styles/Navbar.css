@@ -281,10 +281,16 @@
   }
 }
 
+@media (max-width: 768px) {
+  .navbar-logo-img-desktop {
+    height: 50px;
+  }
+}
+
 @media (max-width: 480px) {
   .navbar-logo-img-mobile {
     display: block;
-    height: 60px;
+    height: 80px;
   }
 
   .navbar-logo-img-desktop {

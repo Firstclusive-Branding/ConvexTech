@@ -15,7 +15,6 @@
 
 .who-image {
   max-width: 650px;
-  overflow: hidden;
   border-radius: 12px;
 }
 
@@ -38,8 +37,11 @@
   width: 300px !important;
   box-shadow: none !important;
   z-index: 3;
+  transition: transform 0.3s ease;
 }
-
+.butterfly-img:hover {
+  transform: scale(1.1);
+}
 .who-quote-icon {
   color: #3ed4ef;
   font-size: 3rem;
@@ -79,6 +81,9 @@
 }
 
 @media (max-width: 1024px) {
+  .who-we-are-img {
+    width: 500px;
+  }
   .butterfly-img {
     top: -5%;
     left: 0;
@@ -96,6 +101,9 @@
     gap: 1rem;
   }
 
+  .who-we-are-img {
+    width: 600px;
+  }
   .butterfly-img {
     width: 300px !important;
     top: -10%;

@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../styles/WhoWeAre.css";
 import { FaQuoteLeft } from "react-icons/fa";
-// import whoWeAreImage from "../assets/who we are assets/who-we-are.jpg";
 import whoWeAreImage from "../assets/who we are assets/who-we-are2.png";
 import butterfly from "../assets/who we are assets/butterfly.gif";
 

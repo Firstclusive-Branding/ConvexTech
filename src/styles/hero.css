@@ -56,6 +56,8 @@
   max-height: 800px;
   animation: slideIn 1s ease-in-out;
   z-index: 3;
+  filter: drop-shadow(0 0 0.75rem #00000080);
+  border-radius: 50%;
 }
 
 @keyframes slideIn {
@@ -121,11 +123,12 @@
 
 @media screen and (max-width: 480px) {
   .hero {
-    height: 65vh;
+    height: 70vh;
   }
 
   .hero-content {
-    max-width: 65%;
+    max-width: 70%;
+    margin-top: 2rem;
   }
   .hero-content h1 {
     font-size: 1.5rem;
@@ -138,7 +141,7 @@
   }
 
   .hero-btn-primary {
-    max-width: 40%;
+    max-width: 60%;
     padding: 8px;
     font-size: 0.8rem;
   }
@@ -147,6 +150,6 @@
     position: absolute;
     max-height: 50%;
     right: 0;
-    top: 18%;
+    top: 20%;
   }
 }
