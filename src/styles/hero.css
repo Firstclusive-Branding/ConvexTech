@@ -70,7 +70,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .hero-content {
     max-width: 80%;
     padding-top: 5rem;
@@ -88,11 +88,12 @@
   .hero-avatar {
     position: absolute;
     max-height: 80%;
-    right: 5%;
+    right: 0;
+    top: 12%;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .hero {
     height: 80vh;
   }
@@ -120,9 +121,9 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .hero {
-    height: 70vh;
+    height: 90vh;
   }
 
   .hero-content {

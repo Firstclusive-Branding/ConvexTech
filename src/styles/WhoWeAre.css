@@ -85,7 +85,7 @@
     padding: 3rem 2rem;
   }
   .who-we-are-img {
-    width: 500px;
+    max-width: 100%;
   }
   .butterfly-img {
     top: -10;
@@ -137,6 +137,7 @@
   .who-wrapper {
     padding: 0 1rem;
     padding-bottom: 2rem;
+    margin-top: -100px;
   }
   .who-container {
     width: 95%;
