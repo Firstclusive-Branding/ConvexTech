@@ -1,6 +1,7 @@
 .footer {
   background: linear-gradient(-135deg, #ffffff, #3ed4ef);
   margin: 0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .footer-wrapper {
@@ -231,10 +232,6 @@
 
 /* Up to 480px */
 @media (max-width: 480px) {
-  .footer {
-    padding: 3rem 1.5rem 2rem;
-  }
-
   .footer-logo {
     height: 48px;
   }
