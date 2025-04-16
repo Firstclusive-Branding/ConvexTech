@@ -25,23 +25,19 @@
 }
 
 .hero-btn-primary {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 119, 255, 1) 0%,
-    rgba(0, 82, 193, 1) 100%
-  );
-  color: white;
-  padding: 12px 28px;
+  background: linear-gradient(90deg, #3ed4ef, #36308a);
   border: none;
-  border-radius: 5px;
+  padding: 0.8rem 2rem;
+  color: #ffffff;
   font-weight: bold;
   font-size: 1rem;
+  border-radius: 30px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 .hero-btn-primary:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
 @keyframes fadeIn {

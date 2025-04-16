@@ -24,14 +24,13 @@ const HeroSection = () => {
           business needs to scale, adapt and lead in a digital-first world.
         </motion.p>
 
-        <motion.button
-          className="hero-btn-primary"
+        <motion.div
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Explore Our Services
-        </motion.button>
+          <button className="hero-btn-primary">Explore Our Services</button>
+        </motion.div>
       </div>
       <img src={heroAvatar} alt="hero-avatar" className="hero-avatar" />
     </section>
