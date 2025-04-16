@@ -193,11 +193,6 @@
   }
 }
 
-/* .mobile-only,
-.mobile-menu {
-  display: none !important;
-} */
-
 .mobile-only {
   display: none !important;
 }
@@ -288,6 +283,10 @@
 }
 
 @media (max-width: 480px) {
+  .navbar {
+    padding: 1rem;
+  }
+
   .navbar-logo-img-mobile {
     display: block;
     height: 80px;
