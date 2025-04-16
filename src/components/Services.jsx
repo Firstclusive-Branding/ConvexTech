@@ -136,10 +136,6 @@ const Services = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 40 }}
                 transition={{ duration: 0.3, delay: index * 0.15 }}
-                // whileHover={{
-                //   scale: 1.05,
-                //   transition: { duration: 0.2, ease: [0.4, 0, 0.2, 1] },
-                // }}
               >
                 <div className="service-icon-wrapper">
                   <div className="service-icon">{service.icon}</div>
