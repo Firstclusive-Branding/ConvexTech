@@ -213,9 +213,9 @@
   display: flex;
 }
 
-/* .mobile-menu {
+.mobile-menu {
   display: none !important;
-} */
+}
 
 @media (max-width: 1024px) {
   .navbar {
@@ -247,12 +247,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2.5rem;
+    gap: 2rem;
     font-size: 1.5rem;
     font-weight: 600;
     transition: bottom 0.6s ease-in-out;
     z-index: 999;
     pointer-events: auto;
+    overflow-y: scroll;
   }
 
   .mobile-menu.open {
@@ -284,7 +285,7 @@
     gap: 1rem;
     font-size: 1.2rem;
     padding-left: 7rem;
-    margin-top: -2.5rem;
+    margin-top: -2rem;
     opacity: 0;
     max-height: 0;
     overflow: hidden;
