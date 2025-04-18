@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Layout from "./components/Layout";
 import Homepage from "./components/Homepage";
-import About from "./components/About";
+import AboutUs from "./components/AboutUs";
 import Careers from "./components/Careers";
 import Contact from "./components/Contact";
 import ErrorPage from "./components/ErrorPage";
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Homepage /> },
-      { path: "about", element: <About /> },
+      { path: "aboutus", element: <AboutUs /> },
       { path: "careers", element: <Careers /> },
       { path: "contact", element: <Contact /> },
     ],
