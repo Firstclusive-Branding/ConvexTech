@@ -30,7 +30,6 @@
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
   background-color: #1a1a18 !important;
-  /* filter: drop-shadow(0 0 2px #fff) !important; */
 }
 
 .hamburger-box {
@@ -44,8 +43,8 @@
   display: block;
   top: 50%;
   margin-top: -2px;
-  filter: drop-shadow(0 0 1px #36308a) drop-shadow(0 0 1px #3ed4ef)
-    drop-shadow(0 0 1px #3ed4ef) drop-shadow(0 0 1px #36308a) !important;
+  filter: drop-shadow(0 0 1px #3ed4ef) drop-shadow(0 0 0px #3ed4ef)
+    drop-shadow(0 0 0px #3ed4ef) drop-shadow(0 0 1px #3ed4ef) !important;
 }
 .hamburger-inner,
 .hamburger-inner::before,

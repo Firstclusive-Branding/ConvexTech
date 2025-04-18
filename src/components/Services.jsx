@@ -134,7 +134,7 @@ const Services = () => {
   };
 
   return (
-    <section className="services-container-filtered">
+    <section id="services" className="services-container-filtered">
       <motion.h2
         className="services-title-filtered"
         initial={{ y: 40, opacity: 0 }}

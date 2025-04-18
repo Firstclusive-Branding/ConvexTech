@@ -159,7 +159,7 @@ const Navbar = () => {
 
         <button
           ref={hamburgerRef}
-          className={`hamburger hamburger--emphatic mobile-only ${
+          className={`hamburger hamburger--collapse mobile-only ${
             isMenuOpen ? "is-active" : ""
           }`}
           type="button"

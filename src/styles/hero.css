@@ -116,7 +116,7 @@
 
   .hero-avatar {
     max-height: 70%;
-    right: 2%;
+    right: -5%;
     top: 15%;
   }
 }
@@ -149,7 +149,7 @@
   .hero-avatar {
     position: absolute;
     max-height: 50%;
-    right: 0;
-    top: 20%;
+    /* right: -5%; */
+    /* top: 15%; */
   }
 }

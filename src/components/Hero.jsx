@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "../styles/hero.css";
+import "../styles/Hero.css";
 import heroAvatar from "../assets/Hero Assets/hero-avatar2.png";
 
 const HeroSection = () => {
@@ -29,7 +29,16 @@ const HeroSection = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <button className="hero-btn-primary">Explore Our Services</button>
+          <button
+            className="hero-btn-primary"
+            onClick={() =>
+              document
+                .getElementById("services")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Explore Our Services
+          </button>
         </motion.div>
       </div>
       <img src={heroAvatar} alt="hero-avatar" className="hero-avatar" />
