@@ -140,6 +140,14 @@ const Navbar = () => {
           </div>
 
           <Link
+            to="/careers"
+            className={`nav-item ${
+              currentPath === "/careers" ? "active-link" : ""
+            } ${isScrolled ? "scrolled" : ""}`}
+          >
+            Careers
+          </Link>
+          <Link
             to="/contact"
             className={`nav-item ${
               currentPath === "/contact" ? "active-link" : ""

@@ -6,9 +6,7 @@ import "../styles/Layout.css";
 const Layout = () => {
   return (
     <div>
-      {/* <div className="app-layout-navbar"> */}
       <Navbar />
-      {/* </div> */}
       <main>
         <Outlet />
       </main>

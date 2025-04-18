@@ -2,6 +2,8 @@ import React from "react";
 import HeroSection from "./Hero";
 import WhoWeAre from "./WhoWeAre";
 import Services from "./Services";
+import ClientTestimonials from "./ClientTestimonials";
+import StatsCounter from "./StatsCounter";
 
 function Homepage() {
   return (
@@ -9,6 +11,8 @@ function Homepage() {
       <HeroSection />
       <WhoWeAre />
       <Services />
+      <ClientTestimonials />
+      <StatsCounter />
     </div>
   );
 }
