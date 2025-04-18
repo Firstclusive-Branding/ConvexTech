@@ -5,7 +5,7 @@ import Layout from "./components/Layout";
 import Homepage from "./components/Homepage";
 import About from "./components/About";
 import Careers from "./components/Careers";
-// import Contact from "./components/Contact";
+import Contact from "./components/Contact";
 import ErrorPage from "./components/ErrorPage";
 
 const router = createBrowserRouter([
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
       { index: true, element: <Homepage /> },
       { path: "about", element: <About /> },
       { path: "careers", element: <Careers /> },
-      // { path: "contact", element: <Contact /> },
+      { path: "contact", element: <Contact /> },
     ],
   },
 ]);
