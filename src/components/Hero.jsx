@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import heroAvatar from "../assets/Hero Assets/hero-avatar2.png";
+import "../styles/Hero.css";
 
 const HeroSection = () => {
   return (
