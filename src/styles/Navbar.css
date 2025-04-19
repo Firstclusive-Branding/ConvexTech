@@ -37,9 +37,12 @@
 
 .navbar-logo-img-desktop {
   height: 64px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, height 0.5s ease;
 }
 
+.navbar-logo-img-desktop.scrolled {
+  height: 44px;
+}
 .navbar-logo:hover img {
   transform: scale(1.02);
 }
@@ -326,8 +329,11 @@
   .navbar-logo-img-mobile {
     display: block;
     height: 80px;
+    transition: height 0.5s ease;
   }
-
+  .navbar-logo-img-mobile.scrolled {
+    height: 60px;
+  }
   .navbar-logo-img-desktop {
     display: none;
   }

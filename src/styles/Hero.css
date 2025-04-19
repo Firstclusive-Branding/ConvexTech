@@ -34,11 +34,12 @@
   font-size: 1rem;
   border-radius: 30px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-btn-primary:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
 }
 
 @keyframes fadeIn {

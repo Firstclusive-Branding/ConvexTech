@@ -43,7 +43,7 @@
 }
 
 .stat-card:hover .stat-icon {
-  transform: scale(1.4) rotate(-10deg);
+  transform: scale(1.4);
 }
 
 .stat-value {

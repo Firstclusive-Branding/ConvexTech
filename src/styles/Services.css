@@ -87,7 +87,7 @@
 
 .service-icon {
   font-size: 2.5rem;
-  color: #36308a;
+  color: #fff !important;
   transition: transform 0.5s ease;
 }
 
@@ -107,14 +107,14 @@
   color: #1a1a18;
 }
 
-.section-1 .service-title,
+/* .section-1 .service-title,
 .section-1 .service-desc,
 .section-1 .service-icon,
 .section-2 .service-title,
 .section-2 .service-desc,
 .section-2 .service-icon {
   color: #ffffff;
-}
+} */
 
 .service-badge {
   position: absolute;

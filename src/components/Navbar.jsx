@@ -86,12 +86,14 @@ const Navbar = () => {
           <img
             src={logo}
             alt="ConvexTech Logo"
-            className="navbar-logo-img-mobile"
+            className={`navbar-logo-img-mobile ${isScrolled ? "scrolled" : ""}`}
           />
           <img
             src={logo2}
             alt="ConvexTech Logo"
-            className="navbar-logo-img-desktop"
+            className={`navbar-logo-img-desktop ${
+              isScrolled ? "scrolled" : ""
+            }`}
           />
         </Link>
 
@@ -105,9 +107,9 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="/aboutus"
+            to="/about-us"
             className={`nav-item ${
-              currentPath === "/aboutus" ? "active-link" : ""
+              currentPath === "/about-us" ? "active-link" : ""
             } ${isScrolled ? "scrolled" : ""}`}
           >
             About Us
@@ -207,7 +209,7 @@ const Navbar = () => {
           Home
         </Link>
         <Link
-          to="/about"
+          to="/about-us"
           onClick={() => setIsMenuOpen(false)}
           style={{ animationDelay: "0.2s" }}
           className="mobile-menu-link"

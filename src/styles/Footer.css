@@ -54,7 +54,6 @@
   font-size: 0.95rem;
 }
 
-/* 🔵 Hover underline effect for service links */
 .footer-services a,
 .footer-office-details a {
   position: relative;
@@ -188,15 +187,14 @@
   color: #3ed4ef;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .footer-attribution a:hover {
   text-decoration: underline;
+  color: #aef507;
 }
 
-/* Media Queries */
-
-/* Up to 1024px */
 @media (max-width: 1024px) {
   .footer-top {
     flex-direction: column;
@@ -210,11 +208,9 @@
   }
 }
 
-/* Up to 768px */
 @media (max-width: 768px) {
   .footer-columns {
     flex-wrap: nowrap;
-    /* flex-direction: column; */
   }
 
   .footer-brand ul li {
@@ -230,7 +226,6 @@
   }
 }
 
-/* Up to 480px */
 @media (max-width: 480px) {
   .footer-logo {
     height: 48px;

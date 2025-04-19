@@ -1,265 +1,243 @@
 .about-section {
-  background-color: #ffffff;
+  padding: 4rem 0;
+  padding-top: 8rem;
+  background: linear-gradient(to right, #ffffff, #f7f9fc);
   color: #1a1a18;
-  padding: 6rem 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.about-intro {
-  display: flex;
-  justify-content: flex-start;
-  gap: 2rem;
-  background: linear-gradient(to right, #f0faff, #e0f3ff);
-  padding: 4rem 2rem;
-}
-
-.about-text {
-  flex: 1 1 450px;
-  max-width: 520px;
-}
-
-.about-text h2 {
-  color: #36308a;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.about-text p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-  text-align: left;
-}
-
-.about-img {
-  flex: 1 1 400px;
-  max-width: 520px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
+.about-intro,
 .about-us-who-we-are {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  background: linear-gradient(to right, #f7faff, #eef6ff);
-  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 0 4rem;
 }
 
+.about-text,
 .who-text {
-  flex: 1 1 450px;
-  max-width: 520px;
+  flex: 1 1 400px;
+  padding: 1rem;
 }
 
+.about-text h2,
 .who-text h2 {
+  font-size: 2.2rem;
   color: #36308a;
-  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
+.about-text p,
 .who-text p {
   font-size: 1.1rem;
   line-height: 1.7;
-  text-align: left;
+  margin-bottom: 0.8rem;
 }
 
+.about-img,
 .who-img {
   flex: 1 1 400px;
-  max-width: 520px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(54, 48, 138, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.about-img:hover,
+.who-img:hover {
+  transform: scale(1.03) !important;
 }
 
 .quote-icon {
-  font-size: 4rem;
+  font-size: 2rem;
   color: #3ed4ef;
-  margin-bottom: -2rem;
+}
+
+.about-us-who-we-are {
+  background: linear-gradient(to right, #ffffff, #eaf8ff);
+  padding: 3rem 2rem;
+  border-radius: 16px;
 }
 
 .services-showcase {
-  padding: 4rem 2rem;
-  background: #fff;
   text-align: center;
 }
 
 .services-showcase h2 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #36308a;
   margin-bottom: 3rem;
-  font-weight: 600;
 }
 
 .services-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
 }
 
 .service-horizontal {
+  position: relative;
   display: flex;
-  background: #f9f9f9;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-  max-width: 900px;
-  width: 100%;
-  transition: transform 0.3s ease;
-}
-
-.service-horizontal:hover {
-  transform: translateY(-10px) !important;
+  flex-direction: column;
+  align-items: center;
 }
 
 .service-img {
-  width: 300px;
-  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.service-horizontal:hover .service-img {
+  transform: scale(1.02);
 }
 
 .service-content {
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.2rem;
-  width: 100%;
+  position: relative;
+  margin-top: -15%;
+  width: 75%;
+  background: linear-gradient(145deg, #3ed4ef, #36308a);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  text-align: center;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: #ffffff;
 }
 
-.service-icon {
-  font-size: 1.8rem;
-  color: #3ed4ef;
-  margin-bottom: 0.5rem;
+.service-horizontal:hover .service-content {
+  transform: translateY(-5px);
 }
 
 .service-content h3 {
   font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: #1a1a18;
-}
-
-.read-more-btn {
-  background: linear-gradient(135deg, #3ed4ef, #36308a);
   color: #ffffff;
-  padding: 0.5rem 1.2rem;
-  border-radius: 30px;
+  margin-bottom: 0.8rem;
   font-weight: 600;
-  text-decoration: none;
-  width: fit-content;
-  transition: transform 0.3s ease;
 }
 
-.read-more-btn:hover {
-  transform: translateY(-4px);
+.service-content p {
+  color: #ffffff;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0.5rem 0 1rem;
+  opacity: 0.9;
 }
 
-/* 1024px and below - Tablet Landscape */
 @media (max-width: 1024px) {
-  .about-intro,
-  .about-us-who-we-are {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .about-text,
+  .who-text {
+    font-size: 1rem;
   }
 
   .about-img,
   .who-img {
     max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .about-us-who-we-are {
+    padding-bottom: 0;
+  }
+
+  .services-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service-horizontal {
+    max-width: 380px;
+  }
+
+  .service-content {
+    width: 80%;
+  }
+
+  .services-showcase h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-intro,
+  .about-us-who-we-are {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-bottom: 0;
   }
 
   .about-text,
   .who-text {
-    max-width: 90%;
-    text-align: center;
+    padding: 0;
+    font-size: 0.95rem;
     flex: 1 1 100%;
   }
 
-  /* .service-horizontal {
-    flex-direction: column;
-    align-items: center;
-  } */
+  .about-text h2,
+  .who-text h2 {
+    font-size: 1.8rem;
+  }
 
-  .service-img {
+  .service-horizontal {
     width: 100%;
-    height: auto;
+    max-width: 340px;
   }
 
   .service-content {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    text-align: center;
+    padding: 1rem;
+    width: 90%;
+    margin-top: -10%;
   }
 
-  .read-more-btn {
-    margin-top: 0.5rem;
-  }
-}
-
-/* 768px and below - Tablet Portrait */
-@media (max-width: 768px) {
-  .about-text h2,
-  .who-text h2,
-  .services-showcase h2 {
-    font-size: 2rem;
-  }
-
-  .quote-icon {
-    font-size: 3rem;
-    margin-bottom: -1rem;
-  }
-
-  .read-more-btn {
-    font-size: 0.9rem;
-    padding: 0.4rem 1rem;
-  }
-
-  .service-img {
-    width: 100%;
-    height: 200px;
+  .service-content h3 {
+    font-size: 1.2rem;
   }
 }
 
-/* 480px and below - Mobile */
 @media (max-width: 480px) {
   .about-section {
-    padding: 4rem 0;
-  }
-
-  .about-intro,
-  .about-us-who-we-are {
     padding: 2rem 1rem;
-  }
-
-  .about-text h2,
-  .who-text h2,
-  .services-showcase h2 {
-    font-size: 1.6rem;
   }
 
   .about-text p,
   .who-text p {
+    font-size: 0.9rem;
+  }
+
+  .about-text h2,
+  .who-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .services-showcase h2 {
+    font-size: 1.6rem;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .service-horizontal {
+    width: 100%;
+  }
+
+  .service-content {
+    padding: 0.6rem;
+  }
+
+  .service-content h3 {
     font-size: 1rem;
   }
 
   .quote-icon {
-    font-size: 2.2rem;
-  }
-
-  .service-horizontal {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .read-more-btn {
-    font-size: 0.85rem;
-    padding: 0.4rem 0.9rem;
-  }
-
-  .service-img {
-    height: 180px;
-  }
-
-  .service-content h3 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 }

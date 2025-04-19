@@ -4,6 +4,7 @@ import "../styles/WhoWeAre.css";
 import { FaQuoteLeft } from "react-icons/fa";
 import whoWeAreImage from "../assets/who we are assets/who-we-are2.png";
 import butterfly from "../assets/who we are assets/butterfly.gif";
+import { Link } from "react-router-dom";
 
 const WhoWeAre = () => {
   return (
@@ -35,7 +36,9 @@ const WhoWeAre = () => {
             “When digital transformation is done right, it’s like a caterpillar
             turning into a butterfly”
           </p>
-          <button className="who-btn">Read More</button>
+          <Link to="/about-us" className="who-we-btn">
+            Read More
+          </Link>
         </motion.div>
       </div>
     </section>

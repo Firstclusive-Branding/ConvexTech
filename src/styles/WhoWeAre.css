@@ -64,7 +64,8 @@
   line-height: 1.6;
   margin-bottom: 1.8rem;
 }
-.who-btn {
+
+.who-we-btn {
   background: linear-gradient(90deg, #3ed4ef, #36308a);
   border: none;
   padding: 0.8rem 2rem;
@@ -73,11 +74,15 @@
   font-size: 1rem;
   border-radius: 30px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
 }
 
-.who-btn:hover {
-  transform: translateY(-3px);
+.who-we-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(54, 48, 138, 0.3);
 }
 
 @media (max-width: 1024px) {
@@ -128,7 +133,7 @@
     font-size: 1.1rem;
   }
 
-  .who-btn {
+  .who-we-btn {
     width: 100%;
   }
 }
@@ -155,7 +160,7 @@
     font-size: 1rem;
   }
 
-  .who-btn {
+  .who-we-btn {
     font-size: 0.95rem;
     padding: 0.7rem 1.5rem;
   }

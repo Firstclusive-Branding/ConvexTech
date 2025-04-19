@@ -4,6 +4,65 @@ import { Link } from "react-router-dom";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 import "../styles/AboutUs.css";
+import StatsCounter from "./StatsCounter";
+const services = [
+  {
+    title: "SAP Solutions",
+    image: "https://picsum.photos/seed/sap/500/250",
+    link: "/sap",
+    description:
+      "Streamline enterprise operations with smart, scalable SAP integrations.",
+  },
+  {
+    title: "Software Development",
+    image: "https://picsum.photos/seed/dev/500/250",
+    link: "/softwaredevelopment",
+    description:
+      "Build custom web and mobile apps that actually deliver business results.",
+  },
+  {
+    title: "Artificial Intelligence",
+    image: "https://picsum.photos/seed/ai/500/250",
+    link: "/artificialintelligence",
+    description:
+      "Leverage AI to automate decisions, optimize performance and drive innovation.",
+  },
+  {
+    title: "Data Science",
+    image: "https://picsum.photos/seed/data/500/250",
+    link: "/datascience",
+    description:
+      "Transform raw data into actionable insights that move your business forward.",
+  },
+  {
+    title: "Branding & Digital Marketing",
+    image: "https://picsum.photos/seed/branding/500/250",
+    link: "/branding",
+    description:
+      "Create a brand that stands out and campaigns that convert across every channel.",
+  },
+  {
+    title: "Staffing & Recruitment",
+    image: "https://picsum.photos/seed/staffing/500/250",
+    link: "/staffing",
+    description:
+      "Find the right talent fast with recruitment that understands your business.",
+  },
+  {
+    title: "Healthcare & Clinical",
+    image: "https://picsum.photos/seed/healthcare/500/250",
+    link: "/healthcare",
+    description:
+      "Digitize your healthcare operations for better patient care and efficiency.",
+  },
+  {
+    title: "Non-IT Services",
+    image: "https://picsum.photos/seed/nonit/500/250",
+    link: "/nonit",
+    description:
+      "Support functions like logistics, HR, and admin—delivered with precision.",
+  },
+];
 
 const AboutUs = () => {
   useEffect(() => {
@@ -44,7 +103,6 @@ const AboutUs = () => {
           transition={{ duration: 0.7 }}
         />
       </div>
-
       <div className="about-us-who-we-are">
         <motion.img
           src="https://picsum.photos/seed/whoimg/600/400"
@@ -72,6 +130,7 @@ const AboutUs = () => {
           <FaQuoteRight />
         </div>
       </div>
+      <StatsCounter />
 
       <div className="services-showcase">
         <motion.h2
@@ -90,19 +149,18 @@ const AboutUs = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
             >
               <img
                 src={service.image}
                 alt={service.title}
                 className="service-img"
               />
-              <div className="service-content">
-                <h3>{service.title}</h3>
-                <Link to={service.link} className="read-more-btn">
-                  Read More
-                </Link>
-              </div>
+              <Link to={service.link} className="service-content">
+                <div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -110,48 +168,5 @@ const AboutUs = () => {
     </section>
   );
 };
-
-const services = [
-  {
-    title: "SAP Solutions",
-    image: "https://picsum.photos/seed/sap/500/250",
-    link: "/sap",
-  },
-  {
-    title: "Software Development",
-    image: "https://picsum.photos/seed/dev/500/250",
-    link: "/softwaredevelopment",
-  },
-  {
-    title: "Artificial Intelligence",
-    image: "https://picsum.photos/seed/ai/500/250",
-    link: "/artificialintelligence",
-  },
-  {
-    title: "Data Science",
-    image: "https://picsum.photos/seed/data/500/250",
-    link: "/datascience",
-  },
-  {
-    title: "Branding & Digital Marketing",
-    image: "https://picsum.photos/seed/branding/500/250",
-    link: "/branding",
-  },
-  {
-    title: "Staffing & Recruitment",
-    image: "https://picsum.photos/seed/staffing/500/250",
-    link: "/staffing",
-  },
-  {
-    title: "Healthcare & Clinical",
-    image: "https://picsum.photos/seed/healthcare/500/250",
-    link: "/healthcare",
-  },
-  {
-    title: "Non-IT Services",
-    image: "https://picsum.photos/seed/nonit/500/250",
-    link: "/nonit",
-  },
-];
 
 export default AboutUs;
