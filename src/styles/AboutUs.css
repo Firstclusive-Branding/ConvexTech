@@ -4,17 +4,29 @@
   background: linear-gradient(to right, #ffffff, #f7f9fc);
   color: #1a1a18;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
 }
 
 .about-intro,
 .about-us-who-we-are {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   margin-bottom: 3rem;
   padding: 0 4rem;
+}
+
+.about-content,
+.who-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.who-content {
+  align-items: flex-end;
 }
 
 .about-text,
@@ -133,6 +145,11 @@
 }
 
 @media (max-width: 1024px) {
+  .about-intro,
+  .about-us-who-we-are {
+    flex-direction: column;
+  }
+
   .about-text,
   .who-text {
     font-size: 1rem;
@@ -168,9 +185,12 @@
   .about-intro,
   .about-us-who-we-are {
     flex-direction: column;
-    padding: 2rem 1rem;
-    text-align: center;
+    padding: 2rem;
     margin-bottom: 0;
+  }
+  .about-content,
+  .who-content {
+    flex-direction: column;
   }
 
   .about-text,
@@ -183,6 +203,7 @@
   .about-text h2,
   .who-text h2 {
     font-size: 1.8rem;
+    text-align: center;
   }
 
   .service-horizontal {
@@ -203,9 +224,20 @@
 
 @media (max-width: 480px) {
   .about-section {
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
+    padding-top: 6rem;
   }
-
+  .about-intro,
+  .about-us-who-we-are {
+    gap: 0;
+  }
+  .about-us-who-we-are {
+    padding-bottom: 0;
+  }
+  .about-img,
+  .who-img {
+    flex: 1 1 100%;
+  }
   .about-text p,
   .who-text p {
     font-size: 0.9rem;
@@ -238,6 +270,6 @@
   }
 
   .quote-icon {
-    font-size: 1.5rem;
+    text-align: left;
   }
 }

@@ -72,28 +72,31 @@ const AboutUs = () => {
   return (
     <section className="about-section">
       <div className="about-intro">
-        <div className="quote-icon">
-          <FaQuoteLeft />
+        <div className="about-content">
+          <div className="quote-icon">
+            <FaQuoteLeft />
+          </div>
+          <motion.div
+            className="about-text"
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            <h2>About Us</h2>
+            <p>
+              It is often said that, when we embark on a technical and a
+              transformational journey, the enterprise often needs to scale up
+              with equal speed and accuracy.
+            </p>
+            <p>
+              These dual parameters are enhanced with the empowerment of digital
+              solutions. For 13 years, we’ve built expertise in offering
+              end-to-end solutions that improve real-world workflows and deliver
+              tangible value.
+            </p>
+          </motion.div>
         </div>
-        <motion.div
-          className="about-text"
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          <h2>About Us</h2>
-          <p>
-            It is often said that, when we embark on a technical and a
-            transformational journey, the enterprise often needs to scale up
-            with equal speed and accuracy.
-          </p>
-          <p>
-            These dual parameters are enhanced with the empowerment of digital
-            solutions. For 13 years, we’ve built expertise in offering
-            end-to-end solutions that improve real-world workflows and deliver
-            tangible value.
-          </p>
-        </motion.div>
+
         <motion.img
           src="https://picsum.photos/seed/aboutimg/600/400"
           alt="About ConvexTech"
@@ -112,22 +115,24 @@ const AboutUs = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
         />
-        <motion.div
-          className="who-text"
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          <h2>Who We Are</h2>
-          <p>
-            ConvexTech is driven by innovation. We deliver cutting-edge
-            solutions with a focus on performance, adaptability, and long-term
-            value. Our expert team brings years of cross-industry experience and
-            deep technical skill to every project we take on.
-          </p>
-        </motion.div>
-        <div className="quote-icon">
-          <FaQuoteRight />
+        <div className="who-content">
+          <motion.div
+            className="who-text"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            <h2>Who We Are</h2>
+            <p>
+              ConvexTech is driven by innovation. We deliver cutting-edge
+              solutions with a focus on performance, adaptability, and long-term
+              value. Our expert team brings years of cross-industry experience
+              and deep technical skill to every project we take on.
+            </p>
+          </motion.div>
+          <div className="quote-icon">
+            <FaQuoteRight />
+          </div>
         </div>
       </div>
       <StatsCounter />

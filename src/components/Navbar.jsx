@@ -100,9 +100,7 @@ const Navbar = () => {
         <div className="navbar-links desktop-only">
           <Link
             to="/"
-            className={`nav-item ${currentPath === "/" ? "active-link" : ""} ${
-              isScrolled ? "scrolled" : ""
-            }`}
+            className={`nav-item ${currentPath === "/" ? "active-link" : ""}`}
           >
             Home
           </Link>
@@ -110,7 +108,7 @@ const Navbar = () => {
             to="/about-us"
             className={`nav-item ${
               currentPath === "/about-us" ? "active-link" : ""
-            } ${isScrolled ? "scrolled" : ""}`}
+            }`}
           >
             About Us
           </Link>
@@ -125,7 +123,7 @@ const Navbar = () => {
                 currentPath.startsWith("/services") ? "active-link" : ""
               } `}
             >
-              <span className={`nav-item ${isScrolled ? "scrolled" : ""}`}>
+              <span className={`nav-item`}>
                 Services
                 <BsCaretDownFill
                   className={`dropdown-icon ${isDropdownOpen ? "open" : ""}`}
@@ -171,7 +169,7 @@ const Navbar = () => {
             to="/careers"
             className={`nav-item ${
               currentPath === "/careers" ? "active-link" : ""
-            } ${isScrolled ? "scrolled" : ""}`}
+            }`}
           >
             Careers
           </Link>
@@ -179,7 +177,7 @@ const Navbar = () => {
             to="/contact"
             className={`nav-item ${
               currentPath === "/contact" ? "active-link" : ""
-            } ${isScrolled ? "scrolled" : ""}`}
+            }`}
           >
             Contact
           </Link>
