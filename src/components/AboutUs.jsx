@@ -2,8 +2,11 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import aboutus1 from "../assets/About Us Assets/about-us1.jpg";
+import aboutus2 from "../assets/About Us Assets/about-us2.jpg";
 
 import "../styles/AboutUs.css";
+
 import StatsCounter from "./StatsCounter";
 const services = [
   {
@@ -71,17 +74,17 @@ const AboutUs = () => {
 
   return (
     <section className="about-section">
-      <div className="about-intro">
+      <motion.div
+        className="about-intro"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
         <div className="about-content">
           <div className="quote-icon">
             <FaQuoteLeft />
           </div>
-          <motion.div
-            className="about-text"
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-          >
+          <div className="about-text">
             <h2>About Us</h2>
             <p>
               It is often said that, when we embark on a technical and a
@@ -94,34 +97,20 @@ const AboutUs = () => {
               end-to-end solutions that improve real-world workflows and deliver
               tangible value.
             </p>
-          </motion.div>
+          </div>
         </div>
 
-        <motion.img
-          src="https://picsum.photos/seed/aboutimg/600/400"
-          alt="About ConvexTech"
-          className="about-img"
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-        />
-      </div>
-      <div className="about-us-who-we-are">
-        <motion.img
-          src="https://picsum.photos/seed/whoimg/600/400"
-          alt="Who we are"
-          className="who-img"
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-        />
+        <img src={aboutus1} alt="About ConvexTech" className="about-img" />
+      </motion.div>
+      <motion.div
+        className="about-us-who-we-are"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+      >
+        <img src={aboutus2} alt="Who we are" className="who-img" />
         <div className="who-content">
-          <motion.div
-            className="who-text"
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-          >
+          <div className="who-we-are-text">
             <h2>Who We Are</h2>
             <p>
               ConvexTech is driven by innovation. We deliver cutting-edge
@@ -129,12 +118,12 @@ const AboutUs = () => {
               value. Our expert team brings years of cross-industry experience
               and deep technical skill to every project we take on.
             </p>
-          </motion.div>
+          </div>
           <div className="quote-icon">
             <FaQuoteRight />
           </div>
         </div>
-      </div>
+      </motion.div>
       <StatsCounter />
 
       <div className="services-showcase">

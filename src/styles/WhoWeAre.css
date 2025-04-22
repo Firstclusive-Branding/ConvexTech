@@ -39,9 +39,7 @@
   z-index: 3;
   transition: transform 3s ease;
 }
-.butterfly-img:hover {
-  transform: translate(350%, 50%);
-}
+
 .who-quote-icon {
   color: #3ed4ef;
   font-size: 3rem;
@@ -93,7 +91,7 @@
     max-width: 100%;
   }
   .butterfly-img {
-    top: -10;
+    top: -25%;
     left: 0;
   }
 
@@ -111,7 +109,6 @@
     width: 80%;
     gap: 1rem;
   }
-
   .who-we-are-img {
     width: 600px;
   }
@@ -125,16 +122,25 @@
   .who-image {
     flex: 1 1 100%;
   }
+  .who-text {
+    text-align: center;
+  }
+
+  .who-quote-icon {
+    text-align: left !important;
+    margin: 0;
+  }
   .who-text h2 {
     font-size: 2rem;
+    text-align: left !important;
   }
 
   .who-text p {
+    text-align: left !important;
     font-size: 1.1rem;
   }
-
   .who-we-btn {
-    width: 100%;
+    width: 50%;
   }
 }
 

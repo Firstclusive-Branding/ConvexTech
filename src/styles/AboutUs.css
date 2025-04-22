@@ -30,29 +30,30 @@
 }
 
 .about-text,
-.who-text {
+.who-we-are-text {
   flex: 1 1 400px;
   padding: 1rem;
 }
 
 .about-text h2,
-.who-text h2 {
+.who-we-are-text h2 {
   font-size: 2.2rem;
   color: #36308a;
   margin-bottom: 1rem;
 }
 
 .about-text p,
-.who-text p {
+.who-we-are-text p {
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 0.8rem;
+  color: #1a1a18;
 }
 
 .about-img,
 .who-img {
-  flex: 1 1 400px;
-  width: 100%;
+  width: 600px;
+  background-size: cover;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(54, 48, 138, 0.2);
   transition: transform 0.4s ease;
@@ -147,11 +148,11 @@
 @media (max-width: 1024px) {
   .about-intro,
   .about-us-who-we-are {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .about-text,
-  .who-text {
+  .who-we-are-text {
     font-size: 1rem;
   }
 
@@ -184,7 +185,6 @@
 @media (max-width: 768px) {
   .about-intro,
   .about-us-who-we-are {
-    flex-direction: column;
     padding: 2rem;
     margin-bottom: 0;
   }
@@ -194,14 +194,14 @@
   }
 
   .about-text,
-  .who-text {
+  .who-we-are-text {
     padding: 0;
     font-size: 0.95rem;
     flex: 1 1 100%;
   }
 
   .about-text h2,
-  .who-text h2 {
+  .who-we-are-text h2 {
     font-size: 1.8rem;
     text-align: center;
   }
@@ -239,12 +239,12 @@
     flex: 1 1 100%;
   }
   .about-text p,
-  .who-text p {
+  .who-we-are-text p {
     font-size: 0.9rem;
   }
 
   .about-text h2,
-  .who-text h2 {
+  .who-we-are-text h2 {
     font-size: 1.5rem;
   }
 

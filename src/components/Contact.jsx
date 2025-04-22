@@ -48,13 +48,13 @@ const Contact = () => {
     <section className="contact-page">
       <div className="contact-form-container">
         <h1>Get In Touch</h1>
-        <div className="contact-form-content">
-          <motion.div
-            className="contact-form-section"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
+        <motion.div
+          className="contact-form-content"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          <div className="contact-form-section">
             <form className="contact-form">
               <p className="disclaimer-text">
                 By submitting this form, you agree to our{" "}
@@ -88,11 +88,11 @@ const Contact = () => {
                 Submit Request
               </button>
             </form>
-          </motion.div>
+          </div>
           <div className="contact-us-img-container">
             <img src={contactUs} alt="contact-us" />
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <section className="contact-locations">
