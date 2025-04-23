@@ -1,4 +1,4 @@
-.who-wrapper {
+/* .who-wrapper {
   background: #ffffff;
   padding: 6rem 2rem;
   position: relative;
@@ -173,5 +173,156 @@
 
   .who-image img {
     max-width: 100%;
+  }
+} */
+
+.who-we-are-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 60px;
+  background-size: cover;
+  background-position: center;
+}
+
+.who-we-are-left-image-wrapper {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.who-we-are-left-image-wrapper:hover .who-we-are-left-bg-shape,
+.who-we-are-left-image-wrapper:hover .who-we-are-left-main-image {
+  transform: scale(1.08);
+}
+
+.who-we-are-left-bg-shape {
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 100%;
+  z-index: 1;
+  transition: transform 0.6s ease;
+}
+
+.who-we-are-left-main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  transition: transform 0.6s ease;
+}
+
+.who-we-are-right {
+  max-width: 540px;
+}
+.who-we-are-section-title {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: #1a1a18;
+}
+
+.who-we-are-section-title-tag {
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(to right, #3ed4ef, transparent);
+}
+
+.who-we-are-quote {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #111;
+}
+.who-we-are-highlight {
+  color: #3ed4ef;
+}
+.who-we-are-read-more-btn {
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  background-color: #3ed4ef;
+  border: none;
+  border-radius: 24px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.5s ease;
+}
+
+.who-we-are-read-more-btn:hover {
+  background-color: #28b3c6;
+  transform: translateY(-7px);
+}
+
+@media (max-width: 1024px) {
+  .who-we-are-section {
+    gap: 60px;
+    padding: 40px;
+  }
+
+  .who-we-are-left-image-wrapper {
+    width: 400px;
+    height: 400px;
+  }
+
+  .who-we-are-quote {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .who-we-are-section {
+    flex-direction: column;
+    padding: 30px;
+    gap: 40px;
+  }
+
+  .who-we-are-left-image-wrapper {
+    width: 420px;
+    height: 420px;
+  }
+
+  .who-we-are-section-title {
+    font-size: 16px;
+  }
+
+  .who-we-are-quote {
+    font-size: 1.8rem;
+  }
+
+  .who-we-are-read-more-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .who-we-are-section {
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .who-we-are-left-image-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+
+  .who-we-are-section-title {
+    font-size: 14px;
+  }
+
+  .who-we-are-quote {
+    font-size: 1.5rem;
+  }
+
+  .who-we-are-read-more-btn {
+    width: 100%;
+    padding: 12px;
   }
 }

@@ -1,49 +1,59 @@
 import React from "react";
 import { motion } from "framer-motion";
-import heroAvatar from "../assets/Hero Assets/hero-avatar2.png";
 import "../styles/Hero.css";
+import heroimage from "../assets/Hero Assets/hero-image.png";
+import heroslash from "../assets/Hero Assets/hero-slash.png";
+import springcircle from "../assets/Hero Assets/spring-circle.png";
 
-const HeroSection = () => {
+const Hero = () => {
   return (
-    <section className="hero">
-      <div className="hero-content">
-        <motion.h1
-          initial={{ y: 40, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          Smart Solutions. Real Impact.
-        </motion.h1>
+    <motion.section
+      className="hero-section"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <motion.div
+        className="slash-mask"
+        initial={{ height: 0 }}
+        animate={{ height: "100%" }}
+        transition={{ duration: 1.2, delay: 0.5 }}
+      >
+        <img src={heroslash} alt="hero-slash" className="hero-slash" />
+      </motion.div>
 
-        <motion.p
-          initial={{ y: 40, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          At ConvexTech, we don’t just build technology — we build what your
-          business needs to scale, adapt and lead in a digital-first world.
-        </motion.p>
+      <motion.div
+        className="hero-left"
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 1.2 }}
+      >
+        <img src={springcircle} alt="spring-circle" className="spring-circle" />
+        <p className="tagline">BEST IT SOLUTION PROVIDER</p>
+        <h1>
+          Empower <span className="highlight"> Businesses</span> with Smart Tech
+        </h1>
+        <p className="subtext">Providing Businesses with Next-Gen Solutions.</p>
+        <button className="hero-button">Get Started</button>
+      </motion.div>
 
-        <motion.div
-          initial={{ x: -50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <button
-            className="hero-btn-primary"
-            onClick={() =>
-              document
-                .getElementById("services")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Explore Our Services
-          </button>
-        </motion.div>
+      <div className="hero-right">
+        <div className="image-container">
+          <img
+            src={heroimage}
+            alt="Smart Tech Presentation"
+            className="hero-image"
+          />
+          <motion.div
+            className="image-overlay"
+            initial={{ x: "0%" }}
+            animate={{ x: "100%" }}
+            transition={{ duration: 1, delay: 1.2 }}
+          />
+        </div>
       </div>
-      <img src={heroAvatar} alt="hero-avatar" className="hero-avatar" />
-    </section>
+    </motion.section>
   );
 };
 
-export default HeroSection;
+export default Hero;

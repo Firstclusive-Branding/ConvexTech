@@ -3,6 +3,7 @@ import Navbar from "./Navbar.jsx";
 import Footer from "./Footer.jsx";
 import "../styles/Layout.css";
 import { useEffect } from "react";
+import Header from "./Header.jsx";
 
 const Layout = () => {
   const location = useLocation();
@@ -13,6 +14,7 @@ const Layout = () => {
 
   return (
     <div>
+      <Header />
       <Navbar />
       <main>
         <Outlet />

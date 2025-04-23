@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { BsCaretDownFill } from "react-icons/bs";
-
+import { BiSolidPhoneCall } from "react-icons/bi";
+import { IoIosArrowDown } from "react-icons/io";
 import "../styles/Navbar.css";
 import "../styles/HamburgerIcon.css";
 import logo from "../assets/ConvexTech Logo.png";
@@ -11,89 +11,44 @@ import navDropdownImg from "../assets/Navbar assets/nav-dropdown-img.jpg";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
-
   const menuRef = useRef();
-  const hamburgerRef = useRef();
-  const navRef = useRef(null);
   const location = useLocation();
   const currentPath = location.pathname;
 
-  // Disable body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
-    if (!isMenuOpen) {
-      setIsMobileServicesOpen(false); // close submenu if mobile menu closes
-    }
+    if (!isMenuOpen) setIsMobileServicesOpen(false);
   }, [isMenuOpen]);
 
-  // Close menu on outside click
   useEffect(() => {
     const handleOutsideClick = (e) => {
-      const clickedOutsideMenu =
-        menuRef.current && !menuRef.current.contains(e.target);
-      const clickedOutsideHamburger =
-        hamburgerRef.current && !hamburgerRef.current.contains(e.target);
-
-      if (isMenuOpen && clickedOutsideMenu && clickedOutsideHamburger) {
+      if (
+        isMenuOpen &&
+        !menuRef.current?.contains(e.target) &&
+        !document.getElementById("hamburger-toggle")?.contains(e.target)
+      ) {
         setIsMenuOpen(false);
       }
     };
 
-    if (isMenuOpen) {
-      document.addEventListener("mousedown", handleOutsideClick);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
+    if (isMenuOpen) document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
   }, [isMenuOpen]);
-
-  // Close mobile-submenu on outside click
-  useEffect(() => {
-    const handleClickOutsideSubmenu = (e) => {
-      const isInsideMenu = menuRef.current?.contains(e.target);
-      if (!isInsideMenu) {
-        setIsMobileServicesOpen(false);
-      }
-    };
-
-    if (isMobileServicesOpen) {
-      document.addEventListener("mousedown", handleClickOutsideSubmenu);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutsideSubmenu);
-    };
-  }, [isMobileServicesOpen]);
-
-  // Scroll listener
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollThreshold = window.innerHeight * 0.25;
-      setIsScrolled(window.scrollY > scrollThreshold);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <>
-      <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} ref={navRef}>
+      <nav className="navbar">
         <Link to="/" className="navbar-logo">
           <img
             src={logo}
             alt="ConvexTech Logo"
-            className={`navbar-logo-img-mobile ${isScrolled ? "scrolled" : ""}`}
+            className="navbar-logo-img-mobile"
           />
           <img
             src={logo2}
             alt="ConvexTech Logo"
-            className={`navbar-logo-img-desktop ${
-              isScrolled ? "scrolled" : ""
-            }`}
+            className="navbar-logo-img-desktop"
           />
         </Link>
 
@@ -112,7 +67,6 @@ const Navbar = () => {
           >
             About Us
           </Link>
-
           <div
             className="dropdown-wrapper"
             onMouseEnter={() => setIsDropdownOpen(true)}
@@ -121,11 +75,11 @@ const Navbar = () => {
             <div
               className={`dropdown-trigger ${
                 currentPath.startsWith("/services") ? "active-link" : ""
-              } `}
+              }`}
             >
-              <span className={`nav-item`}>
+              <span className="nav-item">
                 Services
-                <BsCaretDownFill
+                <IoIosArrowDown
                   className={`dropdown-icon ${isDropdownOpen ? "open" : ""}`}
                 />
               </span>
@@ -164,7 +118,6 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-
           <Link
             to="/careers"
             className={`nav-item ${
@@ -183,25 +136,33 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <button
-          ref={hamburgerRef}
-          className={`hamburger hamburger--collapse mobile-only ${
-            isMenuOpen ? "is-active" : ""
-          }`}
-          type="button"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <span className="hamburger-box">
-            <span className="hamburger-inner"></span>
-          </span>
-        </button>
+        <div id="hamburger-toggle" className="mobile-only">
+          <label className="custom-hamburger">
+            <input
+              type="checkbox"
+              checked={isMenuOpen}
+              onChange={() => setIsMenuOpen(!isMenuOpen)}
+            />
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </label>
+        </div>
+
+        <div className="nav-get-in-touch">
+          <Link to="/contact" className="nav-get-in-touch-button">
+            <span>GET IN TOUCH</span>
+            <span className="nav-get-in-touch-icon">
+              <BiSolidPhoneCall size={20} />
+            </span>
+          </Link>
+        </div>
       </nav>
 
       <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`} ref={menuRef}>
         <Link
           to="/"
           onClick={() => setIsMenuOpen(false)}
-          style={{ animationDelay: "0.1s" }}
           className="mobile-menu-link"
         >
           Home
@@ -209,23 +170,20 @@ const Navbar = () => {
         <Link
           to="/about-us"
           onClick={() => setIsMenuOpen(false)}
-          style={{ animationDelay: "0.2s" }}
           className="mobile-menu-link"
         >
           About
         </Link>
-
         <div
           onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-          style={{ animationDelay: "0.3s", cursor: "pointer" }}
           className="mobile-menu-link"
+          style={{ cursor: "pointer" }}
         >
           <span>Services</span>
-          <BsCaretDownFill
+          <IoIosArrowDown
             className={`dropdown-icon ${isMobileServicesOpen ? "open" : ""}`}
           />
         </div>
-
         <div className={`mobile-submenu ${isMobileServicesOpen ? "open" : ""}`}>
           <Link to="/services/sap" onClick={() => setIsMenuOpen(false)}>
             SAP Solutions
@@ -255,11 +213,9 @@ const Navbar = () => {
             Non-IT Services
           </Link>
         </div>
-
         <Link
           to="/careers"
           onClick={() => setIsMenuOpen(false)}
-          style={{ animationDelay: "0.4s" }}
           className="mobile-menu-link"
         >
           Careers
@@ -267,7 +223,6 @@ const Navbar = () => {
         <Link
           to="/contact"
           onClick={() => setIsMenuOpen(false)}
-          style={{ animationDelay: "0.4s" }}
           className="mobile-menu-link"
         >
           Contact

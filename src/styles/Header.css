@@ -1,0 +1,93 @@
+.header {
+  background-color: #36308a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 54px;
+  font-size: 14px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header-left span {
+  margin-right: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-left span svg {
+  height: 18px;
+  width: 18px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.header-left a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-right: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-left a:hover {
+  color: #00bcd4;
+}
+
+.header-left a:hover svg {
+  color: #00bcd4;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.social-link {
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+  color: #3ed4ef;
+  transform: scale(1.1);
+}
+
+.social-icon {
+  height: 18px;
+  width: 18px;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 8px 24px;
+    font-size: 13px;
+  }
+
+  .header-left {
+    gap: 1.2rem;
+  }
+
+  .header-right {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+}
