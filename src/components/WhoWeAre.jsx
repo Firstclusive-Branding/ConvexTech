@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../styles/WhoWeAre.css";
 import whoWeAreImage from "../assets/who we are assets/who-we-are-img.png";
-import whoWeAreBg from "../assets/Who we are assets/who-we-are-bg.png";
+import whoWeAreBg from "../assets/who we are assets/who-we-are-bg.png";
 import bgPattern from "../assets/circle-dot-bg.png";
 
 const WhoWeAre = () => {
