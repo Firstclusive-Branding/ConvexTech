@@ -1,61 +1,73 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FaStar } from "react-icons/fa";
+import { BiSolidQuoteAltRight } from "react-icons/bi";
+
 import "../styles/ClientTestimonials.css";
+import testimonialBg from "../assets/Client Testimonials Assets/testimonial-bg.png";
 
 const testimonials = [
   {
     name: "Robb Norris",
-    role: "Director of Recruitment, D4M International",
-    feedback:
-      "The SAP Platform, the team had implemented was able to give us a seamless experience, for us and which made most of the automation go-good. The team Convextech, has been the experienced team and we look forward for more such implementations.",
-    image: "https://randomuser.me/api/portraits/men/75.jpg",
+    position: "Director of Recruitment",
+    content:
+      "Paradigms. Monotectonically extend open-source via competitive methods of empowerment dri revolutionize stand- business",
   },
   {
-    name: "Emily Carter",
-    role: "Product Manager, NovaApps",
-    feedback:
-      "We collaborated with ConvexTech on a product transformation initiative, and the entire workflow was handled with precision. Their understanding of functional requirements, ability to translate them into scalable features, and their proactive support made the delivery process smooth and results-driven.",
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    name: "Robb Norris",
+    position: "Director of Recruitment",
+    content:
+      "Paradigms. Monotectonically extend open-source via competitive methods of empowerment dri revolutionize stand- business",
   },
   {
-    name: "Michael Turner",
-    role: "President, Carlile Group LLC",
-    feedback:
-      "We had a finest experience in terms of web application, where we had explained the entire workflow with Convextech, and the team had delivered exactly as to what we had looked forward for, and indeed it went beyond our expectation.",
-    image: "https://randomuser.me/api/portraits/men/85.jpg",
+    name: "Robb Norris",
+    position: "Director of Recruitment",
+    content:
+      "Paradigms. Monotectonically extend open-source via competitive methods of empowerment dri revolutionize stand- business",
   },
 ];
 
 const ClientTestimonials = () => {
   return (
-    <section className="testimonials-section">
-      <motion.h2
-        className="testimonials-heading"
-        initial={{ x: -40, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
+    <section
+      className="ct-section"
+      style={{ backgroundImage: `url(${testimonialBg})` }}
+    >
+      <motion.div
+        className="ct-header"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
       >
-        What Our Clients Say
-      </motion.h2>
+        <div className="ct-label">
+          <span className="ct-label-tag"></span>
+          Client Testimonials
+        </div>
+        <h2>
+          See What <span className="ct-highlight">Our Clients</span> Are Saying
+        </h2>
+      </motion.div>
 
-      <div className="testimonials-grid">
-        {testimonials.map((item, index) => (
+      <div className="ct-cards-wrapper">
+        {testimonials.map((testimonial, index) => (
           <motion.div
-            className="testimonial-card"
             key={index}
-            initial={{ y: 40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            className="ct-card"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: index * 0.2 }}
           >
-            <img
-              src={item.image}
-              alt={item.name}
-              className="testimonial-avatar"
-            />
-            <p className="testimonial-feedback">“{item.feedback}”</p>
-            <div className="testimonial-info">
-              <h4 className="testimonial-name">{item.name}</h4>
-              <p className="testimonial-role">{item.role}</p>
+            <BiSolidQuoteAltRight className="ct-quote-icon" />
+            <p className="ct-content">{testimonial.content}</p>
+            <hr />
+            <div className="ct-stars">
+              {[...Array(5)].map((_, i) => (
+                <FaStar key={i} className="ct-star" />
+              ))}
+            </div>
+            <div className="ct-user-info">
+              <strong>{testimonial.name}</strong>,{" "}
+              <span>{testimonial.position}</span>
             </div>
           </motion.div>
         ))}

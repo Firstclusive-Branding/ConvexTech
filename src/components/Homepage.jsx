@@ -5,6 +5,7 @@ import Services from "./Services";
 import ClientTestimonials from "./ClientTestimonials";
 import StatsCounter from "./StatsCounter";
 import ServicesCarousel from "./ServicesCarousel";
+import "../styles/Homepage.css";
 
 function Homepage() {
   useEffect(() => {
@@ -12,7 +13,7 @@ function Homepage() {
   }, []);
 
   return (
-    <div>
+    <div className="homepage-container">
       <HeroSection />
       <Services />
       <WhoWeAre />

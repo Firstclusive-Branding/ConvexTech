@@ -9,9 +9,10 @@
 .sc-container {
   width: 100%;
   max-width: 1400px;
-  border-radius: 50px 0 0 0;
   overflow: hidden;
   display: flex;
+  justify-content: flex-end;
+  border-radius: 20px 0 0 0;
 }
 
 .sc-content {
@@ -20,14 +21,13 @@
   background-image: url("../assets/Stats Counter Assets/stats-counter-image.png");
   background-size: cover;
   background-position: center;
-  flex: 1;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
   padding: 40px;
   gap: 20px;
   position: relative;
   z-index: 1;
+  border-radius: 20px 0 0 0;
 }
 
 .sc-content::before {
@@ -37,24 +37,20 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #166e7eef;
+  background-color: #2facc2d7;
   z-index: -1;
+  border-radius: 20px 0 0 0;
 }
 
 .sc-stat-box {
   flex: 1;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 20px;
   box-sizing: border-box;
-}
-
-.sc-stat-box > div {
-  flex: 1 1 180px;
-  background-color: transparent;
-  text-align: center;
 }
 
 .sc-stat-box h2 {
@@ -68,7 +64,7 @@
 .sc-stat-box p {
   font-size: 1rem;
   margin: 0;
-  color: #d9f3ff;
+  color: #fff;
 }
 
 .sc-image {
@@ -80,27 +76,22 @@
 
 @media (max-width: 1024px) {
   .sc-container {
-    flex-direction: column;
+    max-width: 90%;
+    height: auto;
   }
 
   .sc-content {
-    flex-direction: column;
     padding: 30px 20px;
-  }
-
-  .sc-stat-box {
-    flex-direction: column;
-    gap: 20px;
+    height: auto;
   }
 
   .sc-image {
-    max-width: 100%;
-    width: 100%;
-    margin-top: 20px;
+    height: 100% !important;
+    max-width: 160px;
+    max-height: 300px;
+    object-fit: cover;
   }
-}
 
-@media (max-width: 768px) {
   .sc-stat-box h2 {
     font-size: 2.2rem;
   }
@@ -110,17 +101,47 @@
   }
 }
 
-@media (max-width: 480px) {
-  .sc-stat-box {
-    gap: 20px;
-  }
-
-  .sc-stat-box > div {
-    flex: 1 1 100%;
+@media (max-width: 768px) {
+  .sc-container {
+    justify-content: flex-end;
   }
 
   .sc-image {
+    display: none;
+  }
+
+  .sc-stat-box h2 {
+    font-size: 2rem;
+  }
+
+  .sc-stat-box p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sc-container {
     max-width: 100%;
-    margin-top: 30px;
+  }
+
+  .sc-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    gap: 0;
+  }
+
+  .sc-content::before {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .sc-stat-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .sc-stat-box p {
+    font-size: 0.85rem;
   }
 }
