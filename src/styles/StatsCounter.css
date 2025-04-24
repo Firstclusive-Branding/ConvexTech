@@ -1,101 +1,126 @@
-.stats-section {
-  padding: 40px 20px;
-  background: linear-gradient(to bottom right, #ffffff, #e6f7fa);
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 
-.stats-heading {
-  font-size: 2.5rem;
-  margin-bottom: 60px;
-  font-weight: bold;
-  color: #36308a;
-}
-
-.stats-container {
+.sc-section {
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  justify-content: flex-end;
+  background-color: #f4f4f4;
 }
 
-.stat-card {
-  background: linear-gradient(135deg, #3ed4ef 10%, #36308a 90%);
-  color: #ffffff;
-  border-radius: 20px;
-  padding: 30px;
-  width: 260px;
-  text-align: center;
-  box-shadow: -10px 10px 10px #36308a40;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  position: relative;
+.sc-container {
+  width: 100%;
+  max-width: 1400px;
+  border-radius: 50px 0 0 0;
   overflow: hidden;
+  display: flex;
 }
 
-.stat-card:hover {
-  transform: translateY(-10px) scale(1.05) !important;
-  box-shadow: 0 25px 60px #36308a59;
-}
-
-.stat-icon {
-  font-size: 3rem;
-  margin-bottom: 10px;
+.sc-content {
+  display: flex;
+  background-color: #36308a;
+  background-image: url("../assets/Stats Counter Assets/stats-counter-image.png");
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 20px;
   position: relative;
-  transition: transform 0.4s ease;
+  z-index: 1;
 }
 
-.stat-card:hover .stat-icon {
-  transform: scale(1.4);
+.sc-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #166e7eef;
+  z-index: -1;
 }
 
-.stat-value {
-  font-size: 2.4rem;
-  font-weight: 900;
-  margin: 10px 0;
-  position: relative;
+.sc-stat-box {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.stat-label {
-  font-size: 1.1rem;
+.sc-stat-box > div {
+  flex: 1 1 180px;
+  background-color: transparent;
+  text-align: center;
+}
+
+.sc-stat-box h2 {
+  font-family: "Unbounded", sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 8px;
+  color: #ffffff;
   font-weight: 500;
-  position: relative;
 }
 
-@media screen and (max-width: 1024px) {
-  .stats-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
+.sc-stat-box p {
+  font-size: 1rem;
+  margin: 0;
+  color: #d9f3ff;
+}
+
+.sc-image {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0 0 0 0;
+}
+
+@media (max-width: 1024px) {
+  .sc-container {
+    flex-direction: column;
   }
 
-  .stat-card {
-    width: 350px;
+  .sc-content {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .sc-stat-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sc-image {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 20px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .stat-card {
-    width: 90%;
-    max-width: 360px;
+@media (max-width: 768px) {
+  .sc-stat-box h2 {
+    font-size: 2.2rem;
   }
 
-  .stats-heading {
-    font-size: 2rem;
+  .sc-stat-box p {
+    font-size: 0.95rem;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .stats-container {
-    grid-template-columns: 1fr;
+@media (max-width: 480px) {
+  .sc-stat-box {
+    gap: 20px;
   }
 
-  .stat-value {
-    font-size: 2rem;
+  .sc-stat-box > div {
+    flex: 1 1 100%;
   }
 
-  .stat-label {
-    font-size: 1rem;
-  }
-
-  .stat-icon {
-    font-size: 2.4rem;
+  .sc-image {
+    max-width: 100%;
+    margin-top: 30px;
   }
 }

@@ -4,6 +4,7 @@ import WhoWeAre from "./WhoWeAre";
 import Services from "./Services";
 import ClientTestimonials from "./ClientTestimonials";
 import StatsCounter from "./StatsCounter";
+import ServicesCarousel from "./ServicesCarousel";
 
 function Homepage() {
   useEffect(() => {
@@ -15,8 +16,9 @@ function Homepage() {
       <HeroSection />
       <Services />
       <WhoWeAre />
-      <ClientTestimonials />
+      <ServicesCarousel />
       <StatsCounter />
+      <ClientTestimonials />
     </div>
   );
 }

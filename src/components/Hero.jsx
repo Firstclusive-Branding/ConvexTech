@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../styles/Hero.css";
 import heroimage from "../assets/Hero Assets/hero-image.png";
+import heroimageMobile from "../assets/Hero Assets/hero-image.jpg";
 import heroslash from "../assets/Hero Assets/hero-slash.png";
 import springcircle from "../assets/Hero Assets/spring-circle.png";
 
@@ -38,19 +39,22 @@ const Hero = () => {
       </motion.div>
 
       <div className="hero-right">
-        <div className="image-container">
-          <img
-            src={heroimage}
-            alt="Smart Tech Presentation"
-            className="hero-image"
-          />
-          <motion.div
-            className="image-overlay"
-            initial={{ x: "0%" }}
-            animate={{ x: "100%" }}
-            transition={{ duration: 1, delay: 1.2 }}
-          />
-        </div>
+        <img
+          src={heroimage}
+          alt="Smart Tech Presentation"
+          className="hero-image"
+        />
+        <img
+          src={heroimageMobile}
+          alt="Smart Tech Presentation"
+          className="hero-image-mobile"
+        />
+        <motion.div
+          className="image-overlay"
+          initial={{ x: "0%" }}
+          animate={{ x: "100%" }}
+          transition={{ duration: 1, delay: 1.2 }}
+        />
       </div>
     </motion.section>
   );
