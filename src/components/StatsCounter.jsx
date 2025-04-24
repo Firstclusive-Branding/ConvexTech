@@ -53,10 +53,14 @@ const StatsCounter = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               key={index}
             >
-              <h2 className="stat-value">
-                {Math.floor(counts[index])}
+              <h2
+                className="stat-value"
+                style={{ opacity: counts[index] > 0 ? 1 : 0 }}
+              >
+                {Math.floor(counts[index]).toLocaleString()}
                 {stat.suffix}
               </h2>
+
               <p className="stat-label">{stat.label}</p>
             </motion.div>
           ))}
