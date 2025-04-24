@@ -6,6 +6,7 @@ import ClientTestimonials from "./ClientTestimonials";
 import StatsCounter from "./StatsCounter";
 import ServicesCarousel from "./ServicesCarousel";
 import "../styles/Homepage.css";
+import Presence from "./Presence";
 
 function Homepage() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function Homepage() {
       <ServicesCarousel />
       <StatsCounter />
       <ClientTestimonials />
+      <Presence />
     </div>
   );
 }

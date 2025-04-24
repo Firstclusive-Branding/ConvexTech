@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import "../styles/Footer.css";
 import {
   FiPhone,
   FiMail,
   FiMapPin,
   FiLinkedin,
-  FiHeart,
   FiCheckCircle,
   FiCpu,
   FiSettings,
@@ -18,13 +18,43 @@ import {
 import { FaHeart } from "react-icons/fa";
 
 import logo2 from "../assets/ConvexTech Logo 2.png";
+import footerBg from "../assets/Footer Assets/footer-bg.png";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer
+      className="footer"
+      style={{
+        backgroundImage: `url(${footerBg})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="footer-wrapper">
+        <motion.div
+          className="newsletter-container"
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="newsletter-box">
+            <h4>Subscribe to Our Newsletter</h4>
+            <form className="newsletter-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </motion.div>
+
         <div className="footer-top">
-          <div className="footer-brand">
+          {/* Services Section */}
+          <motion.div
+            className="footer-brand"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
             <Link to="/">
               <img src={logo2} alt="ConvexTech Logo" className="footer-logo" />
             </Link>
@@ -59,9 +89,16 @@ const Footer = () => {
                 <Link to="/services/non-it">Non-IT Services</Link>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="footer-columns">
+          {/* Contact Details Section */}
+          <motion.div
+            className="footer-columns"
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* United States Office */}
             <div className="footer-office">
               <h3>United States</h3>
               <h5>Texas</h5>
@@ -81,6 +118,7 @@ const Footer = () => {
               </div>
             </div>
 
+            {/* Hyderabad Office */}
             <div className="footer-office">
               <h3>India</h3>
               <h5>Hyderabad</h5>
@@ -103,6 +141,7 @@ const Footer = () => {
               </div>
             </div>
 
+            {/* Noida Office */}
             <div className="footer-office">
               <h3>India</h3>
               <h5>Noida</h5>
@@ -122,9 +161,10 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
+        {/* Footer Bottom */}
         <div className="footer-bottom">
           <div className="footer-social">
             <p>Follow us on</p>
@@ -144,6 +184,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer Attribution */}
       <div className="footer-attribution">
         <p>Powered by ConvexTech © 2011 - 2025.</p>
         <p>
