@@ -16,7 +16,7 @@
   align-items: flex-start;
   justify-content: center;
   height: 100%;
-  width: 50%;
+  width: 70%;
   position: relative;
   z-index: 2;
   background-color: #36308a;
@@ -33,7 +33,7 @@
 .hero-left h1 {
   font-size: 5rem;
   width: 80%;
-  font-weight: 500;
+  /* font-weight: 500; */
   line-height: 1.2;
   margin: 1rem 0;
 }
