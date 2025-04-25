@@ -2,34 +2,54 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../styles/Presence.css";
 import presencebg from "../assets/Presence Assets/presence-bg.png";
+import presenceimg1 from "../assets/Presence Assets/presence-img1.png";
+import presenceimg2 from "../assets/Presence Assets/presence-img2.png";
 
 const Presence = () => {
   return (
     <section className="presence-section">
       <img src={presencebg} alt="presence bg" className="presence-bg" />
+
       <div className="presence-images-wrapper">
-        <div className="presence-img-container presence-img1-bg">
-          <img
-            src="https://picsum.photos/id/1011/300/450"
-            alt="team"
-            className="presence-img1"
-          />
-        </div>
-        <div className="presence-img-container presence-img2-bg">
-          <img
-            src="https://picsum.photos/id/1025/300/450"
-            alt="businessman"
-            className="presence-img2"
-          />
-        </div>
+        <motion.div
+          className="presence-img-container presence-img1-container"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          style={{ transformOrigin: "left" }}
+        >
+          <motion.span
+            className="presend-bg-img1"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            style={{ transformOrigin: "right" }}
+          ></motion.span>
+          <img src={presenceimg1} alt="team" className="presence-img1" />
+        </motion.div>
+        <motion.div
+          className="presence-img-container presence-img2-container"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          style={{ transformOrigin: "right" }}
+        >
+          <motion.span
+            className="presend-bg-img2"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            style={{ transformOrigin: "left" }}
+          ></motion.span>
+          <img src={presenceimg2} alt="businessman" className="presence-img2" />
+        </motion.div>
       </div>
 
       <motion.div
         className="presence-content"
-        initial={{ opacity: 0, y: 80 }}
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: true, amount: 0.3 }}
       >
         <h2 className="presence-heading">
           We Elevate & Enhance Your <span>presence</span>

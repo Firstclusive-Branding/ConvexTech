@@ -13,8 +13,8 @@ const WhoWeAre = () => {
     >
       <motion.div
         className="who-we-are-left"
-        initial={{ x: -100, scale: 0 }}
-        whileInView={{ x: 0, scale: 1 }}
+        initial={{ x: -100, scale: 0.5, opacity: 0 }}
+        whileInView={{ x: 0, scale: 1, opacity: 1 }}
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
       >
