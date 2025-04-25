@@ -4,6 +4,7 @@ import "../styles/WhoWeAre.css";
 import whoWeAreImage from "../assets/who we are assets/who-we-are-img.png";
 import whoWeAreBg from "../assets/who we are assets/who-we-are-bg.png";
 import bgPattern from "../assets/circle-dot-bg.png";
+import { Link } from "react-router-dom";
 
 const WhoWeAre = () => {
   return (
@@ -48,7 +49,9 @@ const WhoWeAre = () => {
           turning into a
           <span className="who-we-are-highlight"> butterfly”</span>
         </h2>
-        <button className="who-we-are-read-more-btn">Read more</button>
+        <Link to="/about-us" className="who-we-are-read-more-btn">
+          Read more
+        </Link>
       </motion.div>
     </section>
   );

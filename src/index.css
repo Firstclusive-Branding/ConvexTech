@@ -11,5 +11,6 @@ body {
   background-position: center;
   overflow-x: hidden;
   position: relative;
+  background-color: #f4f4f4;
   font-family: "Plus Jakarta Sans", Helvetica, Arial, Lucida, sans-serif;
 }
