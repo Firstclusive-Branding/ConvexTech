@@ -17,7 +17,7 @@ import {
 } from "react-icons/fi";
 import { FaHeart } from "react-icons/fa";
 
-import logo2 from "../assets/ConvexTech Logo 2.png";
+import logo2 from "../assets/ConvexTech Logo 1.png";
 import footerBg from "../assets/Footer Assets/footer-bg.png";
 
 const Footer = () => {
