@@ -53,9 +53,9 @@ const ClientTestimonials = () => {
           <motion.div
             key={index}
             className="ct-card"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
+            initial={{ y: 100 }}
+            whileInView={{ y: 0 }}
+            transition={{ duration: 0.5 }}
           >
             <BiSolidQuoteAltRight className="ct-quote-icon" />
             <p className="ct-content">{testimonial.content}</p>

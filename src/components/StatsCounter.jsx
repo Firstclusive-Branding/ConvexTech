@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import Odometer from "react-odometerjs";
+import "odometer/themes/odometer-theme-default.css";
 import "../styles/StatsCounter.css";
 import statsBgImage from "../assets/Stats Counter Assets/stats-counter-image.png";
 
 const StatsCounter = () => {
   const statsData = [
-    { target: 890, label: "Projects Completed", suffix: "+" },
+    { target: 390, label: "Projects Completed", suffix: "+" },
     { target: 12, label: "Our Happy Clients", suffix: "M" },
     { target: 67, label: "All Time Active Users", suffix: "k+" },
     { target: 67, label: "Upcoming Projects", suffix: "k" },
@@ -16,24 +18,12 @@ const StatsCounter = () => {
   const isInView = useInView(statsRef, { once: true });
 
   useEffect(() => {
-    if (!isInView) return;
-
-    const duration = 2500;
-    const frameRate = 10;
-    const totalSteps = duration / frameRate;
-    const increments = statsData.map((stat) => stat.target / totalSteps);
-
-    const interval = setInterval(() => {
-      setCounts((prev) =>
-        prev.map((count, i) => {
-          const next = count + increments[i];
-          return next >= statsData[i].target ? statsData[i].target : next;
-        })
-      );
-    }, frameRate);
-
-    setTimeout(() => clearInterval(interval), duration + 100);
-    return () => clearInterval(interval);
+    if (isInView) {
+      const timeout = setTimeout(() => {
+        setCounts(statsData.map((stat) => stat.target));
+      }, 500);
+      return () => clearTimeout(timeout);
+    }
   }, [isInView]);
 
   return (
@@ -53,14 +43,14 @@ const StatsCounter = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               key={index}
             >
-              <h2
-                className="stat-value"
-                style={{ opacity: counts[index] > 0 ? 1 : 0 }}
-              >
-                {Math.floor(counts[index]).toLocaleString()}
+              <h2 className="stat-value">
+                <Odometer
+                  value={counts[index]}
+                  format="(,ddd)"
+                  duration={2000}
+                />
                 {stat.suffix}
               </h2>
-
               <p className="stat-label">{stat.label}</p>
             </motion.div>
           ))}

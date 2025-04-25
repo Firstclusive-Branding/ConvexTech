@@ -12,10 +12,10 @@
 
 .ct-label {
   color: #3ed4ef;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 1px;
   margin-bottom: 10px;
-  background-color: hsla(189, 85%, 59%, 0.2);
+  background-color: hsla(189, 85%, 59%, 0.15);
   display: inline;
   padding: 10px 20px;
   border-radius: 40px;

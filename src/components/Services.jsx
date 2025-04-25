@@ -62,7 +62,11 @@ const Services = () => {
               Success profesions development our solutions sapien maximu
               creative services.
             </p>
-            <img src={service.img} alt={service.title} />
+            <img
+              src={service.img}
+              alt={service.title}
+              className="service-card-img"
+            />
           </motion.div>
         ))}
       </div>

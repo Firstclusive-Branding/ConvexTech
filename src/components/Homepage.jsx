@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import HeroSection from "./Hero";
-import WhoWeAre from "./WhoWeAre";
 import Services from "./Services";
+import WhoWeAre from "./WhoWeAre";
 import ClientTestimonials from "./ClientTestimonials";
 import StatsCounter from "./StatsCounter";
 import ServicesCarousel from "./ServicesCarousel";

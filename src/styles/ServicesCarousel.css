@@ -103,10 +103,10 @@
 
 .services-carousel-heading {
   color: #3ed4ef;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 1px;
   margin-bottom: 10px;
-  background-color: hsla(189, 85%, 59%, 0.2);
+  background-color: hsla(189, 85%, 59%, 0.15);
   display: inline;
   padding: 10px 20px;
   border-radius: 40px;
@@ -138,43 +138,69 @@
 
 .services-carousel-swiper {
   max-width: 80%;
-  height: 100%;
+  padding: 0 10px;
+}
+
+.services-carousel-swiper .swiper-wrapper {
+  padding-top: 10px;
   padding-bottom: 50px;
 }
+
+.swiper-slide {
+  height: auto !important;
+}
+
 .services-carousel-card {
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
-  padding: 20px;
   overflow: hidden;
   transition: all 0.3s ease;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .services-carousel-card:hover {
-  transform: scale(1.05) !important;
+  transform: scale(1.02) !important;
 }
 
 .services-carousel-img {
   width: 100%;
-  border-radius: 12px;
-  margin-bottom: 20px;
+}
+
+.services-carousel-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  user-select: text !important;
+  pointer-events: auto;
 }
 
 .services-carousel-icon {
   background-color: #3ed4ef;
-  color: #ffffff;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 12px;
   border-radius: 50%;
-  font-size: 26px;
+  width: 60px;
+  height: 60px;
+  margin-top: -15%;
+  transform: translateY(-30%);
+}
+
+.services-carousel-icon img {
+  width: 100%;
+  filter: invert(1);
 }
 
 .services-carousel-name {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0;
   margin-bottom: 10px;
 }
 
@@ -195,7 +221,8 @@
   cursor: grab;
 }
 .services-carousel-dots span {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
   margin: -4px 6px;
   color: #666;
   user-select: none;
@@ -217,28 +244,6 @@
   background-color: #3ed4ef;
   color: #fff;
 }
-
-/* Pagination styling */
-/* .swiper-pagination {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.swiper-pagination-bullet {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 2px solid black;
-  background-color: black;
-  opacity: 0.5;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #3ed4ef;
-  border-color: #3ed4ef;
-  opacity: 1;
-} */
 
 .swiper-pagination {
   display: flex;
