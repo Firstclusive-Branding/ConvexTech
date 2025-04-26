@@ -46,7 +46,12 @@ const Header = () => {
         >
           <FaLinkedinIn className="social-icon" />
         </a>
-        <a href="#" className="social-link">
+        <a
+          href="https://www.instagram.com/convextech19/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link"
+        >
           <FaInstagram className="social-icon" />
         </a>
       </div>

@@ -112,15 +112,17 @@
   color: #ffffff;
   padding: 12px 24px;
   border-radius: 25px;
-  border: none;
+  border: 1px solid #3ed4ef;
   cursor: pointer;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   font-size: 1rem;
 }
 
 .presence-button:hover {
-  background-color: #31b9cf;
+  background-color: #2bb8d4;
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 #fff, 0 0 0 #fff, inset 0px -3px 5px 0 #fff, 0 0 0 #fff;
 }
 
 @media (max-width: 1024px) {

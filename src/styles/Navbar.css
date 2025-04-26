@@ -230,7 +230,9 @@
   .nav-get-in-touch {
     display: none;
   }
-
+  .navbar-logo-img-desktop {
+    height: 50px;
+  }
   .mobile-only {
     display: block !important;
   }
@@ -348,7 +350,7 @@
   .mobile-submenu.open {
     opacity: 1;
     max-height: 500px;
-    margin-top: -1.5rem;
+    margin-top: -1rem;
   }
 
   .mobile-submenu a {
@@ -364,11 +366,11 @@
   }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .navbar-logo-img-desktop {
     height: 50px;
   }
-}
+} */
 
 @media (max-width: 480px) {
   .navbar {

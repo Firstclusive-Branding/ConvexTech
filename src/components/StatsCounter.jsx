@@ -13,7 +13,7 @@ const StatsCounter = () => {
     { target: 67, label: "Upcoming Projects", suffix: "k" },
   ];
 
-  const [counts, setCounts] = useState(statsData.map(() => 0));
+  const [counts, setCounts] = useState([0, 0, 0, 0]);
   const statsRef = useRef(null);
   const isInView = useInView(statsRef, { once: true });
 
@@ -40,13 +40,13 @@ const StatsCounter = () => {
               className="sc-stat-box"
               whileInView={{ scale: 1, opacity: 1 }}
               initial={{ scale: 0.7, opacity: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
               key={index}
             >
               <h2 className="stat-value">
                 <Odometer
                   value={counts[index]}
-                  format="(,ddd)"
+                  format="d,ddd"
                   duration={2000}
                 />
                 {stat.suffix}

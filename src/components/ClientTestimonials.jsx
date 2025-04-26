@@ -37,7 +37,7 @@ const ClientTestimonials = () => {
         className="ct-header"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.8 }}
       >
         <div className="ct-label">
           <span className="ct-label-tag"></span>
@@ -53,9 +53,9 @@ const ClientTestimonials = () => {
           <motion.div
             key={index}
             className="ct-card"
-            initial={{ y: 100 }}
+            initial={{ y: 150 }}
             whileInView={{ y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <BiSolidQuoteAltRight className="ct-quote-icon" />
             <p className="ct-content">{testimonial.content}</p>
