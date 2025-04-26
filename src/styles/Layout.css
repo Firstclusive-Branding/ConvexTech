@@ -9,19 +9,6 @@
   overflow: hidden;
 }
 
-/* .circle-reveal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 250vw;
-  height: 250vw;
-  background: conic-gradient(#36308a var(--percentage), transparent 0deg);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 50;
-  pointer-events: none;
-} */
-
 .circle-container {
   width: 250vw;
   height: 250vh;
@@ -38,9 +25,9 @@
   height: 100%;
 }
 
-circle {
+.semi-circle-layover {
   fill: none;
-  stroke-width: 200%;
+  stroke-width: 400%;
   stroke-dasharray: 2827;
   transform-origin: 50% 50%;
 }

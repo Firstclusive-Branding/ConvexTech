@@ -62,9 +62,16 @@ const Layout = () => {
 const CircularSweep = () => {
   return (
     <div className="circle-container">
-      <svg viewBox="0 0 1000 1000" className="circle-svg">
+      <motion.svg
+        viewBox="0 0 1000 1000"
+        className="circle-svg"
+        initial={{ rotate: 0 }}
+        animate={{ rotate: 0 }}
+        exit={{ rotate: 180 }}
+        transition={{ duration: 1, ease: [0, 0.1, 0.8, 0.2] }}
+      >
         <motion.circle
-          className="semi-a"
+          className="semi-circle-layover semi-a"
           cx="500"
           cy="500"
           r="450"
@@ -74,7 +81,7 @@ const CircularSweep = () => {
           transition={{ duration: 1, ease: [0, 0.1, 0.8, 0.2] }}
         />
         <motion.circle
-          className="semi-b"
+          className="semi-circle-layover semi-b"
           cx="500"
           cy="500"
           r="450"
@@ -83,7 +90,7 @@ const CircularSweep = () => {
           exit={{ strokeDashoffset: 2827 }}
           transition={{ duration: 1, ease: [0, 0.1, 0.8, 0.2] }}
         />
-      </svg>
+      </motion.svg>
     </div>
   );
 };
