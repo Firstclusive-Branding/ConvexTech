@@ -45,6 +45,7 @@ const Layout = () => {
         <AnimatePresence mode="wait">
           {pageChanging && <CircularSweep />}
         </AnimatePresence>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

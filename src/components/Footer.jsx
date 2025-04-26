@@ -37,6 +37,7 @@ const Footer = () => {
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
+          viewport={{ amount: 0.4 }}
         >
           <div className="newsletter-box">
             <h4>Subscribe to Our Newsletter</h4>
@@ -54,6 +55,7 @@ const Footer = () => {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
+            viewport={{ amount: 0.4 }}
           >
             <Link to="/">
               <img src={logo2} alt="ConvexTech Logo" className="footer-logo" />
@@ -97,6 +99,7 @@ const Footer = () => {
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
+            viewport={{ amount: 0.4 }}
           >
             {/* United States Office */}
             <div className="footer-office">

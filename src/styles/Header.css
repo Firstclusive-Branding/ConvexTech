@@ -6,6 +6,8 @@
   align-items: center;
   padding: 8px 54px;
   font-size: 14px;
+  z-index: 1000;
+  position: relative;
 }
 
 .header-left {
