@@ -189,7 +189,7 @@
     flex-direction: column;
     align-items: flex-start;
     height: auto;
-    padding: 2rem;
+    padding: 1rem 2rem;
   }
 
   .spring-circle {
@@ -198,21 +198,24 @@
     left: 25% !important;
   }
   .hero-left {
-    padding: 2rem;
-    width: 100%;
+    padding: 1rem;
+    width: 90%;
+    margin: auto;
   }
 
   .hero-left h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     width: 100%;
+    margin: 0;
   }
 
   .tagline {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .subtext {
     font-size: 0.95rem;
+    margin: 15px 0;
   }
 
   .hero-right {
@@ -238,16 +241,22 @@
     transform: translateX(-50%);
     max-width: 300px;
   }
+
+  .hero-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .hero-section {
-    padding: 2rem 1rem;
+    padding: 1rem;
     height: auto;
   }
 
   .hero-left h1 {
-    font-size: 2.2rem;
+    font-size: 1.9rem;
+    text-align: left;
   }
 
   .tagline {
@@ -259,13 +268,8 @@
   }
 
   .hero-button {
-    padding: 0.7rem 1.5rem;
+    padding: 8px 15px;
     font-size: 0.9rem;
-  }
-
-  .spring-circle {
-    max-width: 250px;
-    top: 20px;
   }
 
   .hero-left {
