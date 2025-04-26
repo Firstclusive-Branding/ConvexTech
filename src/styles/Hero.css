@@ -188,7 +188,7 @@
   .hero-section {
     flex-direction: column;
     align-items: flex-start;
-    height: auto;
+    height: 90vh;
     padding: 1rem 2rem;
   }
 
@@ -251,7 +251,7 @@
 @media screen and (max-width: 480px) {
   .hero-section {
     padding: 1rem;
-    height: auto;
+    height: 80vh;
   }
 
   .hero-left h1 {
@@ -265,6 +265,21 @@
 
   .subtext {
     font-size: 0.9rem;
+  }
+
+  .spring-circle {
+    left: 25% !important;
+    transform: translateX(-25%) !important;
+    max-width: 300px;
+  }
+
+  @keyframes circle-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   .hero-button {

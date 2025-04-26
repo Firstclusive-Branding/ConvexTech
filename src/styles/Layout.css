@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-.circle-reveal {
+/* .circle-reveal {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -20,4 +20,37 @@
   transform: translate(-50%, -50%);
   z-index: 50;
   pointer-events: none;
+} */
+
+.circle-container {
+  width: 250vw;
+  height: 250vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 50;
+}
+
+.circle-svg {
+  width: 100%;
+  height: 100%;
+}
+
+circle {
+  fill: none;
+  stroke-width: 200%;
+  stroke-dasharray: 2827;
+  transform-origin: 50% 50%;
+}
+
+.semi-a {
+  stroke: #36308a;
+  transform: rotate(270deg);
+}
+
+.semi-b {
+  stroke: #36308a;
+  transform: rotate(90deg);
 }

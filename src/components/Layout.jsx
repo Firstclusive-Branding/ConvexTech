@@ -21,7 +21,7 @@ const Layout = () => {
     setPageChanging(true);
     setShowOutlet(false);
 
-    const animationDuration = 800;
+    const animationDuration = 1000;
 
     const timeout1 = setTimeout(() => {
       setShowOutlet(true);
@@ -49,7 +49,7 @@ const Layout = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut" }}
         >
           {showOutlet && <Outlet />}
         </motion.div>
@@ -61,13 +61,30 @@ const Layout = () => {
 
 const CircularSweep = () => {
   return (
-    <motion.div
-      className="circle-reveal"
-      initial={{ "--percentage": "0deg" }}
-      animate={{ "--percentage": "360deg" }}
-      exit={{ "--percentage": "0deg" }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
-    />
+    <div className="circle-container">
+      <svg viewBox="0 0 1000 1000" className="circle-svg">
+        <motion.circle
+          className="semi-a"
+          cx="500"
+          cy="500"
+          r="450"
+          initial={{ strokeDashoffset: 2827 }}
+          animate={{ strokeDashoffset: 1413.5 }}
+          exit={{ strokeDashoffset: 2827 }}
+          transition={{ duration: 1, ease: [0, 0.1, 0.8, 0.2] }}
+        />
+        <motion.circle
+          className="semi-b"
+          cx="500"
+          cy="500"
+          r="450"
+          initial={{ strokeDashoffset: 2827 }}
+          animate={{ strokeDashoffset: 1413.5 }}
+          exit={{ strokeDashoffset: 2827 }}
+          transition={{ duration: 1, ease: [0, 0.1, 0.8, 0.2] }}
+        />
+      </svg>
+    </div>
   );
 };
 
