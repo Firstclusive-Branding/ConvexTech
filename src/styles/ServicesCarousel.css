@@ -145,8 +145,7 @@
   padding-top: 10px;
   padding-bottom: 50px;
 }
-
-.swiper-slide {
+.services-carousel-swiper .swiper-slide {
   height: auto !important;
 }
 
@@ -244,15 +243,13 @@
   background-color: #3ed4ef;
   color: #fff;
 }
-
-.swiper-pagination {
+.services-carousel-swiper .swiper-pagination {
   display: flex;
   justify-content: center;
   gap: 14px;
   margin-top: 30px;
 }
-
-.swiper-pagination-bullet {
+.services-carousel-swiper .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -262,12 +259,10 @@
   position: relative;
   transition: all 0.3s ease;
 }
-
-.swiper-pagination-bullet-active {
+.services-carousel-swiper .swiper-pagination-bullet-active {
   background-color: #3ed4ef;
 }
-
-.swiper-pagination-bullet-active::before {
+.services-carousel-swiper .swiper-pagination-bullet-active::before {
   content: "";
   position: absolute;
   top: -6px;
@@ -312,11 +307,10 @@
   .wavy-thread-container {
     display: none;
   }
-  .swiper-pagination {
+  .services-carousel-swiper .swiper-pagination {
     gap: 5px;
   }
-
-  .swiper-pagination-bullet {
+  .services-carousel-swiper .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
   }

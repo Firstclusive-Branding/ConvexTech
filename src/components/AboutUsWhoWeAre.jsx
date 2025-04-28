@@ -46,10 +46,10 @@ const AboutUsWhoWeAre = () => {
 
         <motion.div
           className="aboutus-whoweare-text"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <div className="aboutus-whoweare-label">
             <span></span>Who We Are

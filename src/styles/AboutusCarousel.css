@@ -7,6 +7,7 @@
 .aboutus-carousel-container {
   max-width: 1500px;
   margin: 0 auto;
+  margin-bottom: 4rem;
   background-color: #f4f4f4;
   background: linear-gradient(to bottom, #f4f4f4 40%, #36308a 40%);
   padding: 2rem;
@@ -62,7 +63,8 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease, transform 0.3s ease,
+    box-shadow 0.2s ease;
 }
 
 .aboutus-carousel-button-prev:hover,
@@ -70,6 +72,11 @@
   background-color: #36308a;
 }
 
+.aboutus-carousel-button-prev:active,
+.aboutus-carousel-button-next:active {
+  transform: scale(0.9);
+  box-shadow: 0 0 0 #fff, 0 0 0 #fff, inset 0px -3px 5px 0 #fff, 0 0 0 #fff;
+}
 .aboutus-carousel-button-prev svg,
 .aboutus-carousel-button-next svg {
   width: 30px;
@@ -89,25 +96,44 @@
 .aboutus-carousel-swiper {
   border-radius: 20px;
   margin-top: 2rem;
+  padding-bottom: 4rem;
+  position: relative;
 }
 
-/* .aboutus-carousel-card {
-  background-color: hsla(0, 0%, 100%, 0.5);
-  border-radius: 15px;
-  text-align: center;
-  transition: background-color 0.3s ease;
-  height: 100%;
-  position: relative;
-} */
+.aboutus-carousel-swiper .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.aboutus-carousel-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  opacity: 0.5;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.aboutus-carousel-swiper .swiper-pagination-bullet-active {
+  background-color: #3ed4ef;
+  transform: scale(1.5) !important;
+  opacity: 1;
+}
+
+.aboutus-carousel-swiper .swiper-slide {
+  height: auto !important;
+}
 
 .aboutus-carousel-card {
   display: flex;
   flex-direction: column;
+  height: 100%;
   background-color: hsla(0, 0%, 100%, 0.5);
   border-radius: 15px;
   text-align: center;
   transition: background-color 0.3s ease;
-  height: 100%;
   position: relative;
 }
 
@@ -167,7 +193,7 @@
   }
 
   .aboutus-carousel-swiper {
-    padding: 1rem 0;
+    padding-bottom: 3rem;
   }
 }
 
@@ -192,7 +218,13 @@
     margin: 0;
     margin-top: 1rem;
   }
-  .aboutus-carousel-swiper {
-    margin-top: 0;
+
+  .aboutus-carousel-swiper .swiper-pagination {
+    gap: 1px;
+  }
+
+  .aboutus-carousel-swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
   }
 }

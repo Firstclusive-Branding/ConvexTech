@@ -1,8 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "../styles/AboutusCarousel.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -78,7 +79,7 @@ const AboutusCarousel = () => {
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        viewport={{ amount: 0.4 }}
+        viewport={{ amount: 0.2 }}
       >
         <div className="aboutus-carousel-header">
           <div className="aboutus-carousel-label">
@@ -99,15 +100,21 @@ const AboutusCarousel = () => {
         </h2>
 
         <Swiper
-          modules={[Navigation, Autoplay]}
+          modules={[Navigation, Autoplay, Pagination]}
           navigation={{
             nextEl: ".aboutus-carousel-button-next",
             prevEl: ".aboutus-carousel-button-prev",
           }}
+          pagination={{
+            clickable: true,
+          }}
           spaceBetween={20}
           slidesPerView={5}
           loop={true}
-          autoplay={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             0: { slidesPerView: 1 },
             480: { slidesPerView: 2 },
