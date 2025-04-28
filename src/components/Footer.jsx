@@ -37,7 +37,7 @@ const Footer = () => {
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          viewport={{ amount: 0.4 }}
+          viewport={{ amount: 0.5 }}
         >
           <div className="newsletter-box">
             <h4>Subscribe to Our Newsletter</h4>

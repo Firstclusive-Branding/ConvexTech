@@ -19,6 +19,7 @@
   animation: circlespin 20s linear infinite;
   z-index: -1;
   opacity: 0.1;
+  pointer-events: none;
 }
 
 @keyframes circlespin {

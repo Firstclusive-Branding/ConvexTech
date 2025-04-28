@@ -1,0 +1,233 @@
+.aboutus-whoweare {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.aboutus-whoweare-bg {
+  position: absolute;
+  top: 0%;
+  right: -14%;
+  height: 500px;
+  animation: circlespin 20s linear infinite;
+  z-index: -1;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+@keyframes circlespin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.aboutus-whoweare-content {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.aboutus-whoweare-images {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  gap: 3rem;
+}
+
+.aboutus-whoweare-img-wrapper {
+  position: relative;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+.aboutus-whoweare-img-wrapper img {
+  transition: transform 0.3s ease;
+}
+
+.aboutus-whoweare-img1-bg,
+.aboutus-whoweare-img2-bg {
+  height: 300px;
+  width: 280px;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  z-index: -1;
+}
+
+.aboutus-whoweare-img1-bg {
+  border-radius: 0 0 0 70px;
+  top: 30%;
+  background-color: #3ed4ef;
+}
+
+.aboutus-whoweare-img2-bg {
+  background-color: #36308a;
+  border-radius: 0 70px 0 0;
+  top: -20%;
+}
+.aboutus-whoweare-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.aboutus-whoweare-img1 {
+  margin-bottom: 50%;
+}
+
+.aboutus-whoweare-img1:hover {
+  transform: translateY(10px) !important;
+}
+.aboutus-whoweare-img2:hover {
+  transform: translateY(-10px) !important;
+}
+
+.aboutus-whoweare-text {
+  flex: 1 1 100%;
+  padding-left: 2rem;
+}
+
+.aboutus-whoweare-label {
+  color: #3ed4ef;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  background-color: hsla(189, 85%, 59%, 0.15);
+  display: inline;
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: 1px solid #3ed4ef;
+  position: relative;
+}
+
+.aboutus-whoweare-label span {
+  height: 5px;
+  width: 25px;
+  border-radius: 10px;
+  background-color: #3ed4ef;
+  position: absolute;
+  top: 50%;
+  left: -3px;
+  transform: translate(-50%, -50%);
+}
+.aboutus-whoweare-heading {
+  font-size: 1.8rem;
+  color: #1a1a18;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.aboutus-whoweare-heading span {
+  color: #36308a;
+}
+
+.aboutus-whoweare-description {
+  font-size: 1rem;
+  color: #444444;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.aboutus-whoweare-button {
+  background-color: #3ed4ef;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 25px;
+  border: 1px solid #3ed4ef;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.aboutus-whoweare-button:hover {
+  background-color: #2bb8d4;
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 #fff, 0 0 0 #fff, inset 0px -3px 5px 0 #fff, 0 0 0 #fff;
+}
+
+@media (max-width: 1024px) {
+  .aboutus-whoweare-bg {
+    height: 400px;
+    top: 10%;
+    right: -20%;
+  }
+
+  .aboutus-whoweare-text {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+
+  .aboutus-whoweare-img-wrapper img {
+    height: 280px;
+    width: 200px;
+  }
+  .aboutus-whoweare-img1-bg,
+  .aboutus-whoweare-img2-bg {
+    height: 200px;
+    width: 210px;
+    left: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutus-whoweare {
+    padding: 1rem 2rem;
+  }
+
+  .aboutus-whoweare-bg {
+    top: 50%;
+    right: -25%;
+  }
+  .aboutus-whoweare-content {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .aboutus-whoweare-heading {
+    font-size: 1.5rem;
+  }
+
+  .aboutus-whoweare-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutus-whoweare-bg {
+    height: 300px;
+    top: 55%;
+    right: -35%;
+  }
+
+  .aboutus-whoweare-heading {
+    font-size: 1.3rem;
+  }
+
+  .aboutus-whoweare-img-wrapper img {
+    height: 230px;
+    width: 150px;
+  }
+
+  .aboutus-whoweare-img1-bg,
+  .aboutus-whoweare-img2-bg {
+    height: 150px;
+    width: 140px;
+    left: 15%;
+  }
+  .aboutus-whoweare-img1-bg {
+    top: 35%;
+  }
+
+  .aboutus-whoweare-img2-bg {
+    top: -15%;
+  }
+}

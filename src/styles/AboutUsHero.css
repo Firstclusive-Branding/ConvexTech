@@ -1,0 +1,245 @@
+.aboutus-hero {
+  background: linear-gradient(35deg, #ffffff 75%, #f4f4f4 75%);
+  padding: 4rem 2rem;
+}
+
+.aboutus-hero-content {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aboutus-hero-text {
+  flex: 1 1 500px;
+  padding-right: 2rem;
+}
+
+.aboutus-hero-label {
+  color: #3ed4ef;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  background-color: hsla(189, 85%, 59%, 0.15);
+  display: inline;
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: 1px solid #3ed4ef;
+  position: relative;
+}
+
+.aboutus-hero-label span {
+  height: 5px;
+  width: 25px;
+  border-radius: 10px;
+  background-color: #3ed4ef;
+  position: absolute;
+  top: 50%;
+  left: -3px;
+  transform: translate(-50%, -50%);
+}
+
+.aboutus-hero-quote {
+  font-size: 1.8rem;
+  color: #1a1a18;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.aboutus-hero-quote span {
+  color: #36308a;
+}
+
+.aboutus-hero-description {
+  font-size: 1rem;
+  color: #1a1a18;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.aboutus-hero-button {
+  background-color: #3ed4ef;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border: 1px solid #3ed4ef;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.aboutus-hero-button:hover {
+  background-color: #2bb8d4;
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 #fff, 0 0 0 #fff, inset 0px -3px 5px 0 #fff, 0 0 0 #fff;
+}
+
+.aboutus-hero-images {
+  flex: 1 1 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.aboutus-hero-img1,
+.aboutus-hero-img2 {
+  width: 280px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.aboutus-hero-img1 {
+  margin-bottom: 30%;
+  border-radius: 0 0 70px 0;
+}
+
+.aboutus-hero-img2 {
+  border-radius: 70px 0 0 0;
+}
+
+.aboutus-hero-img1:hover {
+  transform: translateY(10px) !important;
+}
+.aboutus-hero-img2:hover {
+  transform: translateY(-10px) !important;
+}
+.aboutus-hero-stats {
+  margin-top: 4rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.aboutus-hero-stat-card {
+  background-color: #f8f8f8;
+  background-image: url("../assets/About Us Assets/About Us Hero Assets/about-us-hero-card-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  padding: 3rem 1rem;
+  flex: 1 1 200px;
+  text-align: center;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  position: relative;
+}
+
+.aboutus-hero-stat-card * {
+  z-index: 2;
+}
+.aboutus-hero-stat-card:hover {
+  transform: translateY(-10px) !important;
+  background-color: #3ed4ef59;
+}
+
+.aboutus-hero-icon {
+  font-size: 2rem;
+  color: #3ed4ef;
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+.aboutus-hero-stat-card:hover .aboutus-hero-icon {
+  color: #36308a;
+  transform: scale(1.5);
+}
+
+.aboutus-hero-number {
+  font-size: 3rem;
+  margin: 1.5rem 0;
+  font-weight: 500;
+}
+
+.aboutus-hero-label-text {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .aboutus-hero {
+    padding: 2rem 3rem;
+  }
+  .aboutus-hero-content {
+    flex-direction: column-reverse;
+  }
+
+  .aboutus-hero-text {
+    padding-right: 0;
+    flex: 1 1 100%;
+  }
+
+  .aboutus-hero-img1,
+  .aboutus-hero-img2 {
+    width: 220px;
+    height: 300px;
+  }
+  .aboutus-hero-button {
+    padding: 0.7rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutus-hero-quote {
+    font-size: 1.5rem;
+  }
+
+  .aboutus-hero-description {
+    font-size: 0.95rem;
+  }
+
+  .aboutus-hero-img1,
+  .aboutus-hero-img2 {
+    width: 250px;
+    height: 300px;
+  }
+
+  .aboutus-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutus-hero {
+    padding: 1rem 2rem;
+  }
+
+  .aboutus-hero-quote {
+    font-size: 1.3rem;
+  }
+  .aboutus-hero-label {
+    padding: 5px 15px;
+  }
+  .aboutus-hero-images {
+    flex: 1 1 100%;
+  }
+
+  .aboutus-hero-img1,
+  .aboutus-hero-img2 {
+    width: 150px;
+    height: 220px;
+  }
+  .aboutus-hero-img1 {
+    margin-bottom: 20%;
+  }
+  .aboutus-hero-stats {
+    gap: 1rem;
+  }
+
+  .aboutus-hero-button {
+    padding: 0.5rem 1rem;
+  }
+
+  .aboutus-hero-stats {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 0;
+  }
+}

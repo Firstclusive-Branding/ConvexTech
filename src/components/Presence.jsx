@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../styles/Presence.css";
-import presencebg from "../assets/Presence Assets/presence-bg.png";
+import presencebg from "../assets/circle-pattern-bg.png";
 import presenceimg1 from "../assets/Presence Assets/presence-img1.png";
 import presenceimg2 from "../assets/Presence Assets/presence-img2.png";
 

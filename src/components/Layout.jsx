@@ -16,7 +16,7 @@ const Layout = () => {
   }, [location.pathname]);
 
   useEffect(() => {
-    if (location.pathname === "/") return;
+    if (location.pathname === "/" || location.pathname === "/about-us") return;
 
     setPageChanging(true);
     setShowOutlet(false);
