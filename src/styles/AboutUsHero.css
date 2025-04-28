@@ -119,7 +119,7 @@
 }
 
 .aboutus-hero-stat-card {
-  background-color: #f8f8f8;
+  background-color: #f4f4f4;
   background-image: url("../assets/About Us Assets/About Us Hero Assets/about-us-hero-card-bg.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -132,18 +132,22 @@
   position: relative;
 }
 
-.aboutus-hero-stat-card * {
-  z-index: 2;
-}
 .aboutus-hero-stat-card:hover {
   transform: translateY(-10px) !important;
   background-color: #3ed4ef59;
 }
 
 .aboutus-hero-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #3ed4ef;
-  transition: color 0.5s ease, transform 0.5s ease;
+  background-color: #ffffff40;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  transition: color 0.5s ease, transform 0.5s ease, padding 0.5s ease;
 }
 .aboutus-hero-stat-card:hover .aboutus-hero-icon {
   color: #36308a;

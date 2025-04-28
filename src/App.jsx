@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       { index: true, element: <Homepage /> },
       { path: "about-us", element: <AboutUs /> },
       { path: "careers", element: <Careers /> },
-      { path: "contact", element: <Contact /> },
+      { path: "contact-us", element: <Contact /> },
 
       // Service Routes
       { path: "services/sap", element: <SAPSolutions /> },

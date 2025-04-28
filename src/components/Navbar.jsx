@@ -127,9 +127,9 @@ const Navbar = () => {
             Careers
           </Link>
           <Link
-            to="/contact"
+            to="/contact-us"
             className={`nav-item ${
-              currentPath === "/contact" ? "active-link" : ""
+              currentPath === "/contact-us" ? "active-link" : ""
             }`}
           >
             Contact
@@ -150,7 +150,7 @@ const Navbar = () => {
         </div>
 
         <div className="nav-get-in-touch">
-          <Link to="/contact" className="nav-get-in-touch-button">
+          <Link to="/contact-us" className="nav-get-in-touch-button">
             <span>GET IN TOUCH</span>
             <span className="nav-get-in-touch-icon">
               <BiSolidPhoneCall size={20} />
@@ -221,7 +221,7 @@ const Navbar = () => {
           Careers
         </Link>
         <Link
-          to="/contact"
+          to="/contact-us"
           onClick={() => setIsMenuOpen(false)}
           className="mobile-menu-link"
         >
