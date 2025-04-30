@@ -5,7 +5,15 @@ import { IoIosArrowDown } from "react-icons/io";
 import "../styles/Navbar.css";
 import logo from "../assets/ConvexTech Logo.png";
 import logo2 from "../assets/ConvexTech Logo 2.png";
-import navDropdownImg from "../assets/Navbar assets/nav-dropdown-img.jpg";
+
+import sapSolutionsImg from "../assets/Navbar assets/sap-solutions-nav.png";
+import softwareDevImg from "../assets/Navbar assets/software-development-nav.png";
+import aiImg from "../assets/Navbar assets/artificial-intelligence-nav.png";
+import dataScienceImg from "../assets/Navbar assets/data-science-nav.png";
+import brandingImg from "../assets/Navbar assets/branding-nav.png";
+import staffingImg from "../assets/Navbar assets/staffing-nav.png";
+import healthcareImg from "../assets/Navbar assets/healthcare-nav.png";
+import nonItImg from "../assets/Navbar assets/non-it-nav.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,6 +22,50 @@ const Navbar = () => {
   const menuRef = useRef();
   const location = useLocation();
   const currentPath = location.pathname;
+  const [hoveredService, setHoveredService] = useState(sapSolutionsImg);
+
+  const serviceLinks = [
+    {
+      name: "SAP Solutions",
+      path: "/services/sap",
+      img: sapSolutionsImg,
+    },
+    {
+      name: "Software Development",
+      path: "/services/software",
+      img: softwareDevImg,
+    },
+    {
+      name: "Artificial Intelligence",
+      path: "/services/ai",
+      img: aiImg,
+    },
+    {
+      name: "Data Science",
+      path: "/services/data-science",
+      img: dataScienceImg,
+    },
+    {
+      name: "Branding & Digital Marketing",
+      path: "/services/branding",
+      img: brandingImg,
+    },
+    {
+      name: "Staffing & Recruitment",
+      path: "/services/staffing",
+      img: staffingImg,
+    },
+    {
+      name: "Healthcare & Clinical",
+      path: "/services/healthcare",
+      img: healthcareImg,
+    },
+    {
+      name: "Non-IT Services",
+      path: "/services/non-it",
+      img: nonItImg,
+    },
+  ];
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
@@ -67,58 +119,6 @@ const Navbar = () => {
             About Us
           </Link>
 
-          {/* <div
-            className="dropdown-wrapper"
-            onMouseEnter={() => setIsDropdownOpen(true)}
-            onMouseLeave={() => setIsDropdownOpen(false)}
-          >
-            <div
-              className={`dropdown-trigger ${
-                currentPath.startsWith("/services") ? "active-link" : ""
-              }`}
-            >
-              <span className="nav-item">
-                Services
-                <IoIosArrowDown
-                  className={`dropdown-icon ${isDropdownOpen ? "open" : ""}`}
-                />
-              </span>
-            </div>
-            <div className={`dropdown-menu ${isDropdownOpen ? "open" : ""}`}>
-              <ul className="dropdown-links">
-                <li>
-                  <Link to="/services/sap">SAP Solutions</Link>
-                </li>
-                <li>
-                  <Link to="/services/software">Software Development</Link>
-                </li>
-                <li>
-                  <Link to="/services/ai">Artificial Intelligence</Link>
-                </li>
-                <li>
-                  <Link to="/services/data-science">Data Science</Link>
-                </li>
-                <li>
-                  <Link to="/services/branding">
-                    Branding & Digital Marketing
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/staffing">Staffing & Recruitment</Link>
-                </li>
-                <li>
-                  <Link to="/services/healthcare">Healthcare & Clinical</Link>
-                </li>
-                <li>
-                  <Link to="/services/non-it">Non-IT Services</Link>
-                </li>
-              </ul>
-              <div className="dropdown-image">
-                <img src={navDropdownImg} alt="Menu Showcase" />
-              </div>
-            </div>
-          </div> */}
-
           <div className="dropdown-wrapper">
             <span
               className={`nav-item ${
@@ -136,35 +136,26 @@ const Navbar = () => {
                 onMouseEnter={() => setIsDropdownOpen(false)}
               >
                 <ul className="dropdown-links">
-                  <li>
-                    <Link to="/services/sap">SAP Solutions</Link>
-                  </li>
-                  <li>
-                    <Link to="/services/software">Software Development</Link>
-                  </li>
-                  <li>
-                    <Link to="/services/ai">Artificial Intelligence</Link>
-                  </li>
-                  <li>
-                    <Link to="/services/data-science">Data Science</Link>
-                  </li>
-                  <li>
-                    <Link to="/services/branding">
-                      Branding & Digital Marketing
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/services/staffing">Staffing & Recruitment</Link>
-                  </li>
-                  <li>
-                    <Link to="/services/healthcare">Healthcare & Clinical</Link>
-                  </li>
-                  <li>
-                    <Link to="/services/non-it">Non-IT Services</Link>
-                  </li>
+                  {serviceLinks.map((service, index) => (
+                    <li key={index}>
+                      <Link
+                        to={service.path}
+                        onMouseEnter={() => setHoveredService(service.img)}
+                        onMouseLeave={() => setHoveredService(sapSolutionsImg)}
+                      >
+                        {service.name}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
+
                 <div className="dropdown-image">
-                  <img src={navDropdownImg} alt="Menu Showcase" />
+                  <img
+                    src={hoveredService}
+                    key={hoveredService}
+                    alt="Service Visual"
+                    className="dropdown-img-transition"
+                  />
                 </div>
               </div>
             </span>

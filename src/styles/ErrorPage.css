@@ -1,7 +1,6 @@
 .error-page-container {
-  padding: 60px 20px;
   text-align: center;
-  background-color: #6e6e6e;
+  background-color: #f4f4f4;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,17 +13,16 @@
   width: 90%;
   border-radius: 20px;
   margin-bottom: 30px;
-  filter: drop-shadow(0 10px 30px #3ed4efe6);
   transition: transform 0.5s ease;
 }
 .error-page-image:hover {
   transform: scale(1.1) !important;
 }
 .error-page-title {
-  font-size: 3rem;
+  font-size: 4rem;
   color: #36308a;
   margin-bottom: 15px;
-  filter: drop-shadow(-1px 1px 0 #ffffff);
+  filter: drop-shadow(-1px 1px 0 #3ed4ef);
 }
 
 .error-page-text {
