@@ -3,18 +3,32 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 
-import sapimg from "../assets/Services Carousel Assets/Cards Icons/sap.svg";
-import softwaredevelopementimg from "../assets/Services Carousel Assets/Cards Icons/software-development.svg";
-import artificialintelligenceimg from "../assets/Services Carousel Assets/Cards Icons/artificial-intelligence.svg";
-import datascienceimg from "../assets/Services Carousel Assets/Cards Icons/data-science.svg";
-import brandingimg from "../assets/Services Carousel Assets/Cards Icons/branding.svg";
-import accountsimg from "../assets/Services Carousel Assets/Cards Icons/accounts.svg";
-import bluecollarimg from "../assets/Services Carousel Assets/Cards Icons/blue-collar.svg";
-import industrialstaffingimg from "../assets/Services Carousel Assets/Cards Icons/industrial-staffing.svg";
-import datamanagementimg from "../assets/Services Carousel Assets/Cards Icons/data-management.svg";
-import healthcareitimg from "../assets/Services Carousel Assets/Cards Icons/healthcare-it.svg";
-import ehrimg from "../assets/Services Carousel Assets/Cards Icons/ehr.svg";
-import healthcareimg from "../assets/Services Carousel Assets/Cards Icons/healthcare.svg";
+import sapicon from "../assets/Services Carousel Assets/Cards Icons/sap.svg";
+import softwaredevelopementicon from "../assets/Services Carousel Assets/Cards Icons/software-development.svg";
+import artificialintelligenceicon from "../assets/Services Carousel Assets/Cards Icons/artificial-intelligence.svg";
+import datascienceicon from "../assets/Services Carousel Assets/Cards Icons/data-science.svg";
+import brandingicon from "../assets/Services Carousel Assets/Cards Icons/branding.svg";
+import accountsicon from "../assets/Services Carousel Assets/Cards Icons/accounts.svg";
+import bluecollaricon from "../assets/Services Carousel Assets/Cards Icons/blue-collar.svg";
+import industrialstaffingicon from "../assets/Services Carousel Assets/Cards Icons/industrial-staffing.svg";
+import datamanagementicon from "../assets/Services Carousel Assets/Cards Icons/data-management.svg";
+import healthcareiticon from "../assets/Services Carousel Assets/Cards Icons/healthcare-it.svg";
+import ehricon from "../assets/Services Carousel Assets/Cards Icons/ehr.svg";
+import healthcareicon from "../assets/Services Carousel Assets/Cards Icons/healthcare.svg";
+
+import sapSolutionsImg from "../assets/Services Carousel Assets/sap-solutions.png";
+import softwareDevImg from "../assets/Services Carousel Assets/software-development.png";
+import aiImg from "../assets/Services Carousel Assets/artificial-intelligence.png";
+import dataScienceImg from "../assets/Services Carousel Assets/data-science.png";
+import brandingImg from "../assets/Services Carousel Assets/branding.png";
+import staffingImg from "../assets/Services Carousel Assets/staffing.png";
+import healthcareImg from "../assets/Services Carousel Assets/healthcare.png";
+import accountsimg from "../assets/Services Carousel Assets/accounts.png";
+import bluecollarimg from "../assets/Services Carousel Assets/blue-collar.png";
+import industrialstaffingimg from "../assets/Services Carousel Assets/industrial-staffing.png";
+import dataanalyticsimg from "../assets/Services Carousel Assets/data-analytics.png";
+import ehrimg from "../assets/Services Carousel Assets/ehr.png";
+import healthcareclinicalimg from "../assets/Services Carousel Assets/healthcare-clinical.png";
 
 import twinklestar from "../assets/Services Carousel Assets/twinkle.png";
 import bgcard from "../assets/Services Carousel Assets/bg-card.png";
@@ -25,85 +39,85 @@ import "../styles/ServicesCarousel.css";
 const services = [
   {
     title: "SAP Solutions",
-    icon: sapimg,
-    img: "https://picsum.photos/seed/sap/400/300",
+    icon: sapicon,
+    img: sapSolutionsImg,
     description:
       "Comprehensive SAP implementations to streamline operations and drive business growth.",
   },
   {
     title: "Software Development",
-    icon: softwaredevelopementimg,
-    img: "https://picsum.photos/seed/software/400/300",
+    icon: softwaredevelopementicon,
+    img: softwareDevImg,
     description:
       "Custom software solutions tailored to meet your business objectives efficiently.",
   },
   {
     title: "Artificial Intelligence",
-    icon: artificialintelligenceimg,
-    img: "https://picsum.photos/seed/ai/400/300",
+    icon: artificialintelligenceicon,
+    img: aiImg,
     description:
       "AI-powered solutions that automate processes and drive smarter decisions at scale.",
   },
   {
     title: "Data Science",
-    icon: datascienceimg,
-    img: "https://picsum.photos/seed/ds/400/300",
+    icon: datascienceicon,
+    img: dataScienceImg,
     description:
       "Extract insights from complex data sets to power strategy, prediction, and growth.",
   },
   {
     title: "Branding & Digital Marketing",
-    icon: brandingimg,
-    img: "https://picsum.photos/seed/branding/400/300",
+    icon: brandingicon,
+    img: brandingImg,
     description:
       "Elevate your brand presence through innovative marketing strategies and creative design.",
   },
   {
     title: "Accounts & Finance",
-    icon: accountsimg,
-    img: "https://picsum.photos/seed/finance/400/300",
+    icon: accountsicon,
+    img: accountsimg,
     description:
       "Robust financial services including bookkeeping, payroll, and strategic planning.",
   },
   {
     title: "Blue Collar Jobs",
-    icon: bluecollarimg,
-    img: "https://picsum.photos/seed/bluecollar/400/300",
+    icon: bluecollaricon,
+    img: bluecollarimg,
     description:
       "Reliable workforce solutions for skilled and semi-skilled labor across industries.",
   },
   {
     title: "Industrial Staffing",
-    icon: industrialstaffingimg,
-    img: "https://picsum.photos/seed/staffing/400/300",
+    icon: industrialstaffingicon,
+    img: industrialstaffingimg,
     description:
       "Flexible staffing solutions for industrial roles to keep operations running smoothly.",
   },
   {
     title: "Data Management & Analytics",
-    icon: datamanagementimg,
-    img: "https://picsum.photos/seed/analytics/400/300",
+    icon: datamanagementicon,
+    img: dataanalyticsimg,
     description:
       "Ensure data integrity and actionable insights through structured management and analysis.",
   },
   {
     title: "Healthcare IT Solutions",
-    icon: healthcareitimg,
-    img: "https://picsum.photos/seed/healthit/400/300",
+    icon: healthcareiticon,
+    img: healthcareImg,
     description:
       "Secure and scalable IT systems that optimize clinical workflows and patient care.",
   },
   {
     title: "Electronic Health Records (EHR) Implementations",
-    icon: ehrimg,
-    img: "https://picsum.photos/seed/ehr/400/300",
+    icon: ehricon,
+    img: ehrimg,
     description:
       "Seamless EHR deployment for improved patient data access, compliance, and outcomes.",
   },
   {
     title: "Healthcare & Clinical",
-    icon: healthcareimg,
-    img: "https://picsum.photos/seed/healthcare/400/300",
+    icon: healthcareicon,
+    img: healthcareclinicalimg,
     description:
       "Accelerate clinical operations with tailored solutions for healthcare organizations.",
   },
