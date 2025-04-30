@@ -7,6 +7,7 @@ import AboutUs from "./components/AboutUs";
 import Careers from "./components/Careers";
 import Contact from "./components/Contact";
 import ErrorPage from "./components/ErrorPage";
+import JobDetails from "./components/JobDetails";
 
 // Service Pages
 import SAPSolutions from "./components/SAPSolutions";
@@ -17,6 +18,7 @@ import BrandingAndDigitalMarketing from "./components/BrandingAndDigitalMarketin
 import StaffingAndRecruitment from "./components/StaffingAndRecruitment";
 import HealthcareAndClinical from "./components/HealthcareAndClinical";
 import NonITServices from "./components/NonITServices";
+import JobApply from "./components/JobApply";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +29,9 @@ const router = createBrowserRouter([
       { index: true, element: <Homepage /> },
       { path: "about-us", element: <AboutUs /> },
       { path: "careers", element: <Careers /> },
+      { path: "job/:title/:id", element: <JobDetails /> },
       { path: "contact-us", element: <Contact /> },
+      { path: "job/:title/:id/apply", element: <JobApply /> },
 
       // Service Routes
       { path: "services/sap", element: <SAPSolutions /> },

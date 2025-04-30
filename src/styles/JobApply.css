@@ -1,0 +1,164 @@
+.jobapply-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.jobapply-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #36308a;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.jobapply-back:hover {
+  color: #3ed4ef;
+}
+
+.jobapply-container h2 {
+  font-size: 24px;
+  color: #36308a;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.jobapply-subtitle {
+  text-align: center;
+  color: #1a1a18;
+  margin-bottom: 20px;
+}
+
+.jobapply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.jobapply-form input,
+.jobapply-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.readonly-input {
+  background-color: #f4f4f4;
+  color: #36308a;
+  font-weight: 500;
+  border: 1px solid #ccc;
+}
+
+.jobapply-form input[type="file"] {
+  border: none;
+  padding: 0;
+}
+
+.file-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a18;
+}
+
+.checkbox-label {
+  font-size: 13px;
+  color: #1a1a18;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.checkbox-label input {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.jobapply-form button {
+  background-color: #3ed4ef;
+  color: #1a1a18;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.jobapply-form button:hover {
+  background-color: #33c6e2;
+}
+
+@media (max-width: 1024px) {
+  .jobapply-container {
+    margin: 30px auto;
+    padding: 25px;
+  }
+
+  .jobapply-form button {
+    font-size: 15px;
+  }
+
+  .jobapply-container h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jobapply-container {
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .jobapply-container h2 {
+    font-size: 20px;
+  }
+
+  .jobapply-form button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .jobapply-back {
+    font-size: 15px;
+  }
+
+  .checkbox-label {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jobapply-container {
+    margin: 16px auto;
+    padding: 16px;
+    width: 95%;
+  }
+
+  .jobapply-container h2 {
+    font-size: 18px;
+  }
+
+  .jobapply-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .jobapply-back {
+    font-size: 14px;
+  }
+
+  .checkbox-label {
+    font-size: 11.5px;
+  }
+}
