@@ -9,11 +9,11 @@ const Careers = () => {
   return (
     <section className="careers-section">
       <div className="careers-section-wrapper">
-        {jobList.map((job) => (
+        {jobList.map((job, index) => (
           <motion.div
             whileInView={{ opacity: 1, scale: 1 }}
-            initial={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.2 * index }}
             key={job.id}
             className="careers-card-wrapper"
           >
