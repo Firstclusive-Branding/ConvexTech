@@ -40,6 +40,7 @@
     1px 1px 0 #fff;
   paint-order: stroke fill;
   cursor: pointer;
+  padding: 15px 0;
 }
 
 .nav-item::after {
@@ -47,7 +48,7 @@
   position: absolute;
   width: 0%;
   height: 3px;
-  bottom: -6px;
+  bottom: 15px;
   left: 0;
   background-color: #3ed4ef;
   border-radius: 2px;
@@ -85,7 +86,7 @@
   display: flex;
 }
 
-.dropdown-icon {
+.nav-item .dropdown-icon {
   display: flex;
   margin-left: 2px;
   margin-top: 2px;
@@ -94,14 +95,14 @@
   color: #1a1a18;
   filter: drop-shadow(-1px -1px 0 #fff) drop-shadow(1px -1px 0 #fff)
     drop-shadow(-1px 1px 0 #fff) drop-shadow(1px 1px 0 #fff);
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.5s ease, color 0.5s ease;
 }
 
-.dropdown-icon.open {
+.nav-item:hover .dropdown-icon.open {
   transform: rotate(180deg) !important;
 }
 
-.dropdown-trigger:hover .dropdown-icon {
+.nav-item:hover .dropdown-icon {
   color: #3ed4ef;
 }
 
@@ -109,7 +110,7 @@
   display: none !important;
   position: absolute;
   top: 100%;
-  left: -300%;
+  left: -50px;
   background-color: #ffffff;
   padding: 1rem;
   border-radius: 12px;
@@ -123,7 +124,11 @@
   gap: 1rem;
 }
 
-.dropdown-menu.open {
+/* .dropdown-menu.open {
+  display: flex !important;
+} */
+
+.nav-item:hover .dropdown-menu {
   display: flex !important;
 }
 
@@ -137,7 +142,7 @@
   padding: 0;
 }
 
-.dropdown-links a {
+.dropdown-links li a {
   display: block;
   padding: 0.7rem 1rem;
   color: #1a1a18;
@@ -148,7 +153,7 @@
   border-radius: 6px;
 }
 
-.dropdown-links a:hover {
+.dropdown-links li a:hover {
   background-color: #f7fafa;
   color: #3ed4ef;
   border-left: 3px solid #3ed4ef;

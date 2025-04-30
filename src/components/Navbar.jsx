@@ -7,7 +7,7 @@ import logo from "../assets/ConvexTech Logo.png";
 import logo2 from "../assets/ConvexTech Logo 2.png";
 import navDropdownImg from "../assets/Navbar assets/nav-dropdown-img.jpg";
 
-const Navbar = ({ onNavigate }) => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
@@ -66,7 +66,8 @@ const Navbar = ({ onNavigate }) => {
           >
             About Us
           </Link>
-          <div
+
+          {/* <div
             className="dropdown-wrapper"
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
@@ -116,7 +117,59 @@ const Navbar = ({ onNavigate }) => {
                 <img src={navDropdownImg} alt="Menu Showcase" />
               </div>
             </div>
+          </div> */}
+
+          <div className="dropdown-wrapper">
+            <span
+              className={`nav-item ${
+                currentPath.startsWith("/services") ? "active-link" : ""
+              }`}
+              onMouseEnter={() => setIsDropdownOpen(true)}
+              onMouseLeave={() => setIsDropdownOpen(false)}
+            >
+              Services
+              <IoIosArrowDown
+                className={`dropdown-icon ${isDropdownOpen ? "open" : ""}`}
+              />
+              <div
+                className={`dropdown-menu ${isDropdownOpen ? "open" : ""}`}
+                onMouseEnter={() => setIsDropdownOpen(false)}
+              >
+                <ul className="dropdown-links">
+                  <li>
+                    <Link to="/services/sap">SAP Solutions</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/software">Software Development</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/ai">Artificial Intelligence</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/data-science">Data Science</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/branding">
+                      Branding & Digital Marketing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/services/staffing">Staffing & Recruitment</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/healthcare">Healthcare & Clinical</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/non-it">Non-IT Services</Link>
+                  </li>
+                </ul>
+                <div className="dropdown-image">
+                  <img src={navDropdownImg} alt="Menu Showcase" />
+                </div>
+              </div>
+            </span>
           </div>
+
           <Link
             to="/careers"
             className={`nav-item ${
