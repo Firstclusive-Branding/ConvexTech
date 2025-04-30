@@ -13,7 +13,7 @@ const Careers = () => {
           <motion.div
             whileInView={{ opacity: 1, scale: 1 }}
             initial={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.5, delay: 0.2 * index }}
+            transition={{ duration: 0.5, delay: 0.1 * index }}
             key={job.id}
             className="careers-card-wrapper"
           >

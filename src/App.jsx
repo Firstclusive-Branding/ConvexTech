@@ -30,8 +30,8 @@ const router = createBrowserRouter([
       { path: "about-us", element: <AboutUs /> },
       { path: "careers", element: <Careers /> },
       { path: "job/:title/:id", element: <JobDetails /> },
-      { path: "contact-us", element: <Contact /> },
       { path: "job/:title/:id/apply", element: <JobApply /> },
+      { path: "contact-us", element: <Contact /> },
 
       // Service Routes
       { path: "services/sap", element: <SAPSolutions /> },

@@ -7,7 +7,7 @@ import logo from "../assets/ConvexTech Logo.png";
 import logo2 from "../assets/ConvexTech Logo 2.png";
 import navDropdownImg from "../assets/Navbar assets/nav-dropdown-img.jpg";
 
-const Navbar = () => {
+const Navbar = ({ onNavigate }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);

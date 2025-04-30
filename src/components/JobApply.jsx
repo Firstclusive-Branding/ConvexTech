@@ -48,7 +48,7 @@ const JobApply = () => {
           please visit our Privacy Policy and SMS Terms and Conditions.
         </label>
 
-        <button type="submit">Submit Application</button>
+        <button type="submit">SUBMIT</button>
       </form>
     </div>
   );

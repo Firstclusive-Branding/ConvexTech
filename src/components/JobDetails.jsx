@@ -54,7 +54,7 @@ const JobDetails = () => {
 
         <Link
           to={`/job/${formattedTitle}/${job.id}/apply`}
-          className="apply-link"
+          className="job-apply-link"
         >
           Apply Now
         </Link>

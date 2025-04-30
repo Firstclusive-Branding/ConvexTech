@@ -81,7 +81,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <span className="contact-location-label">
             <span></span>UNITED STATES, Texas
@@ -100,10 +100,10 @@ const Contact = () => {
               </a>
             </div>
             <div className="contact-location-item">
-              <span>
+              <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3470.7420557741943!2d-95.3933916!3d29.5530053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xacf5e7a8ea7bb83d%3A0xe0dd4bec75e5106a!2sConvexTech!5e0!3m2!1sen!2sin!4v1745989061478!5m2!1sen!2sin">
                 <FaMapPin />
                 11200 Broadway Suite 2743 Pearland, TX 77584
-              </span>
+              </a>
             </div>
           </div>
         </motion.div>
@@ -113,7 +113,7 @@ const Contact = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <iframe
             title="ConvexTech Location"
@@ -131,7 +131,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <span className="contact-location-label">
             <span></span>INDIA, Hyderabad
@@ -150,11 +150,11 @@ const Contact = () => {
               </a>
             </div>
             <div className="contact-location-item">
-              <span>
+              <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.1455851921028!2d78.45833787580332!3d17.404799602301978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97e9cc98d797%3A0xa4b816327930becb!2sConvexTech%20INC!5e0!3m2!1sen!2sin!4v1745989111920!5m2!1sen!2sin">
                 <FaMapPin />
                 115A, First Floor, Downtown Mall, Beside Lotus Hospital,
                 Lakdikapul, Hyderabad 500-004
-              </span>
+              </a>
             </div>
           </div>
         </motion.div>
@@ -164,7 +164,7 @@ const Contact = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <iframe
             title="ConvexTech Location"
@@ -201,10 +201,10 @@ const Contact = () => {
               </a>
             </div>
             <div className="contact-location-item">
-              <span>
+              <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9814192768526!2d77.37579207550073!3d28.630318975665972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce518ee0f9179%3A0x3598043c7b88e93e!2sJAV%20Tower!5e0!3m2!1sen!2sin!4v1745989279754!5m2!1sen!2sin">
                 <FaMapPin />
                 Jav Tower H17 2nd Floor, S-01 Sector 63 Noida 201301
-              </span>
+              </a>
             </div>
           </div>
         </motion.div>

@@ -1,7 +1,7 @@
 .job-details {
+  margin: 40px auto;
   padding: 40px;
   max-width: 1000px;
-  margin: auto;
   line-height: 1.6;
   color: #1a1a18;
   background-color: #ffffff;
@@ -50,22 +50,24 @@
   margin-bottom: 5px;
 }
 
-.apply-link {
-  display: inline-block;
-  margin-top: 30px;
-  background-color: #36308a;
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 8px;
+.job-apply-link {
+  background-color: #3ed4ef;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border: 1px solid #3ed4ef;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  transition: background-color 0.6s ease, color 0.6s ease;
+  display: inline-block;
 }
 
-.apply-link:hover {
-  background-color: #3ed4ef;
-  color: #1a1a18;
+.job-apply-link:hover {
+  background-color: #2bb8d4;
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 #fff, 0 0 0 #fff, inset 0px -3px 5px 0 #fff, 0 0 0 #fff;
 }
 
 @media (max-width: 1024px) {
@@ -77,7 +79,7 @@
     font-size: 1.8rem;
   }
 
-  .apply-link {
+  .job-apply-link {
     font-size: 15px;
     padding: 10px 18px;
   }
@@ -86,6 +88,7 @@
 @media (max-width: 768px) {
   .job-details {
     padding: 20px;
+    margin: 10px;
   }
 
   .job-details h1 {
@@ -97,7 +100,7 @@
     font-size: 1.1rem;
   }
 
-  .apply-link {
+  .job-apply-link {
     font-size: 14px;
     padding: 10px 16px;
   }
@@ -116,7 +119,7 @@
     font-size: 1.4rem;
   }
 
-  .apply-link {
+  .job-apply-link {
     width: 100%;
     text-align: center;
     padding: 12px 0;

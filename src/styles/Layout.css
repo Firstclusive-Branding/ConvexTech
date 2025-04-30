@@ -1,4 +1,4 @@
-.layout-wrapper {
+/* .layout-wrapper {
   position: relative;
   overflow-x: hidden;
 }
@@ -33,11 +33,36 @@
 }
 
 .semi-a {
-  stroke: #36308a;
+  stroke: #3ed4ef80;
+  filter: blur(12px);
   transform: rotate(270deg);
 }
 
 .semi-b {
-  stroke: #36308a;
+  stroke: #3ed4ef80;
+  filter: blur(12px);
   transform: rotate(90deg);
+} */
+
+.layout-wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.main-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.curtain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3ed4ef80;
+  z-index: 99;
+  pointer-events: none;
+  backdrop-filter: blur(12px);
 }
