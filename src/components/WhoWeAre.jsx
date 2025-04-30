@@ -17,7 +17,7 @@ const WhoWeAre = () => {
         initial={{ x: -100, scale: 0.5, opacity: 0 }}
         whileInView={{ x: 0, scale: 1, opacity: 1 }}
         transition={{ duration: 1.5 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
       >
         <div className="who-we-are-left-image-wrapper">
           <img
@@ -38,7 +38,7 @@ const WhoWeAre = () => {
         initial={{ x: 200, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
       >
         <p className="who-we-are-section-title">
           <span className="who-we-are-section-title-tag"></span>

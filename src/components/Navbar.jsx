@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { IoIosArrowDown } from "react-icons/io";
 import "../styles/Navbar.css";
-import "../styles/HamburgerIcon.css";
 import logo from "../assets/ConvexTech Logo.png";
 import logo2 from "../assets/ConvexTech Logo 2.png";
 import navDropdownImg from "../assets/Navbar assets/nav-dropdown-img.jpg";

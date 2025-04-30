@@ -1,6 +1,7 @@
 .who-we-are-section {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 100px;
   align-items: center;
   padding: 60px;
   background-size: cover;
@@ -123,7 +124,6 @@
   .who-we-are-read-more-btn {
     font-size: 1rem;
     padding: 10px 20px;
-    width: 50% !important;
   }
 }
 
@@ -134,8 +134,8 @@
   }
 
   .who-we-are-left-image-wrapper {
-    width: 260px;
-    height: 260px;
+    width: 300px;
+    height: 300px;
   }
 
   .who-we-are-section-title {
@@ -147,7 +147,6 @@
   }
 
   .who-we-are-read-more-btn {
-    width: 100%;
-    padding: 12px;
+    padding: 10px 18px;
   }
 }
