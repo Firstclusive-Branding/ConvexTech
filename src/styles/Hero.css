@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   background-color: #36308a;
+  /* background-color: #05004d; */
   height: 90vh;
   overflow: hidden;
   color: #fff;
@@ -20,6 +21,7 @@
   position: relative;
   z-index: 2;
   background-color: #36308a;
+  /* background-color: #05004d; */
 }
 
 .tagline {
@@ -28,6 +30,7 @@
   margin-bottom: 1rem;
   color: #3ed4ef;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .hero-left h1 {
@@ -45,6 +48,27 @@
 
 .highlight {
   color: #3ed4ef;
+  background: linear-gradient(
+    120deg,
+    #3ed4efcc 30%,
+    #ffffff 40%,
+    #3ed4efcc 50%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
 }
 
 .subtext {
@@ -77,6 +101,7 @@
   opacity: 0.5;
   user-select: none;
   pointer-events: none;
+  left: -25%;
 }
 
 @keyframes circle-spin {
@@ -142,9 +167,21 @@
 
 @media screen and (max-width: 1240px) {
   .slash-mask {
-    left: 70%;
-    transform: translateX(-70%);
+    left: 65%;
+    transform: translateX(-65%);
     height: 80vh;
+  }
+
+  .spring-circle {
+    height: 70%;
+  }
+
+  .hero-left {
+    padding: 4rem;
+  }
+
+  .hero-left h1 {
+    font-size: 3.5rem;
   }
 }
 @media screen and (max-width: 1024px) {

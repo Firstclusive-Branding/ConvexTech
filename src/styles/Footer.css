@@ -243,6 +243,18 @@
   color: #ffffff;
 }
 
+.footer-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-footer a:hover {
+  color: #3ed4ef !important;
+}
+
 .footer-attribution a {
   color: #ffffff;
   text-decoration: none;

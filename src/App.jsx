@@ -5,9 +5,11 @@ import Layout from "./components/Layout";
 import Homepage from "./components/Homepage";
 import AboutUs from "./components/AboutUs";
 import Careers from "./components/Careers";
+import FindTalent from "./components/FindTalent";
 import Contact from "./components/Contact";
 import ErrorPage from "./components/ErrorPage";
 import JobDetails from "./components/JobDetails";
+import TermsAndCondition from "./components/TermsAndCondition";
 
 // Staffing Service Pages
 import SAPSolutions from "./components/SAPSolutions";
@@ -38,10 +40,12 @@ const router = createBrowserRouter([
       { index: true, element: <Homepage /> },
       { path: "about-us", element: <AboutUs /> },
       { path: "find-jobs", element: <Careers /> },
+      { path: "find-talent", element: <FindTalent /> },
       { path: "job/:title/:id", element: <JobDetails /> },
       { path: "job/:title/:id/apply", element: <JobApply /> },
       { path: "project-enquiry", element: <ProjectEnquiry /> },
       { path: "contact-us", element: <Contact /> },
+      { path: "terms-and-condition", element: <TermsAndCondition /> },
 
       // Service Routes
       { path: "staffing-services/sap", element: <SAPSolutions /> },

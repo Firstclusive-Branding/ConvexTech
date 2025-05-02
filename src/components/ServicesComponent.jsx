@@ -42,40 +42,39 @@ const services = [
 const ServicesComponent = () => {
   return (
     <div className="services-container">
-      {services.map((section, index) => (
-        <motion.section
-          key={index}
-          className={`services-section ${index % 2 !== 0 ? "reverse" : ""}`}
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: index * 0.2 }}
-          viewport={{ once: true }}
-        >
-          <motion.img
-            src={section.image}
-            alt={section.title}
-            className="services-image"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
-          />
-          <motion.div
-            className="services-content"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
+      {services.map((section, index) => {
+        const isReversed = index % 2 !== 0;
+        return (
+          <section
+            key={index}
+            className={`services-section ${isReversed ? "reverse" : ""}`}
           >
-            <h2>{section.title}</h2>
-            {section.paragraphs.map((text, i) =>
-              text.includes("<ul>") ? (
-                <div key={i} dangerouslySetInnerHTML={{ __html: text }} />
-              ) : (
-                <p key={i}>{text}</p>
-              )
-            )}
-          </motion.div>
-        </motion.section>
-      ))}
+            <motion.img
+              src={section.image}
+              alt={section.title}
+              className="services-image"
+              initial={{ opacity: 0, x: isReversed ? 50 : -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+            />
+            <motion.div
+              className="services-content"
+              initial={{ opacity: 0, x: isReversed ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+            >
+              <h2>{section.title}</h2>
+              {section.paragraphs.map((text, i) =>
+                text.includes("<ul>") ? (
+                  <div key={i} dangerouslySetInnerHTML={{ __html: text }} />
+                ) : (
+                  <p key={i}>{text}</p>
+                )
+              )}
+            </motion.div>
+          </section>
+        );
+      })}
     </div>
   );
 };

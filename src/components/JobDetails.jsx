@@ -15,7 +15,7 @@ const JobDetails = () => {
 
   return (
     <div className="job-details">
-      <Link to="/careers" className="back-button">
+      <Link to="/find-jobs" className="back-button">
         <FaArrowLeftLong />
         Back to Careers
       </Link>

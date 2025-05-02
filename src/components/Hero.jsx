@@ -9,7 +9,17 @@ import springcircle from "../assets/Hero Assets/spring-circle.png";
 
 const Hero = () => {
   const [startAnimation, setStartAnimation] = useState(false);
-  const words = ["Empower", "Businesses", "with", "Smart", "Tech"];
+  const words = [
+    "Staffing,",
+    "Software",
+    "&",
+    "Marketing",
+    "that",
+    "actually",
+    "Delivers",
+  ];
+
+  const highlightWords = ["delivers"];
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -59,7 +69,7 @@ const Hero = () => {
       >
         <img src={springcircle} alt="spring-circle" className="spring-circle" />
 
-        <p className="tagline">BEST IT SOLUTION PROVIDER</p>
+        <p className="tagline">Build Teams. Build Tech.</p>
 
         {/* <SplitText
           as="h1"
@@ -77,7 +87,7 @@ const Hero = () => {
             <motion.span
               key={index}
               className={`hero-word ${
-                word === "Businesses" ? "highlight" : ""
+                highlightWords.includes(word.toLowerCase()) ? "highlight" : ""
               }`}
               initial={{ opacity: 0, y: 50 }}
               animate={startAnimation ? { opacity: 1, y: 0 } : {}}
@@ -89,9 +99,11 @@ const Hero = () => {
           ))}
         </motion.h1>
 
-        <p className="subtext">Providing Businesses with Next-Gen Solutions.</p>
+        <p className="subtext">
+          From scaling teams to launching tech, we’ve got you covered.
+        </p>
         <button className="hero-button" onClick={handleScrollToServices}>
-          Get Started
+          Let's Talk
         </button>
       </motion.div>
 

@@ -100,7 +100,11 @@ const Contact = () => {
               </a>
             </div>
             <div className="contact-location-item">
-              <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3470.7420557741943!2d-95.3933916!3d29.5530053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xacf5e7a8ea7bb83d%3A0xe0dd4bec75e5106a!2sConvexTech!5e0!3m2!1sen!2sin!4v1745989061478!5m2!1sen!2sin">
+              <a
+                href="https://www.google.com/maps?ll=29.553005,-95.393392&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=16203190513311223914"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaMapPin />
                 11200 Broadway Suite 2743 Pearland, TX 77584
               </a>
@@ -150,7 +154,11 @@ const Contact = () => {
               </a>
             </div>
             <div className="contact-location-item">
-              <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.1455851921028!2d78.45833787580332!3d17.404799602301978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97e9cc98d797%3A0xa4b816327930becb!2sConvexTech%20INC!5e0!3m2!1sen!2sin!4v1745989111920!5m2!1sen!2sin">
+              <a
+                href="https://www.google.com/maps?ll=17.404795,78.460913&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=11869261223972355787"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaMapPin />
                 115A, First Floor, Downtown Mall, Beside Lotus Hospital,
                 Lakdikapul, Hyderabad 500-004
@@ -201,7 +209,11 @@ const Contact = () => {
               </a>
             </div>
             <div className="contact-location-item">
-              <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9814192768526!2d77.37579207550073!3d28.630318975665972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce518ee0f9179%3A0x3598043c7b88e93e!2sJAV%20Tower!5e0!3m2!1sen!2sin!4v1745989279754!5m2!1sen!2sin">
+              <a
+                href="https://www.google.com/maps?ll=28.630319,77.378367&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=3861841338287319358"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaMapPin />
                 Jav Tower H17 2nd Floor, S-01 Sector 63 Noida 201301
               </a>

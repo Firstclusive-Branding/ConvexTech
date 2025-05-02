@@ -14,8 +14,10 @@ import {
   FiActivity,
   FiBriefcase,
   FiUserCheck,
+  FiFacebook,
 } from "react-icons/fi";
 import { FaHeart } from "react-icons/fa";
+import { BsInstagram, BsTwitterX } from "react-icons/bs";
 
 import logo2 from "../assets/ConvexTech Logo white.png";
 import footerBg from "../assets/Footer Assets/footer-bg.png";
@@ -178,6 +180,19 @@ const Footer = () => {
             >
               <FiLinkedin size={20} />
             </a>
+            <a
+              href="https://www.instagram.com/convextech19/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BsInstagram size={20} />
+            </a>
+            <a href="#">
+              <FiFacebook size={20} />
+            </a>
+            <a href="#">
+              <BsTwitterX size={20} />
+            </a>
           </div>
 
           <div className="footer-legal">
@@ -190,14 +205,23 @@ const Footer = () => {
 
       {/* Footer Attribution */}
       <div className="footer-attribution">
-        <p>Powered by ConvexTech © 2011 - 2025.</p>
-        <p>
-          Made with{" "}
-          <FaHeart style={{ color: "#3ed4ef", verticalAlign: "middle" }} /> by{" "}
-          <a href="https://firstclusive.com" target="_blank" rel="noreferrer">
-            Firstclusive
-          </a>
-        </p>
+        <div className="footer-footer">
+          <p>Powered by ConvexTech © 2011 - 2025.</p>
+          <div>
+            <a href="/terms-and-condition">Terms and Condition</a> |{" "}
+            <a href="/privacy-policy">Privacy Policy</a> |
+            <a href="#">Unsubscribe</a>
+          </div>
+        </div>
+        <div>
+          <p>
+            Made with{" "}
+            <FaHeart style={{ color: "#3ed4ef", verticalAlign: "middle" }} /> by{" "}
+            <a href="https://firstclusive.com" target="_blank" rel="noreferrer">
+              Firstclusive
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );

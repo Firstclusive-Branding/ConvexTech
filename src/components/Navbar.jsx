@@ -225,7 +225,14 @@ const Navbar = () => {
               </div>
             </span>
           </div>
-
+          <Link
+            to="/find-talent"
+            className={`nav-item ${
+              currentPath === "/find-talent" ? "active-link" : ""
+            }`}
+          >
+            Find Talent
+          </Link>
           <Link
             to="/find-jobs"
             className={`nav-item ${
@@ -400,7 +407,13 @@ const Navbar = () => {
               SAP
             </Link>
           </div>
-
+          <Link
+            to="/find-talent"
+            onClick={() => setIsMenuOpen(false)}
+            className="mobile-menu-link"
+          >
+            Find Talent
+          </Link>
           <Link
             to="/find-jobs"
             onClick={() => setIsMenuOpen(false)}
