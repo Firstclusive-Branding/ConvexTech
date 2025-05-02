@@ -13,11 +13,15 @@ import brandingImg from "../assets/Navbar assets/branding-nav.png";
 import staffingImg from "../assets/Navbar assets/staffing-nav.png";
 import healthcareImg from "../assets/Navbar assets/healthcare-nav.png";
 import nonItImg from "../assets/Navbar assets/non-it-nav.png";
+import logoimg from "../assets/Navbar assets/logo.png";
+import marketingimg from "../assets/Navbar assets/marketing.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isMobileTechSolutionsOpen, setIsMobileTechSolutionsOpen] =
+    useState(false);
   const menuRef = useRef();
   const location = useLocation();
   const currentPath = location.pathname;
@@ -26,49 +30,78 @@ const Navbar = () => {
   const serviceLinks = [
     {
       name: "SAP Solutions",
-      path: "/services/sap",
+      path: "/staffing-services/sap",
       img: sapSolutionsImg,
     },
     {
       name: "Software Development",
-      path: "/services/software-development",
+      path: "/staffing-services/software-development",
       img: softwareDevImg,
     },
     {
       name: "Artificial Intelligence",
-      path: "/services/ai",
+      path: "/staffing-services/ai",
       img: aiImg,
     },
     {
       name: "Data Science",
-      path: "/services/data-science",
+      path: "/staffing-services/data-science",
       img: dataScienceImg,
     },
     {
       name: "Branding & Digital Marketing",
-      path: "/services/branding",
+      path: "/staffing-services/branding",
       img: brandingImg,
     },
     {
       name: "Staffing & Recruitment",
-      path: "/services/staffing",
+      path: "/staffing-services/staffing",
       img: staffingImg,
     },
     {
       name: "Healthcare & Clinical",
-      path: "/services/healthcare",
+      path: "/staffing-services/healthcare",
       img: healthcareImg,
     },
     {
       name: "Non-IT Services",
-      path: "/services/non-it",
+      path: "/staffing-services/non-it",
       img: nonItImg,
+    },
+  ];
+
+  const techSolutionsLinks = [
+    {
+      name: "Logo",
+      path: "/tech-solutions/logo",
+      img: logoimg,
+    },
+    {
+      name: "Branding",
+      path: "/tech-solutions/branding",
+      img: brandingImg,
+    },
+    {
+      name: "Marketing",
+      path: "/tech-solutions/marketing",
+      img: marketingimg,
+    },
+    {
+      name: "Websites",
+      path: "/tech-solutions/websites",
+      img: softwareDevImg,
+    },
+    {
+      name: "SAP",
+      path: "/tech-solutions/sap",
+      img: sapSolutionsImg,
     },
   ];
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
     if (!isMenuOpen) setIsMobileServicesOpen(false);
+    if (!isMenuOpen) setIsMobileTechSolutionsOpen(false);
   }, [isMenuOpen]);
 
   useEffect(() => {
@@ -115,13 +148,11 @@ const Navbar = () => {
 
           <div className="dropdown-wrapper">
             <span
-              className={`nav-item ${
-                currentPath.startsWith("/services") ? "active-link" : ""
-              }`}
+              className="nav-item"
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              Services
+              Staffing Services
               <IoIosArrowDown
                 className={`dropdown-icon ${isDropdownOpen ? "open" : ""}`}
               />
@@ -155,21 +186,61 @@ const Navbar = () => {
             </span>
           </div>
 
+          <div className="dropdown-wrapper">
+            <span
+              className="nav-item"
+              onMouseEnter={() => setIsDropdownOpen(true)}
+              onMouseLeave={() => setIsDropdownOpen(false)}
+            >
+              Tech Solutions
+              <IoIosArrowDown
+                className={`dropdown-icon ${isDropdownOpen ? "open" : ""}`}
+              />
+              <div
+                className={`dropdown-menu ${isDropdownOpen ? "open" : ""}`}
+                onMouseEnter={() => setIsDropdownOpen(false)}
+              >
+                <ul className="dropdown-links">
+                  {techSolutionsLinks.map((service, index) => (
+                    <li key={index}>
+                      <Link
+                        to={service.path}
+                        onMouseEnter={() => setHoveredService(service.img)}
+                        onMouseLeave={() => setHoveredService(sapSolutionsImg)}
+                      >
+                        {service.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="dropdown-image">
+                  <img
+                    src={hoveredService}
+                    key={hoveredService}
+                    alt="Service Visual"
+                    className="dropdown-img-transition"
+                  />
+                </div>
+              </div>
+            </span>
+          </div>
+
           <Link
-            to="/careers"
+            to="/find-jobs"
             className={`nav-item ${
-              currentPath === "/careers" ? "active-link" : ""
+              currentPath === "/find-jobs" ? "active-link" : ""
             }`}
           >
-            Careers
+            Find Jobs
           </Link>
           <Link
-            to="/contact-us"
+            to="/project-enquiry"
             className={`nav-item ${
-              currentPath === "/contact-us" ? "active-link" : ""
+              currentPath === "/project-enquiry" ? "active-link" : ""
             }`}
           >
-            Contact
+            Project Enquiry
           </Link>
         </div>
 
@@ -196,74 +267,162 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`} ref={menuRef}>
-        <Link
-          to="/"
-          onClick={() => setIsMenuOpen(false)}
-          className="mobile-menu-link"
-        >
-          Home
-        </Link>
-        <Link
-          to="/about-us"
-          onClick={() => setIsMenuOpen(false)}
-          className="mobile-menu-link"
-        >
-          About
-        </Link>
+      <div className={`mobile-menu-overlay ${isMenuOpen ? "open" : ""}`}>
         <div
-          onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-          className="mobile-menu-link"
-          style={{ cursor: "pointer" }}
+          className={`mobile-menu ${isMenuOpen ? "open" : ""}`}
+          ref={menuRef}
         >
-          <span>Services</span>
-          <IoIosArrowDown
-            className={`dropdown-icon ${isMobileServicesOpen ? "open" : ""}`}
-          />
-        </div>
-        <div className={`mobile-submenu ${isMobileServicesOpen ? "open" : ""}`}>
-          <Link to="/services/sap" onClick={() => setIsMenuOpen(false)}>
-            SAP Solutions
-          </Link>
-          <Link to="/services/software" onClick={() => setIsMenuOpen(false)}>
-            Software Development
-          </Link>
-          <Link to="/services/ai" onClick={() => setIsMenuOpen(false)}>
-            Artificial Intelligence
+          <Link
+            to="/"
+            onClick={() => setIsMenuOpen(false)}
+            className="mobile-menu-link"
+          >
+            Home
           </Link>
           <Link
-            to="/services/data-science"
+            to="/about-us"
             onClick={() => setIsMenuOpen(false)}
+            className="mobile-menu-link"
           >
-            Data Science
+            About Us
           </Link>
-          <Link to="/services/branding" onClick={() => setIsMenuOpen(false)}>
-            Branding & Marketing
+          <div
+            onClick={() => {
+              setIsMobileTechSolutionsOpen(false);
+              setIsMobileServicesOpen(!isMobileServicesOpen);
+            }}
+            className="mobile-menu-link"
+            style={{ cursor: "pointer" }}
+          >
+            <span>Staffing Services</span>
+            <IoIosArrowDown
+              className={`dropdown-icon ${isMobileServicesOpen ? "open" : ""}`}
+            />
+          </div>
+          <div
+            className={`mobile-submenu ${isMobileServicesOpen ? "open" : ""}`}
+          >
+            <Link
+              to="/staffing-services/sap"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              SAP Solutions
+            </Link>
+            <Link
+              to="/staffing-services/software"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Software Development
+            </Link>
+            <Link
+              to="/staffing-services/ai"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Artificial Intelligence
+            </Link>
+            <Link
+              to="/staffing-services/data-science"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Data Science
+            </Link>
+            <Link
+              to="/staffing-services/branding"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Branding & Marketing
+            </Link>
+            <Link
+              to="/staffing-services/staffing"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Staffing
+            </Link>
+            <Link
+              to="/staffing-services/healthcare"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Healthcare
+            </Link>
+            <Link
+              to="/staffing-services/non-it"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Non-IT Services
+            </Link>
+          </div>
+
+          <div
+            onClick={() => {
+              setIsMobileServicesOpen(false);
+              setIsMobileTechSolutionsOpen(!isMobileTechSolutionsOpen);
+            }}
+            className="mobile-menu-link"
+            style={{ cursor: "pointer" }}
+          >
+            <span>Tech Solutions</span>
+            <IoIosArrowDown
+              className={`dropdown-icon ${
+                isMobileTechSolutionsOpen ? "open" : ""
+              }`}
+            />
+          </div>
+          <div
+            className={`mobile-submenu ${
+              isMobileTechSolutionsOpen ? "open" : ""
+            }`}
+          >
+            <Link
+              to="/tech-solutions/logo"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Logo
+            </Link>
+            <Link
+              to="/tech-solutions/branding"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Branding
+            </Link>
+            <Link
+              to="/tech-solutions/marketing"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Marketing
+            </Link>
+            <Link
+              to="/tech-solutions/websites"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Websites
+            </Link>
+            <Link to="/tech-solutions/SAP" onClick={() => setIsMenuOpen(false)}>
+              SAP
+            </Link>
+          </div>
+
+          <Link
+            to="/find-jobs"
+            onClick={() => setIsMenuOpen(false)}
+            className="mobile-menu-link"
+          >
+            Find Jobs
           </Link>
-          <Link to="/services/staffing" onClick={() => setIsMenuOpen(false)}>
-            Staffing
+          <Link
+            to="/project-enquiry"
+            onClick={() => setIsMenuOpen(false)}
+            className="mobile-menu-link"
+          >
+            Project Enquiry
           </Link>
-          <Link to="/services/healthcare" onClick={() => setIsMenuOpen(false)}>
-            Healthcare
-          </Link>
-          <Link to="/services/non-it" onClick={() => setIsMenuOpen(false)}>
-            Non-IT Services
+          <Link
+            to="/contact-us"
+            onClick={() => setIsMenuOpen(false)}
+            className="mobile-menu-link"
+          >
+            Contact Us
           </Link>
         </div>
-        <Link
-          to="/careers"
-          onClick={() => setIsMenuOpen(false)}
-          className="mobile-menu-link"
-        >
-          Careers
-        </Link>
-        <Link
-          to="/contact-us"
-          onClick={() => setIsMenuOpen(false)}
-          className="mobile-menu-link"
-        >
-          Contact
-        </Link>
       </div>
     </>
   );

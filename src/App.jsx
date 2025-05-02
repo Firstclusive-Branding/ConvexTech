@@ -9,7 +9,7 @@ import Contact from "./components/Contact";
 import ErrorPage from "./components/ErrorPage";
 import JobDetails from "./components/JobDetails";
 
-// Service Pages
+// Staffing Service Pages
 import SAPSolutions from "./components/SAPSolutions";
 import SoftwareDevelopment from "./components/SoftwareDevelopment";
 import ArtificialIntelligence from "./components/ArtificialIntelligence";
@@ -20,6 +20,14 @@ import HealthcareAndClinical from "./components/HealthcareAndClinical";
 import NonITServices from "./components/NonITServices";
 import JobApply from "./components/JobApply";
 import ServicesComponent from "./components/ServicesComponent";
+import ProjectEnquiry from "./components/ProjectEnquiry";
+
+//Tech Solutions Pages
+import TSLogo from "./components/TSLogo";
+import TSBranding from "./components/TSBranding";
+import TSMarketing from "./components/TSMarketing";
+import TSWebsites from "./components/TSWebsites";
+import TSSAP from "./components/TSSAP";
 
 const router = createBrowserRouter([
   {
@@ -29,24 +37,39 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Homepage /> },
       { path: "about-us", element: <AboutUs /> },
-      { path: "careers", element: <Careers /> },
+      { path: "find-jobs", element: <Careers /> },
       { path: "job/:title/:id", element: <JobDetails /> },
       { path: "job/:title/:id/apply", element: <JobApply /> },
+      { path: "project-enquiry", element: <ProjectEnquiry /> },
       { path: "contact-us", element: <Contact /> },
 
       // Service Routes
-      { path: "services/sap", element: <SAPSolutions /> },
-      // { path: "services/software-development", element: <SoftwareDevelopment /> },
+      { path: "staffing-services/sap", element: <SAPSolutions /> },
+      // { path: "staffing-services/software-development", element: <SoftwareDevelopment /> },
       {
-        path: "services/software-development",
+        path: "staffing-services/software-development",
         element: <ServicesComponent />,
       },
-      { path: "services/ai", element: <ArtificialIntelligence /> },
-      { path: "services/data-science", element: <DataScience /> },
-      { path: "services/branding", element: <BrandingAndDigitalMarketing /> },
-      { path: "services/staffing", element: <StaffingAndRecruitment /> },
-      { path: "services/healthcare", element: <HealthcareAndClinical /> },
-      { path: "services/non-it", element: <NonITServices /> },
+      { path: "staffing-services/ai", element: <ArtificialIntelligence /> },
+      { path: "staffing-services/data-science", element: <DataScience /> },
+      {
+        path: "staffing-services/branding",
+        element: <BrandingAndDigitalMarketing />,
+      },
+      {
+        path: "staffing-services/staffing",
+        element: <StaffingAndRecruitment />,
+      },
+      {
+        path: "staffing-services/healthcare",
+        element: <HealthcareAndClinical />,
+      },
+      { path: "staffing-services/non-it", element: <NonITServices /> },
+      { path: "tech-solutions/logo", element: <TSLogo /> },
+      { path: "tech-solutions/branding", element: <TSBranding /> },
+      { path: "tech-solutions/marketing", element: <TSMarketing /> },
+      { path: "tech-solutions/websites", element: <TSWebsites /> },
+      { path: "tech-solutions/sap", element: <TSSAP /> },
     ],
   },
 ]);
