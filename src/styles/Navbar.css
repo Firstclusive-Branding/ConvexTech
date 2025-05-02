@@ -333,6 +333,7 @@
     z-index: 999;
     pointer-events: auto;
     overflow-y: scroll;
+    font-family: "Gidole", sans-serif;
   }
 
   .mobile-menu.open {
