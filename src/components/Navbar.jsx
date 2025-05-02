@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { IoIosArrowDown } from "react-icons/io";
 import "../styles/Navbar.css";
-import logo from "../assets/ConvexTech Logo.png";
 import logo2 from "../assets/ConvexTech Logo 2.png";
 
 import sapSolutionsImg from "../assets/Navbar assets/sap-solutions-nav.png";
@@ -32,7 +31,7 @@ const Navbar = () => {
     },
     {
       name: "Software Development",
-      path: "/services/software",
+      path: "/services/software-development",
       img: softwareDevImg,
     },
     {
@@ -91,11 +90,6 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <Link to="/" className="navbar-logo">
-          <img
-            src={logo}
-            alt="ConvexTech Logo"
-            className="navbar-logo-img-mobile"
-          />
           <img
             src={logo2}
             alt="ConvexTech Logo"

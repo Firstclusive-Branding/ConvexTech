@@ -38,6 +38,11 @@
   text-align: left !important;
 }
 
+.hero-word {
+  display: inline-block;
+  white-space: pre;
+}
+
 .highlight {
   color: #3ed4ef;
 }
@@ -187,15 +192,17 @@
   .hero-section {
     flex-direction: column;
     align-items: flex-start;
-    height: 90vh;
+    height: auto;
     padding: 1rem 2rem;
+    padding-bottom: 3rem;
+    gap: 2rem;
   }
 
   .spring-circle {
-    height: 80%;
-    width: auto;
+    height: 100%;
     left: 25% !important;
   }
+
   .hero-left {
     padding: 1rem;
     width: 90%;
@@ -249,13 +256,19 @@
 
 @media screen and (max-width: 480px) {
   .hero-section {
-    padding: 1rem;
-    height: 80vh;
+    padding: 0;
+    padding-bottom: 2rem;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .hero-left {
+    width: 100%;
   }
 
   .hero-left h1 {
-    font-size: 1.9rem;
-    text-align: left;
+    font-size: 2.1rem;
+    text-align: left !important;
   }
 
   .tagline {
@@ -263,7 +276,7 @@
   }
 
   .subtext {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .spring-circle {

@@ -52,6 +52,9 @@ const Presence = () => {
         transition={{ duration: 0.8, delay: 0.5 }}
         viewport={{ once: false }}
       >
+        <p className="presence-label">
+          <span></span>Visible Impact
+        </p>
         <h2 className="presence-heading">
           We Elevate & Enhance Your <span>presence</span>
         </h2>

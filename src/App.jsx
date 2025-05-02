@@ -19,6 +19,7 @@ import StaffingAndRecruitment from "./components/StaffingAndRecruitment";
 import HealthcareAndClinical from "./components/HealthcareAndClinical";
 import NonITServices from "./components/NonITServices";
 import JobApply from "./components/JobApply";
+import ServicesComponent from "./components/ServicesComponent";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,11 @@ const router = createBrowserRouter([
 
       // Service Routes
       { path: "services/sap", element: <SAPSolutions /> },
-      { path: "services/software", element: <SoftwareDevelopment /> },
+      // { path: "services/software-development", element: <SoftwareDevelopment /> },
+      {
+        path: "services/software-development",
+        element: <ServicesComponent />,
+      },
       { path: "services/ai", element: <ArtificialIntelligence /> },
       { path: "services/data-science", element: <DataScience /> },
       { path: "services/branding", element: <BrandingAndDigitalMarketing /> },

@@ -1,7 +1,18 @@
 .services-wrapper {
-  background: url("../assets/texture-bg.png") no-repeat center center/cover;
+  position: relative;
   padding: 60px 20px;
   text-align: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.services-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/texture-bg.png") no-repeat center center/cover;
+  opacity: 0.4;
+  z-index: -1;
 }
 
 .services-header .services-subtitle {
@@ -30,8 +41,17 @@
 .services-title {
   font-size: 32px;
   color: #1a1a18;
-  font-weight: 800;
-  margin-bottom: 40px;
+  margin: 40px auto;
+  text-align: center;
+  font-weight: 500;
+}
+.services-title span {
+  color: #3ed4ef;
+}
+
+.services-card-container {
+  max-width: 80%;
+  margin: auto;
 }
 
 .services-cards {
@@ -39,7 +59,6 @@
   justify-content: center;
   margin: auto;
   gap: 24px;
-  max-width: 80%;
   padding-bottom: 200px;
 }
 

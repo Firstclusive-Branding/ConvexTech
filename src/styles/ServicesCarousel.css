@@ -32,7 +32,7 @@
   stroke-width: 2;
   stroke-dasharray: 6 10;
   stroke-linecap: round;
-  animation: worm-wave 4s linear infinite;
+  animation: worm-wave 20s linear infinite;
 }
 
 @keyframes worm-wave {
@@ -40,7 +40,7 @@
     stroke-dashoffset: 0;
   }
   100% {
-    stroke-dashoffset: 200;
+    stroke-dashoffset: 1500;
   }
 }
 
@@ -127,7 +127,7 @@
 
 .services-carousel-title {
   font-size: 2rem;
-  margin-top: 15px;
+  margin: 40px auto;
   color: #000;
   font-weight: 500;
 }

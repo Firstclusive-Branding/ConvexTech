@@ -21,7 +21,6 @@ import softwareDevImg from "../assets/Services Carousel Assets/software-developm
 import aiImg from "../assets/Services Carousel Assets/artificial-intelligence.png";
 import dataScienceImg from "../assets/Services Carousel Assets/data-science.png";
 import brandingImg from "../assets/Services Carousel Assets/branding.png";
-import staffingImg from "../assets/Services Carousel Assets/staffing.png";
 import healthcareImg from "../assets/Services Carousel Assets/healthcare.png";
 import accountsimg from "../assets/Services Carousel Assets/accounts.png";
 import bluecollarimg from "../assets/Services Carousel Assets/blue-collar.png";

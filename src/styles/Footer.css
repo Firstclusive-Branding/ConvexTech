@@ -280,7 +280,9 @@
   .newsletter-box {
     flex-direction: column;
     max-width: fit-content;
+    padding: 1rem;
   }
+
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
