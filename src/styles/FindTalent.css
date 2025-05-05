@@ -1,0 +1,212 @@
+.find-talent-container {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  color: #1a1a18;
+}
+
+.find-talent-content {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.find-talent-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.find-talent-image {
+  border-radius: 12px;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+.find-talent-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.6s ease;
+}
+.find-talent-image img:hover {
+  transform: scale(1.05);
+}
+.find-talent-subtitle {
+  font-size: 1.2rem;
+  color: #3ed4ef;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.find-talent-title {
+  font-size: 2.8rem;
+  color: #36308a;
+  margin-bottom: 0;
+}
+
+.find-talent-description {
+  font-size: 1.05rem;
+  color: #1a1a18;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.find-talent-right {
+  flex: 1;
+  background-color: #f5f8ff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 12px rgba(62, 212, 239, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.find-talent-form input,
+.find-talent-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.find-talent-form input:focus,
+.find-talent-form textarea:focus {
+  border-color: #3ed4ef;
+  outline: none;
+}
+
+.find-talent-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.find-talent-form button {
+  width: 100%;
+  background-color: #3ed4ef;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 25px;
+  border: 1px solid #3ed4ef;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.5s ease;
+  font-size: 1rem;
+}
+
+.find-talent-form button:hover {
+  background-color: #2bb8d4;
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 #fff, 0 0 0 #fff, inset 0px -3px 5px 0 #fff, 0 0 0 #fff;
+}
+
+.find-talent-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.find-talent-checkbox input[type="checkbox"] {
+  width: auto;
+  margin-top: 5px;
+}
+
+.find-talent-checkbox-label {
+  font-size: 0.85rem;
+  color: #1a1a18;
+  line-height: 1.6;
+}
+
+.find-talent-checkbox-label a {
+  color: #3ed4ef;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.find-talent-checkbox-label a:hover {
+  text-decoration: underline;
+  color: #36308a;
+}
+
+@media (max-width: 1024px) {
+  .find-talent-container {
+    width: 95%;
+  }
+  .find-talent-image {
+    margin-bottom: 30px;
+    height: auto;
+  }
+
+  .find-talent-title {
+    font-size: 2.2rem;
+  }
+
+  .find-talent-right {
+    padding: 30px;
+  }
+
+  .find-talent-form button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .find-talent-content {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .find-talent-title {
+    font-size: 2rem;
+  }
+
+  .find-talent-subtitle {
+    font-size: 1rem;
+  }
+  .find-talent-form input,
+  .find-talent-form textarea {
+    font-size: 0.95rem;
+    padding: 12px 14px;
+  }
+
+  .find-talent-form button {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .find-talent-container {
+    padding: 10px;
+  }
+  .find-talent-title {
+    font-size: 1.6rem;
+  }
+
+  .find-talent-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .find-talent-form button {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .find-talent-checkbox-label {
+    font-size: 0.75rem;
+  }
+
+  .find-talent-right {
+    padding: 24px;
+  }
+}
