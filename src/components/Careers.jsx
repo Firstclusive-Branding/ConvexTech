@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { jobList } from "./CareersList";
@@ -6,6 +6,9 @@ import "../styles/Careers.css";
 import careersImage from "../assets/Careers Assets/careers-img.png";
 
 const Careers = () => {
+  useEffect(() => {
+    document.title = `Find Jobs - Convex Tech`;
+  }, []);
   return (
     <section className="careers-section">
       <div className="careers-section-wrapper">

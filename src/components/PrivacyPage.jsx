@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/PrivacyPage.css";
 
 const PrivacyPage = () => {
+  useEffect(() => {
+    document.title = `Privacy Policy - Convex Tech`;
+  }, []);
+
   return (
     <div className="privacy-container">
       <h1>Privacy Policy</h1>

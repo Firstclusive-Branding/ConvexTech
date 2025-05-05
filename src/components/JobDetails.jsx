@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { jobList } from "./CareersList";
 import "../styles/JobDetails.css";
@@ -12,6 +12,10 @@ const JobDetails = () => {
   if (!job) return <p>Job not found.</p>;
 
   const formattedTitle = job.title.toLowerCase().replace(/\s+/g, "-");
+
+  useEffect(() => {
+    document.title = `${job.title} - Convex Tech`;
+  }, []);
 
   return (
     <div className="job-details">

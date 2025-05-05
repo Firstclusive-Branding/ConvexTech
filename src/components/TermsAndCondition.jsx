@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/TermsAndCondition.css";
 
 const TermsAndCondition = () => {
+  useEffect(() => {
+    document.title = `Terms and Conditions - Convex Tech`;
+  }, []);
+
   return (
     <div className="terms-container">
       <h1>Terms and Conditions</h1>

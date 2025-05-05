@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/ProjectEnquiry.css";
 import enquiryImage from "../assets/Project Enquiry Assets/project-enquiry.png";
 import { motion } from "framer-motion";
 
 const ProjectEnquiry = () => {
+  useEffect(() => {
+    document.title = `Project Enquiry - Convex Tech`;
+  }, []);
+
   return (
     <div>
       <div className="project-enquiry-container">

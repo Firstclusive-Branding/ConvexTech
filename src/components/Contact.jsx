@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import "../styles/Contact.css";
 import contactusimg from "../assets/Contact Us Assets/contact-us.png";
@@ -6,6 +6,9 @@ import { FaPhoneSquareAlt } from "react-icons/fa";
 import { FaEnvelope, FaMapPin } from "react-icons/fa6";
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = `Contact Us - Convex Tech`;
+  }, []);
   return (
     <section className="contact-section">
       <motion.div className="contact-container">

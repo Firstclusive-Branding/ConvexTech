@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/FindTalent.css";
 import findtalentimg from "../assets/Find Talent Assets/find-talent.png";
 import { motion } from "framer-motion";
 
 const FindTalent = () => {
+  useEffect(() => {
+    document.title = `Find Talent - Convex Tech`;
+  }, []);
   return (
     <div>
       <div className="find-talent-container">

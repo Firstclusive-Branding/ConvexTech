@@ -10,6 +10,7 @@ import Contact from "./components/Contact";
 import ErrorPage from "./components/ErrorPage";
 import JobDetails from "./components/JobDetails";
 import TermsAndCondition from "./components/TermsAndCondition";
+import PrivacyPage from "./components/PrivacyPage";
 
 // Staffing Service Pages
 import SAPSolutions from "./components/SAPSolutions";
@@ -21,7 +22,6 @@ import StaffingAndRecruitment from "./components/StaffingAndRecruitment";
 import HealthcareAndClinical from "./components/HealthcareAndClinical";
 import NonITServices from "./components/NonITServices";
 import JobApply from "./components/JobApply";
-import ServicesComponent from "./components/ServicesComponent";
 import ProjectEnquiry from "./components/ProjectEnquiry";
 
 //Tech Solutions Pages
@@ -30,7 +30,6 @@ import TSBranding from "./components/TSBranding";
 import TSMarketing from "./components/TSMarketing";
 import TSWebsites from "./components/TSWebsites";
 import TSSAP from "./components/TSSAP";
-import PrivacyPage from "./components/PrivacyPage";
 
 const router = createBrowserRouter([
   {
@@ -55,10 +54,6 @@ const router = createBrowserRouter([
         path: "staffing-services/software-development",
         element: <SoftwareDevelopment />,
       },
-      // {
-      //   path: "staffing-services/software-development",
-      //   element: <ServicesComponent />,
-      // },
       { path: "staffing-services/ai", element: <ArtificialIntelligence /> },
       { path: "staffing-services/data-science", element: <DataScience /> },
       {

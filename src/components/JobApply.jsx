@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import "../styles/JobApply.css";
 import { FaArrowLeftLong } from "react-icons/fa6";
@@ -10,6 +10,10 @@ const JobApply = () => {
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
+
+  useEffect(() => {
+    document.title = `Apply for ${formattedTitle} - Convex Tech`;
+  }, []);
 
   return (
     <div className="jobapply-container">

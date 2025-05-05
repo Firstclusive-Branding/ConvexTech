@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineCloud, AiOutlinePieChart } from "react-icons/ai";
 import { BsDatabaseCheck, BsPeople } from "react-icons/bs";
@@ -77,6 +77,9 @@ const sapServices = [
   },
 ];
 const SAPSolutions = () => {
+  useEffect(() => {
+    document.title = `SAP Solutions - Convex Tech`;
+  }, []);
   return (
     <div className="services-container">
       {sapServices.map((section, index) => {

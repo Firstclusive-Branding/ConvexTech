@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import "../styles/ErrorPage.css";
 import errorimg from "../assets/error-404.png";
 
 const ErrorPage = () => {
+  useEffect(() => {
+    document.title = `Error 404 - Convex Tech`;
+  }, []);
   return (
     <div className="error-page-container">
       <motion.img

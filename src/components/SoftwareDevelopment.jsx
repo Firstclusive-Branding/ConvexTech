@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineCode, AiOutlineMobile } from "react-icons/ai";
 import { BsWindow } from "react-icons/bs";
@@ -55,6 +55,9 @@ const services = [
 ];
 
 const SoftwareDevelopment = () => {
+  useEffect(() => {
+    document.title = `Software Development - Convex Tech`;
+  }, []);
   return (
     <div className="services-container">
       {services.map((section, index) => {
