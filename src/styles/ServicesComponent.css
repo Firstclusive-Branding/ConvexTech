@@ -14,18 +14,20 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 40px;
-  background: #ffffff;
+  background: linear-gradient(35deg, #ffffff 75%, #f4f4f4 75%);
+  border: 2px solid #ffffff;
   border-radius: 20px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .services-section:hover {
-  transform: translateY(-4px);
+  transform: translateY(-10px) !important;
 }
 
 .services-section.reverse {
   flex-direction: row-reverse;
+  background: linear-gradient(135deg, #f4f4f4 25%, #ffffff 25%);
 }
 
 .services-image-wrapper {
