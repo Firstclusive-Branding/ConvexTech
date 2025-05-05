@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "../../styles/Admin Styles/ManageJobs.css";
+import "../styles/ManageJobs.css";
 import { MdEdit, MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
@@ -71,9 +71,8 @@ const ManageJobs = ({ role }) => {
         },
         getAuthHeaders()
       );
-
+      console.log("Full Response:", res.data);
       const jobList = res.data.data.jobs || res.data.data.jobposting || [];
-
       setJobs(jobList);
       setTotalPages(res.data.data.totalPages || 1);
     } catch (err) {
@@ -311,7 +310,7 @@ const ManageJobs = ({ role }) => {
             {!isRecruiter && <th>Posted By</th>}
             {!isRecruiter && <th>Role</th>}
             <th>Updated</th>
-            {!isRecruiter && <th>Status</th>}
+            <th>Status</th>
             <th>Actions</th>
           </tr>
         </thead>

@@ -1,0 +1,116 @@
+.contact-forms-container {
+  padding: 20px 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  color: #1a1a18;
+}
+
+.contact-forms-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #36308a;
+  margin-bottom: 20px;
+}
+
+.contact-forms-search {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.contact-forms-search input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  color: #1a1a18;
+}
+
+.contact-forms-error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.contact-forms-no-data {
+  font-size: 16px;
+  text-align: center;
+  color: #666;
+  margin-top: 40px;
+}
+
+.contact-forms-table-wrapper {
+  overflow-x: auto;
+}
+
+.contact-forms-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contact-forms-table th,
+.contact-forms-table td {
+  padding: 12px 14px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  vertical-align: top;
+}
+
+.contact-forms-table th {
+  background-color: #36308a;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.contact-forms-table td {
+  color: #1a1a18;
+}
+
+.contact-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ef4444;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.contact-delete-btn:hover {
+  color: #c53030;
+}
+
+.contact-forms-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.contact-forms-pagination button {
+  background-color: #36308a;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-forms-pagination button:hover {
+  background-color: #2b2675;
+}
+
+.contact-forms-pagination button:disabled {
+  background-color: #a1a1aa;
+  cursor: not-allowed;
+}

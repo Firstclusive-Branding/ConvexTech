@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "../../styles/Admin Styles/AdminUsers.css";
+import "../styles/AdminUsers.css";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 import { MdEdit, MdDelete } from "react-icons/md";
@@ -372,7 +372,9 @@ const AdminUsers = ({ role }) => {
                   <td>{new Date(user.createdAt).toLocaleDateString()}</td>
                   <td>
                     <button
-                      className="users-approve-btn"
+                      className={`users-approve-btn ${
+                        user.approved ? "approved-disabled" : ""
+                      }`}
                       onClick={() => handleApprove(user._id)}
                       disabled={user.approved || loading === user._id}
                     >
@@ -383,11 +385,17 @@ const AdminUsers = ({ role }) => {
                         : "Approve"}
                     </button>
                     <button
-                      className="users-reject-btn"
+                      className={`users-reject-btn ${
+                        user.reject ? "rejected-disabled" : ""
+                      }`}
                       onClick={() => handleReject(user._id)}
-                      disabled={!user.approved || loading === user._id}
+                      disabled={user.reject || loading === user._id}
                     >
-                      {loading === user._id ? "Rejecting..." : "Deny"}
+                      {user.reject
+                        ? "Denied"
+                        : loading === user._id
+                        ? "Rejecting..."
+                        : "Deny"}
                     </button>
                   </td>
 

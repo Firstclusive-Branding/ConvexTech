@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import AdminSidebar from "./AdminSidebar";
 import AdminNavbar from "./AdminNavbar";
-import "../../styles/Admin Styles/AdminLayout.css";
+import "../styles/AdminLayout.css";
 
 const AdminLayout = () => {
   const [isDesktop, setIsDesktop] = useState(

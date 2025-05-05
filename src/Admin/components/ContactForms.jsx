@@ -3,7 +3,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "../../styles/Admin Styles/ContactForms.css";
+import "../styles/ContactForms.css";
 import { MdDelete } from "react-icons/md";
 
 const baseURL = import.meta.env.VITE_API_URL;

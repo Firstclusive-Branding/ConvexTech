@@ -9,8 +9,8 @@ import {
   FaUserFriends,
   FaSignOutAlt,
 } from "react-icons/fa";
-import "../../styles/Admin Styles/AdminSidebar.css";
-import Logo from "../../assets/Logo.png";
+import "../styles/AdminSidebar.css";
+import Logo from "../../assets/ConvexTech Logo white.png";
 import profilePic from "../../assets/profile-pic.png";
 
 const AdminSidebar = ({ role }) => {
@@ -52,7 +52,7 @@ const AdminSidebar = ({ role }) => {
 
   return (
     <div className={`universal-sidebar ${role}-sidebar`}>
-      <img src={Logo} alt="Logo" />
+      <img src={Logo} alt="Logo" className="universal-sidebar-logo" />
 
       <ul>
         <li>

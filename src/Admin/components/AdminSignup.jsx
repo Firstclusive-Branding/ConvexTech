@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { IoMdRefresh } from "react-icons/io";
 import axios from "axios";
 import { toast } from "react-toastify";
-import "../../styles/Admin Styles/AdminSignup.css";
+import "../styles/AdminSignup.css";
 
 const baseURL = import.meta.env.VITE_API_URL;
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
-import "../../styles/Admin Styles/RecruiterForm.css";
+import "../styles/RecruiterForm.css";
 import { MdDelete } from "react-icons/md";
 
 const baseURL = import.meta.env.VITE_API_URL;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../styles/Admin Styles/AdminNavbar.css";
+import "../styles/AdminNavbar.css";
 
 const AdminNavbar = ({ role }) => {
   const [firstName, setFirstName] = useState("");

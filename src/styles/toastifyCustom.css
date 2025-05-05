@@ -1,0 +1,17 @@
+.custom-toast {
+  border-radius: 10px;
+  background: #1a1a18;
+  color: #ffffff;
+  border-left: 6px solid #3ed4ef;
+  box-shadow: 0 4px 12px rgba(54, 48, 138, 0.4);
+}
+
+.custom-toast-body {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.custom-toast-progress {
+  background: #3ed4ef !important;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/Admin Styles/ForgotPassword.css";
+import "../styles/ForgotPassword.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
@@ -44,7 +44,7 @@ const ForgotPassword = () => {
         tokenotp: otp,
         password: newPassword,
       });
-      toast.success("Password reset successfully!");
+      toast.success("Password reset successfully! Redirecting to login...");
       setTimeout(() => {
         navigate("/admin");
         setOtpSent(false);

@@ -1,0 +1,315 @@
+.admin-users-container {
+  padding: 30px;
+  background-color: #ffffff;
+  color: #1a1a18;
+}
+
+.admin-users-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.admin-users-controls input,
+.admin-users-controls select {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  color: #1a1a18;
+}
+
+.add-user-btn {
+  background-color: #3ed4ef;
+  color: #1a1a18;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-user-btn:hover {
+  background-color: #1dc8e2;
+}
+
+.admin-users-table-wrapper {
+  overflow-x: auto;
+}
+
+.admin-users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-users-table th,
+.admin-users-table td {
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.admin-users-table th {
+  background-color: #36308a;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.admin-users-no-data {
+  text-align: center;
+  padding: 30px;
+  font-size: 16px;
+  color: #888;
+}
+
+.role-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: #f3f4f6;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.role-badge.manager {
+  background-color: #d1e7ff;
+  color: #084298;
+}
+
+.role-badge.recruiter {
+  background-color: #ffe8cc;
+  color: #a25b00;
+}
+
+.users-approve-btn,
+.users-reject-btn {
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  margin: 4px 2px;
+  transition: background-color 0.3s ease;
+}
+
+.users-approve-btn {
+  background-color: #28a745;
+}
+
+.users-approve-btn:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.users-reject-btn {
+  background-color: #dc3545;
+}
+
+.users-reject-btn:hover:not(:disabled) {
+  background-color: #c82333;
+}
+
+.users-approve-btn.approved-disabled {
+  background-color: #a1f0c4;
+  color: #155724;
+  cursor: not-allowed;
+}
+
+.users-reject-btn.rejected-disabled {
+  background-color: #ffd9d9;
+  color: #721c24;
+  cursor: not-allowed;
+}
+
+.reset-password-btn,
+.update-password-btn,
+.cancel-password-btn,
+.update-btn,
+.cancel-btn {
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.reset-password-btn {
+  background-color: #3ed4ef;
+  color: #1a1a18;
+}
+
+.update-password-btn {
+  background-color: #004aad;
+  color: #ffffff;
+}
+
+.cancel-password-btn {
+  background-color: #e5e7eb;
+  color: #1a1a18;
+}
+
+.update-btn {
+  background-color: #004aad;
+  color: #ffffff;
+}
+
+.cancel-btn {
+  background-color: #f1f5f9;
+  color: #1a1a18;
+}
+
+.edit-btn,
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin: 0 4px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.new-password-input {
+  padding: 6px 10px;
+  font-size: 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  margin-right: 8px;
+  width: 120px;
+}
+
+.admin-users-pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.admin-users-pagination button {
+  background-color: #36308a;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-users-pagination button:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #00000070;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #36308a;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+}
+
+.modal-close-btn:hover {
+  color: #000;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="password"],
+.modal-content input[type="tel"] {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.create-user-role {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.submit-user-btn {
+  background-color: #3ed4ef;
+  color: #1a1a18;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-user-btn:hover {
+  background-color: #22cfe6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

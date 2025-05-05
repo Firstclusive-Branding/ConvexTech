@@ -1,0 +1,142 @@
+.job-applicants-container {
+  padding: 20px 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  color: #1a1a18;
+}
+
+.job-applicants-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #36308a;
+  margin-bottom: 20px;
+}
+
+.job-applicants-search {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.job-applicants-search input {
+  padding: 10px 14px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  color: #1a1a18;
+}
+
+.job-applicants-error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.job-applicants-no-data {
+  font-size: 16px;
+  text-align: center;
+  color: #666;
+  margin-top: 40px;
+}
+
+.job-applicants-table-wrapper {
+  overflow-x: auto;
+}
+
+.job-applicants-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.job-applicants-table th,
+.job-applicants-table td {
+  padding: 12px 14px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.job-applicants-table th {
+  background-color: #36308a;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.job-applicants-table td a {
+  color: #0c7dbd;
+  text-decoration: none;
+}
+
+.role-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: #3ed4ef;
+  color: #1a1a18;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.applicant-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ef4444;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.applicant-delete-btn:hover {
+  color: #c53030;
+}
+
+.job-applicant-pdf-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6f4f9;
+  border-radius: 6px;
+  padding: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.job-applicant-pdf-link:hover {
+  background-color: #c9eaf6;
+}
+
+.job-applicants-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.job-applicants-pagination button {
+  background-color: #36308a;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.job-applicants-pagination button:hover {
+  background-color: #2b2675;
+}
+
+.job-applicants-pagination button:disabled {
+  background-color: #a1a1aa;
+  cursor: not-allowed;
+}

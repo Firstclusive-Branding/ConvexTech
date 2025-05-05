@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "../../styles/Admin Styles/AdminLogin.css";
+import "../styles/AdminLogin.css";
 import { IoMdRefresh } from "react-icons/io";
 import { toast } from "react-toastify";
-import logo from "../../assets/Logo.png";
+import logo from "../../assets/ConvexTech Logo 2.png";
 
 const AdminLogin = () => {
   const navigate = useNavigate();
@@ -19,8 +19,7 @@ const AdminLogin = () => {
   const baseURL = import.meta.env.VITE_API_URL;
 
   const generateCaptchaText = () => {
-    const chars =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const chars = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghjkmnopqrstuvwxyz0123456789";
     let text = "";
     for (let i = 0; i < 6; i++) {
       text += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -124,7 +123,7 @@ const AdminLogin = () => {
           toast.error("Invalid user role");
       }
 
-      // window.location.reload();
+      window.location.reload();
     } catch (err) {
       const msg =
         err?.response?.data?.message || "Something went wrong. Try again.";
@@ -138,6 +137,9 @@ const AdminLogin = () => {
     <div className="admin-login-container">
       <div className="admin-login-logo-container">
         <img src={logo} alt="logo" />
+        <a href="/" className="admin-login-home-button">
+          Home
+        </a>
       </div>
       <div className="admin-login-box">
         <h2 className="admin-login-title">Login</h2>

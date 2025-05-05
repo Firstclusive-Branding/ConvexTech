@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../../styles/Admin Styles/AdminDashboard.css";
+import "../styles/AdminDashboard.css";
 
 const AdminDashboard = () => {
   const storedUser = JSON.parse(localStorage.getItem("userData"));
