@@ -51,11 +51,14 @@ const router = createBrowserRouter([
 
       // Service Routes
       { path: "staffing-services/sap", element: <SAPSolutions /> },
-      // { path: "staffing-services/software-development", element: <SoftwareDevelopment /> },
       {
         path: "staffing-services/software-development",
-        element: <ServicesComponent />,
+        element: <SoftwareDevelopment />,
       },
+      // {
+      //   path: "staffing-services/software-development",
+      //   element: <ServicesComponent />,
+      // },
       { path: "staffing-services/ai", element: <ArtificialIntelligence /> },
       { path: "staffing-services/data-science", element: <DataScience /> },
       {

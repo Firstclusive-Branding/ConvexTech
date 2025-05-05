@@ -1,10 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { AiOutlineCode, AiOutlineMobile } from "react-icons/ai";
+import { BsWindow } from "react-icons/bs";
+import { FiLayout } from "react-icons/fi";
 import "../styles/ServicesComponent.css";
 
 const services = [
   {
-    title: "Software Development",
+    titleMain: "Software",
+    titleHighlight: "Development",
+    icon: <AiOutlineCode className="services-icon" />,
     image: "https://picsum.photos/seed/softwaredev/800/400",
     paragraphs: [
       "In the digital world, website development or web development plays a key role in showcasing the product or service information to the prospective audience, and having to get into the best of UI/UX design persona.",
@@ -13,7 +18,9 @@ const services = [
     ],
   },
   {
-    title: "Front-End & Back-End Development",
+    titleMain: "Front-End &",
+    titleHighlight: "Back-End Development",
+    icon: <FiLayout className="services-icon" />,
     image: "https://picsum.photos/seed/frontendbackend/800/400",
     paragraphs: [
       "Convextech is one of the web design and development company in United States, which primarily focuses on two major components:",
@@ -22,7 +29,9 @@ const services = [
     ],
   },
   {
-    title: "Web Application Development",
+    titleMain: "Web Application",
+    titleHighlight: "Development",
+    icon: <BsWindow className="services-icon" />,
     image: "https://picsum.photos/seed/webapp/800/400",
     paragraphs: [
       "The web application development is one of the integral components for a designing company, as this would involve conceiving, creating, and development of web applications or the software applications which are mostly accessible over the internet or cloud, or run through the web-server. The interface of which is made available through a web browser.",
@@ -30,7 +39,9 @@ const services = [
     ],
   },
   {
-    title: "Mobile Application Development",
+    titleMain: "Mobile Application",
+    titleHighlight: "Development",
+    icon: <AiOutlineMobile className="services-icon" />,
     image: "https://picsum.photos/seed/mobileapp/800/400",
     paragraphs: [
       "Similar to web application development, mobile application development is the one which involves conceiving, designing and development of an application which could primarily run through hand-held devices, smartphones and tablets. Sometimes, these can be a range of mobile apps, with a different kind of operating system, which are particularly suited for Android and iOS platforms.",
@@ -45,25 +56,31 @@ const ServicesComponent = () => {
       {services.map((section, index) => {
         const isReversed = index % 2 !== 0;
         return (
-          <section
+          <motion.section
             key={index}
             className={`services-section ${isReversed ? "reverse" : ""}`}
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.2 }}
           >
-            <motion.img
-              src={section.image}
-              alt={section.title}
-              className="services-image"
-              initial={{ opacity: 0, x: isReversed ? 50 : -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-            />
-            <motion.div
-              className="services-content"
-              initial={{ opacity: 0, x: isReversed ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-            >
-              <h2>{section.title}</h2>
+            <div className="services-image-wrapper">
+              <img
+                src={section.image}
+                alt={section.title}
+                className="services-image"
+              />
+            </div>
+            <div className="services-content">
+              {/* <h2>
+                {section.icon} {section.title}
+              </h2> */}
+              <h2>
+                {section.icon} {section.titleMain}{" "}
+                <span className="highlighted-word">
+                  {section.titleHighlight}
+                </span>
+              </h2>
+
               {section.paragraphs.map((text, i) =>
                 text.includes("<ul>") ? (
                   <div key={i} dangerouslySetInnerHTML={{ __html: text }} />
@@ -71,8 +88,8 @@ const ServicesComponent = () => {
                   <p key={i}>{text}</p>
                 )
               )}
-            </motion.div>
-          </section>
+            </div>
+          </motion.section>
         );
       })}
     </div>
