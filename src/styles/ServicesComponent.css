@@ -118,8 +118,15 @@
   color: #1a1a18;
   margin-bottom: 8px;
 }
+.services-component-list li {
+  list-style: none;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.services-component-list li strong {
+  color: #3ed4ef;
+}
 
-/* Responsive Breakpoints */
 @media (max-width: 1024px) {
   .services-section {
     flex-direction: column;
