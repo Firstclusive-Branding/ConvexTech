@@ -1,7 +1,6 @@
 .admin-navbar {
   height: 70px;
-  background-color: #ffffff;
-  border-bottom: 2px solid #3ed4ef;
+  background-color: #1a1a18;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,7 +12,7 @@
 }
 
 .admin-title {
-  color: #1a1a18;
+  color: #ffffff;
   font-size: 20px;
   font-weight: 600;
 }
@@ -23,7 +22,7 @@
   align-items: center;
   gap: 20px;
   font-size: 14px;
-  color: #36308a;
+  color: #3ed4ef;
   font-weight: 500;
 }
 

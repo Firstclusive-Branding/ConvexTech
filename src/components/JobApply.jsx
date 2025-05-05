@@ -38,7 +38,7 @@ const JobApply = () => {
         <input type="text" placeholder="Full Name" required />
         <input type="email" placeholder="Email Address" required />
         <input type="text" placeholder="Phone Number" required />
-        <input type="number" placeholder="Experience" required />
+        <input type="number" placeholder="Experience (in years)" required />
 
         <label className="file-label">Upload Your CV (PDF Only)</label>
         <input type="file" accept="application/pdf" required />
