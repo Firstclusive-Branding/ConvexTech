@@ -39,14 +39,21 @@ const JobApply = () => {
         <label className="file-label">Upload Your CV (PDF Only)</label>
         <input type="file" accept="application/pdf" required />
 
-        <label className="checkbox-label">
-          <input type="checkbox" />
-          By checking this box, I consent to receive text messages related to
-          conversations and follow-ups from ConvexTech. You can reply ‘STOP’ at
-          any time to opt out. Message and data rates may apply. Message
-          frequency may vary; text HELP for assistance. For more information,
-          please visit our Privacy Policy and SMS Terms and Conditions.
-        </label>
+        <div className="find-talent-checkbox">
+          <input type="checkbox" id="find-TermsCheckbox" />
+          <label
+            htmlFor="find-TermsCheckbox"
+            className="find-talent-checkbox-label"
+          >
+            By checking this box, I consent to receive text messages related to
+            conversations and follow-ups from Cadila Global. You can reply
+            ‘STOP’ at any time to opt out. Message and data rates may apply.
+            Message frequency may vary; text HELP for assistance. For more
+            information, please visit our{" "}
+            <a href="/privacy-policy">Privacy Policy</a> and SMS{" "}
+            <a href="/terms-and-conditions">Terms and Conditions</a>.
+          </label>
+        </div>
 
         <button type="submit">SUBMIT</button>
       </form>

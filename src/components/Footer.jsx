@@ -196,31 +196,32 @@ const Footer = () => {
           </div>
 
           <div className="footer-legal">
-            <a href="#">Privacy Policy</a>
+            <a href="/terms-and-conditions">Terms and Conditions</a>
+            <span>|</span>
+            <a href="/privacy-policy">Privacy Policy</a>
             <span>|</span>
             <a href="#">Unsubscribe</a>
           </div>
         </div>
-      </div>
 
-      {/* Footer Attribution */}
-      <div className="footer-attribution">
-        <div className="footer-footer">
+        {/* Footer Attribution */}
+        <div className="footer-attribution">
           <p>Powered by ConvexTech © 2011 - 2025.</p>
+
           <div>
-            <a href="/terms-and-condition">Terms and Condition</a> |{" "}
-            <a href="/privacy-policy">Privacy Policy</a> |
-            <a href="#">Unsubscribe</a>
+            <p>
+              Made with{" "}
+              <FaHeart style={{ color: "#3ed4ef", verticalAlign: "middle" }} />{" "}
+              by{" "}
+              <a
+                href="https://firstclusive.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Firstclusive
+              </a>
+            </p>
           </div>
-        </div>
-        <div>
-          <p>
-            Made with{" "}
-            <FaHeart style={{ color: "#3ed4ef", verticalAlign: "middle" }} /> by{" "}
-            <a href="https://firstclusive.com" target="_blank" rel="noreferrer">
-              Firstclusive
-            </a>
-          </p>
         </div>
       </div>
     </footer>

@@ -30,6 +30,7 @@ import TSBranding from "./components/TSBranding";
 import TSMarketing from "./components/TSMarketing";
 import TSWebsites from "./components/TSWebsites";
 import TSSAP from "./components/TSSAP";
+import PrivacyPage from "./components/PrivacyPage";
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,8 @@ const router = createBrowserRouter([
       { path: "job/:title/:id/apply", element: <JobApply /> },
       { path: "project-enquiry", element: <ProjectEnquiry /> },
       { path: "contact-us", element: <Contact /> },
-      { path: "terms-and-condition", element: <TermsAndCondition /> },
+      { path: "terms-and-conditions", element: <TermsAndCondition /> },
+      { path: "privacy-policy", element: <PrivacyPage /> },
 
       // Service Routes
       { path: "staffing-services/sap", element: <SAPSolutions /> },
