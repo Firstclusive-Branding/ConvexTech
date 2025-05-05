@@ -22,6 +22,7 @@
   z-index: 1;
   overflow: hidden;
   margin-bottom: 40px;
+  border-radius: 15px;
 }
 
 .contact-container::before {
@@ -31,7 +32,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #f4f4f4c7;
+  background-color: hsla(0, 0%, 96%, 0.9);
   z-index: -1;
 }
 
@@ -140,19 +141,21 @@
   height: auto;
   border-radius: 12px;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: drop-shadow(0 0 5px #1a1a1881);
 }
 .contact-image:hover {
   transform: scale(1.05);
+  filter: drop-shadow(0 0 10px #1a1a1881);
 }
 
 .contact-location-section {
   background: linear-gradient(
     35deg,
-    #f4f4f4 25%,
+    #3ed4ef28 25%,
     #ffffff 25%,
     #ffffff 75%,
-    #f4f4f4 75%
+    #3ed4ef28 75%
   );
   border: 3px solid #ffffff;
 
@@ -264,6 +267,7 @@
   }
   .contact-location-section {
     padding-bottom: 20px;
+    width: 95%;
   }
   .contact-button {
     padding: 10px 30px;
