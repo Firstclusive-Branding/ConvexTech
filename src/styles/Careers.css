@@ -5,6 +5,28 @@
   background-color: #ffffff;
 }
 
+.careers-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.careers-loader-container .spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #e4e4e4;
+  border-top: 6px solid #36308a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .careers-section-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
