@@ -35,7 +35,9 @@ const AdminNavbar = ({ role }) => {
   return (
     <div className="admin-navbar">
       <div></div>
-      <h2 className="admin-title">Welcome, {firstName}</h2>
+      <h2 className="admin-title">
+        Welcome, {firstName.charAt(0).toUpperCase() + firstName.slice(1)}
+      </h2>
       <div className="admin-nav-items">
         <span className="admin-clock">
           {currentTime.toLocaleString(undefined, {

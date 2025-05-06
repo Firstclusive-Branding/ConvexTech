@@ -27,6 +27,6 @@
 }
 
 .admin-clock {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "monospace", Tahoma, Geneva, Verdana, sans-serif;
   white-space: nowrap;
 }
