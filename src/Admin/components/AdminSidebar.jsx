@@ -8,6 +8,7 @@ import {
   FaUserTie,
   FaUserFriends,
   FaSignOutAlt,
+  FaFolderOpen,
 } from "react-icons/fa";
 import "../styles/AdminSidebar.css";
 import Logo from "../../assets/ConvexTech Logo white.png";
@@ -73,6 +74,27 @@ const AdminSidebar = ({ role }) => {
           </Link>
         </li>
 
+        {/* {role !== "recruiter" && (
+          <>
+            <li>
+              <Link to="/admin/contact-forms">
+                <FaEnvelope /> Contact Us Form
+              </Link>
+            </li>
+            <li>
+              <Link to="/admin/recruiter-forms">
+                <FaUserTie /> Find Talent Form
+              </Link>
+            </li>
+            <li>
+              <Link to="/admin/users">
+                <FaUserFriends />
+                {isAdmin ? "Users" : "Recruiters"}
+              </Link>
+            </li>
+          </>
+        )} */}
+
         {role !== "recruiter" && (
           <>
             <li>
@@ -85,6 +107,15 @@ const AdminSidebar = ({ role }) => {
                 <FaUserTie /> Find Talent Form
               </Link>
             </li>
+
+            {isAdmin && (
+              <li>
+                <Link to="/admin/project-enquiries">
+                  <FaFolderOpen /> Project Enquiries
+                </Link>
+              </li>
+            )}
+
             <li>
               <Link to="/admin/users">
                 <FaUserFriends />

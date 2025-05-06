@@ -53,6 +53,7 @@ import ContactForms from "./Admin/components/ContactForms";
 import RecruiterForm from "./Admin/components/RecruiterForm";
 import ForgotPassword from "./Admin/components/ForgotPassword";
 import AdminSignup from "./Admin/components/AdminSignup";
+import ManageProjectEnquiry from "./Admin/components/ManageProjectEnquiry";
 
 // Route Protection
 const ProtectedRoute = ({ element, roleKey }) => {
@@ -205,6 +206,15 @@ const router = createBrowserRouter([
                     ? "managerAuthenticated"
                     : "recruiterAuthenticated"
                 }
+              />
+            ),
+          },
+          {
+            path: "project-enquiries",
+            element: (
+              <ProtectedRoute
+                element={<ManageProjectEnquiry />}
+                roleKey="adminAuthenticated"
               />
             ),
           },

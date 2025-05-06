@@ -91,6 +91,37 @@
   min-height: 100px;
 }
 
+textarea {
+  font-family: inherit;
+}
+
+.project-type-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+.project-type-checkboxes p {
+  width: 100%;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.checkbox-label {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.checkbox-label input {
+  width: auto;
+  margin: 0;
+}
+
 .project-enquiry-form button {
   width: 100%;
   background-color: #3ed4ef;
