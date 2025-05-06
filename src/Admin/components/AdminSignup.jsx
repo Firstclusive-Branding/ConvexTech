@@ -156,10 +156,8 @@ function AdminSignup() {
         password,
       });
 
-      // setSuccessMessage(response.data.message || "Successfully signed up.");
       toast.success("Successfully signed up. Redirecting to login...");
 
-      // Reset form
       setFormData({
         firstname: "",
         lastname: "",
@@ -172,7 +170,6 @@ function AdminSignup() {
       setUserCaptchaInput("");
       setCaptchaVerified(false);
 
-      // Navigate to login after delay
       setTimeout(() => {
         navigate("/admin");
       }, 3000);
@@ -188,9 +185,7 @@ function AdminSignup() {
     <div className="admin-signup-wrapper">
       <div className="admin-signup-box">
         <h2 className="admin-signup-title">Sign Up</h2>
-        {/* {successMessage && (
-          <div className="signup-success-message">{successMessage}</div>
-        )} */}
+
         <form onSubmit={handleSubmit}>
           <div className="signup-input-group">
             <input

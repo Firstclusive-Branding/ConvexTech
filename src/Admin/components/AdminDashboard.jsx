@@ -30,19 +30,19 @@ const AdminDashboard = () => {
     <div className="admin-dashboard">
       <div className="datetime-group">
         <div className="datetime">
-          <strong>System time:</strong> {formatTime(dateTime)}
+          <strong>System time :</strong> {formatTime(dateTime)}
         </div>
         <div className="datetime">
-          <strong>CST:</strong> {formatTime(dateTime, "America/Chicago")}
+          <strong>CST :</strong> {formatTime(dateTime, "America/Chicago")}
         </div>
         <div className="datetime">
-          <strong>EST:</strong> {formatTime(dateTime, "America/New_York")}
+          <strong>EST :</strong> {formatTime(dateTime, "America/New_York")}
         </div>
         <div className="datetime">
-          <strong>MST:</strong> {formatTime(dateTime, "America/Denver")}
+          <strong>MST :</strong> {formatTime(dateTime, "America/Denver")}
         </div>
         <div className="datetime">
-          <strong>PST:</strong> {formatTime(dateTime, "America/Los_Angeles")}
+          <strong>PST :</strong> {formatTime(dateTime, "America/Los_Angeles")}
         </div>
       </div>
       <div className="dashboard-header">
