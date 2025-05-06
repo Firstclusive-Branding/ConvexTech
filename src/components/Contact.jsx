@@ -10,6 +10,8 @@ import Swal from "sweetalert2";
 const baseURL = import.meta.env.VITE_API_URL;
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
@@ -33,6 +35,8 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+
     const payload = {
       ...formData,
       termaccepted: formData.termaccepted || false,
@@ -58,6 +62,8 @@ const Contact = () => {
       }
     } catch (err) {
       Swal.fire("Error", err.message || "Submission failed", "error");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -153,8 +159,11 @@ const Contact = () => {
               </label>
             </div>
 
-            <button type="submit" className="contact-button">
-              Send Now
+            <button type="submit" className="contact-button" disabled={loading}>
+              <span style={{ visibility: loading ? "hidden" : "visible" }}>
+                Send Now
+              </span>
+              {loading && <span className="contact-button-loader"></span>}
             </button>
           </form>
         </motion.div>

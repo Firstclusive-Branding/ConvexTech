@@ -121,12 +121,32 @@
   cursor: pointer;
   transition: all 0.3s ease;
   width: fit-content;
+  position: relative;
 }
 
 .contact-button:hover {
   background-color: #2bb8d4;
   transform: translateY(-5px);
   box-shadow: 0 0 0 #fff, 0 0 0 #fff, inset 0px -3px 5px 0 #fff, 0 0 0 #fff;
+}
+
+.contact-button-loader {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 0.7s linear infinite;
+  vertical-align: middle;
+  position: absolute;
+  left: 40%;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .contact-right {

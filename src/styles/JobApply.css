@@ -93,7 +93,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  /* width: fit-content; */
+  position: relative;
 }
 
 .jobapply-form button:hover {
@@ -103,14 +103,16 @@
 }
 
 .job-apply-loader {
-  width: 18px;
-  height: 18px;
-  border: 2px solid #ffffff;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
   border-top: 2px solid transparent;
   border-radius: 50%;
-  animation: spin 0.7s linear infinite;
   display: inline-block;
+  animation: spin 0.7s linear infinite;
   vertical-align: middle;
+  position: absolute;
+  left: 50%;
 }
 
 @keyframes spin {

@@ -175,7 +175,10 @@ const ProjectEnquiry = () => {
               ></textarea>
 
               <button type="submit" disabled={loading}>
-                {loading ? <span className="loader"></span> : "Send Enquiry"}
+                <span style={{ visibility: loading ? "hidden" : "visible" }}>
+                  Send Enquiry
+                </span>
+                {loading && <span className="project-button-loader"></span>}
               </button>
             </form>
           </motion.div>

@@ -8,6 +8,8 @@ import Swal from "sweetalert2";
 const baseURL = import.meta.env.VITE_API_URL;
 
 const FindTalent = () => {
+  const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     companyname: "",
     email: "",
@@ -33,6 +35,8 @@ const FindTalent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    setLoading(true);
+
     try {
       const res = await axios.post(
         `${baseURL}/api/user/talent/create`,
@@ -57,6 +61,8 @@ const FindTalent = () => {
       }
     } catch (error) {
       Swal.fire("Error", error.message || "Failed to submit.", "error");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -148,7 +154,12 @@ const FindTalent = () => {
               </label>
             </div>
 
-            <button type="submit">Submit Requirement</button>
+            <button type="submit" disabled={loading}>
+              <span style={{ visibility: loading ? "hidden" : "visible" }}>
+                Send Enquiry
+              </span>
+              {loading && <span className="find-talent-button-loader"></span>}
+            </button>
           </form>
         </motion.div>
       </div>
