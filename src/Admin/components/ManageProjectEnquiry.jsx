@@ -97,6 +97,7 @@ const ManageProjectEnquiry = () => {
                 <th>Services</th>
                 <th>Budget</th>
                 <th>Submited</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -108,6 +109,14 @@ const ManageProjectEnquiry = () => {
                   <td>{entry.services}</td>
                   <td>{entry.estimatedbudget}</td>
                   <td>{new Date(entry.createdAt).toLocaleDateString()}</td>
+                  <td>
+                    <button
+                      className="project-enquiries-delete-btn"
+                      onClick={() => handleDelete(entry._id)}
+                    >
+                      <MdDelete size={24} />
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
