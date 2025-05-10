@@ -11,6 +11,10 @@ import WhyChooseUs from "./WhyChooseUs";
 import StaffingSolutions from "./StaffingSolutions";
 import Industries from "./Industries";
 import Vacancies from "./Vacancies";
+import TechSolutions from "./TechSolutions";
+import EmployerTestimonials from "./EmployerTestimonials";
+import CandidateTestimonials from "./CandidateTestimonials";
+import GetInTouchBanner from "./GetInTouchBanner";
 
 function Homepage() {
   useEffect(() => {
@@ -24,12 +28,16 @@ function Homepage() {
       <StaffingSolutions />
       <Industries />
       <Vacancies />
+      <TechSolutions />
       {/* <Services /> */}
       <WhoWeAre />
       <ServicesCarousel />
       <StatsCounter />
+      <EmployerTestimonials />
+      <CandidateTestimonials />
       <ClientTestimonials />
       <Presence />
+      <GetInTouchBanner />
     </div>
   );
 }

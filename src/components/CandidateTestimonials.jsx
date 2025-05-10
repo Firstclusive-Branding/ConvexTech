@@ -8,26 +8,26 @@ import testimonialBg from "../assets/Client Testimonials Assets/testimonial-bg.p
 
 const testimonials = [
   {
-    name: "Nathan Greene",
-    position: "Founder, NexaTech",
+    name: "Ryan Walker",
+    position: "Software Engineer",
     content:
-      "Our new website not only looks world-class but performs like a sales machine. Convex Tech nailed the UX, speed, and SEO.",
+      "From first call to offer letter, everything was smooth and transparent. I got placed in just 10 days through Convex Tech.",
   },
   {
-    name: "Amanda Clark",
-    position: "CMO, BrightPath Media",
+    name: "Emily Brooks",
+    position: "Digital Marketing Analyst",
     content:
-      "We’ve run campaigns with other agencies before, but none delivered ROI like this. Their marketing team just gets it.",
+      "I’ve worked with other consultancies before, but this one felt personal. They actually listened and placed me in the right role.",
   },
   {
-    name: "Thomas Reed",
-    position: "SAP Project Lead, Altor Group",
+    name: "Daniel Carter",
+    position: "SAP Functional Consultant",
     content:
-      "Their SAP consultants understood both our tech stack and business goals. Deployment was clean, and support was rock solid.",
+      "They didn’t just find me a job, they found me a growth path. Grateful for how committed and professional the team was.",
   },
 ];
 
-const ClientTestimonials = () => {
+const CandidateTestimonials = () => {
   return (
     <section
       className="ct-section"
@@ -41,10 +41,10 @@ const ClientTestimonials = () => {
       >
         <div className="ct-label">
           <span className="ct-label-tag"></span>
-          Client Testimonials
+          Candidate Testimonials
         </div>
         <h2>
-          See What <span className="ct-highlight">Our Clients</span> Are Saying
+          What <span className="ct-highlight">Our Hires</span> Have Shared
         </h2>
       </motion.div>
 
@@ -76,4 +76,4 @@ const ClientTestimonials = () => {
   );
 };
 
-export default ClientTestimonials;
+export default CandidateTestimonials;

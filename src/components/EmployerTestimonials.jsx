@@ -8,26 +8,26 @@ import testimonialBg from "../assets/Client Testimonials Assets/testimonial-bg.p
 
 const testimonials = [
   {
-    name: "Nathan Greene",
-    position: "Founder, NexaTech",
+    name: "Samantha Lee",
+    position: "Head of Talent Acquisition",
     content:
-      "Our new website not only looks world-class but performs like a sales machine. Convex Tech nailed the UX, speed, and SEO.",
+      "Convex Tech transformed our hiring process. The level of talent and turnaround speed exceeded expectations across every project.",
   },
   {
-    name: "Amanda Clark",
-    position: "CMO, BrightPath Media",
+    name: "Vikram Desai",
+    position: "Operations Manager",
     content:
-      "We’ve run campaigns with other agencies before, but none delivered ROI like this. Their marketing team just gets it.",
+      "The team delivered quality profiles with zero time wasted. We finally found a staffing partner that actually understands business needs.",
   },
   {
-    name: "Thomas Reed",
-    position: "SAP Project Lead, Altor Group",
+    name: "Elena Martins",
+    position: "HR Business Partner",
     content:
-      "Their SAP consultants understood both our tech stack and business goals. Deployment was clean, and support was rock solid.",
+      "Reliable, responsive, and effective — that’s how I’d sum up our experience. Convex Tech helped us scale fast without compromise.",
   },
 ];
 
-const ClientTestimonials = () => {
+const EmployerTestimonials = () => {
   return (
     <section
       className="ct-section"
@@ -41,10 +41,10 @@ const ClientTestimonials = () => {
       >
         <div className="ct-label">
           <span className="ct-label-tag"></span>
-          Client Testimonials
+          Employer Testimonials
         </div>
         <h2>
-          See What <span className="ct-highlight">Our Clients</span> Are Saying
+          What <span className="ct-highlight">Our Partners</span> Say About Us
         </h2>
       </motion.div>
 
@@ -76,4 +76,4 @@ const ClientTestimonials = () => {
   );
 };
 
-export default ClientTestimonials;
+export default EmployerTestimonials;

@@ -1,0 +1,161 @@
+.getintouch-section {
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #3ed4ef 25%,
+    #36308a 35%,
+    #36308a 55%,
+    #3ed4ef 75%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.getintouch-content {
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+.getintouch-quote-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.getintouch-quote-icon {
+  font-size: 76px;
+  color: #ffffff;
+  margin: 0 50px;
+}
+
+.getintouch-text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0;
+}
+
+.getintouch-button {
+  background-color: #ffffff;
+  color: #36308a;
+  padding: 14px 32px;
+  font-weight: 700;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.getintouch-button:hover {
+  background-color: #3ed4ef;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.phone-icon-wrapper {
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #3ed4ef;
+}
+
+.phone-icon {
+  color: #3ed4ef;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  .getintouch-quote-icon {
+    font-size: 56px;
+    margin: 0 30px;
+  }
+
+  .getintouch-text {
+    font-size: 2rem;
+  }
+
+  .getintouch-button {
+    font-size: 1rem;
+    padding: 12px 28px;
+  }
+
+  .phone-icon {
+    font-size: 14px;
+  }
+
+  .phone-icon-wrapper {
+    padding: 6px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .getintouch-quote-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .getintouch-quote-icon {
+    font-size: 48px;
+    margin: 0;
+  }
+
+  .getintouch-text {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  .getintouch-button {
+    font-size: 1rem;
+    padding: 10px 24px;
+    gap: 10px;
+  }
+
+  .phone-icon {
+    font-size: 13px;
+  }
+
+  .phone-icon-wrapper {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .getintouch-section {
+    padding: 40px 20px;
+  }
+
+  .getintouch-quote-icon {
+    font-size: 40px;
+  }
+
+  .getintouch-text {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .getintouch-button {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .phone-icon {
+    font-size: 12px;
+  }
+
+  .phone-icon-wrapper {
+    padding: 4px;
+  }
+}
