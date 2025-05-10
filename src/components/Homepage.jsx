@@ -30,13 +30,13 @@ function Homepage() {
       <Vacancies />
       <TechSolutions />
       {/* <Services /> */}
-      <WhoWeAre />
-      <ServicesCarousel />
+      {/* <WhoWeAre /> */}
+      {/* <ServicesCarousel /> */}
       <StatsCounter />
       <EmployerTestimonials />
       <CandidateTestimonials />
       <ClientTestimonials />
-      <Presence />
+      {/* <Presence /> */}
       <GetInTouchBanner />
     </div>
   );
