@@ -1,0 +1,60 @@
+import React from "react";
+import { motion } from "framer-motion";
+import "../styles/WhyChooseUs.css";
+import WhyChooseUsImg1 from "../assets/Why Choose Us Assets/why-choose-us-1.png";
+import WhyChooseUsImg2 from "../assets/Why Choose Us Assets/why-choose-us-2.png";
+
+const WhyChooseUs = () => {
+  return (
+    <section className="whychooseus-section">
+      <motion.div
+        className="whychooseus-image"
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <img
+          src={WhyChooseUsImg1}
+          alt="Why Choose Us"
+          className="whychooseus-img1"
+        />
+        <motion.img
+          src={WhyChooseUsImg2}
+          alt="Why Choose Us"
+          className="whychooseus-img2"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        />
+      </motion.div>
+
+      <motion.div
+        className="whychooseus-content"
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <p className="whychooseus-label">
+          <span></span>Why Choose Us
+        </p>
+        <h2 className="whychooseus-heading">
+          We Deliver Scalable, Secure and Future-Ready Solutions
+        </h2>
+        <p className="whychooseus-text">
+          At ConvexTech, we don’t just follow industry standards - we elevate
+          them. From deep SAP expertise to tailored software development, we
+          ensure every solution is built to perform at scale and drive real
+          business results.
+        </p>
+        <button
+          className="whychooseus-button"
+          onClick={() => (window.location.href = "/about-us")}
+        >
+          Learn More About Us
+        </button>
+      </motion.div>
+    </section>
+  );
+};
+
+export default WhyChooseUs;

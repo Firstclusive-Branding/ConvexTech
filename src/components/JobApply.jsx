@@ -152,7 +152,7 @@ const JobApply = () => {
         <label className="file-label">Upload Your CV (PDF Only)</label>
         <input
           type="file"
-          accept="application/pdf"
+          accept=".pdf,.doc,.docx"
           name="resume"
           id="resumeUpload"
           onChange={handleChange}

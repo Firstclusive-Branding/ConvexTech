@@ -112,12 +112,13 @@
   border-radius: 12px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
   border: 1px solid #f0f0f0;
-  min-width: 800px;
+  min-width: 700px;
   max-width: 900px;
   z-index: 999;
   animation: dropdownFadeIn 0.3s ease-out;
   display: flex;
   gap: 1rem;
+  cursor: default;
 }
 
 /* .dropdown-menu.open {

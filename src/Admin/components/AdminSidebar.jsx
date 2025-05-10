@@ -129,7 +129,7 @@ const AdminSidebar = ({ role }) => {
       <div className="sidebar-user-container">
         <div className="sidebar-user">
           <img src={profilePic} alt="profile pic placeholder" />
-          <p>{firstName}</p>
+          <p>{firstName.charAt(0).toUpperCase() + firstName.slice(1)}</p>
         </div>
         <div className="sidebar-sign-out-container">
           <a className="sidebar-sign-out" onClick={handleSignOut}>

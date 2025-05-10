@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 
 import sapicon from "../assets/Services Carousel Assets/Cards Icons/sap.svg";
@@ -161,13 +161,9 @@ const ServicesCarousel = () => {
       </div>
 
       <Swiper
-        modules={[Pagination, Autoplay]}
+        modules={[Pagination]}
         pagination={{ clickable: true }}
         loop={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
         spaceBetween={20}
         breakpoints={{
           1025: { slidesPerView: 4 },
@@ -183,7 +179,10 @@ const ServicesCarousel = () => {
               className="services-carousel-card"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
+              transition={{
+                duration: 0.3,
+                ease: "easeOut",
+              }}
             >
               <img
                 src={service.img}
