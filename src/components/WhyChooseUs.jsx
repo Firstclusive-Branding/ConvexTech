@@ -38,8 +38,10 @@ const WhyChooseUs = () => {
           <span></span>Why Choose Us
         </p>
         <h2 className="whychooseus-heading">
-          People First. Tech That Works. Growth That Lasts
+          People <span>First</span>. Tech That <span>Works</span>. Growth That{" "}
+          <span>Lasts</span>
         </h2>
+
         <p className="whychooseus-text">
           At ConvexTech, we help you build strong teams first. From hiring top
           talent to running complex SAP projects to building websites and
