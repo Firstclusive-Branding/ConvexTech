@@ -38,13 +38,17 @@ const WhyChooseUs = () => {
           <span></span>Why Choose Us
         </p>
         <h2 className="whychooseus-heading">
-          We Deliver Scalable, Secure and Future-Ready Solutions
+          People First. Tech That Works. Growth That Lasts
         </h2>
         <p className="whychooseus-text">
-          At ConvexTech, we don’t just follow industry standards - we elevate
-          them. From deep SAP expertise to tailored software development, we
-          ensure every solution is built to perform at scale and drive real
-          business results.
+          At ConvexTech, we help you build strong teams first. From hiring top
+          talent to running complex SAP projects to building websites and
+          running digital campaigns; everything we do is built around your
+          business goals.
+        </p>
+        <p className="whychooseus-text">
+          We keep it simple. We focus on results. We stay with you for the long
+          run!
         </p>
         <button
           className="whychooseus-button"
