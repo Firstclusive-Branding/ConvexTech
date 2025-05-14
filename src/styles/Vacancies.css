@@ -67,9 +67,9 @@
 }
 
 .vacancies-swiper {
-  padding-bottom: 60px;
+  padding-top: 40px !important;
+  padding-bottom: 60px !important;
   overflow-y: visible;
-  padding-top: 40px;
 }
 
 .vacancy-card {
