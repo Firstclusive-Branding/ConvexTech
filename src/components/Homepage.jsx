@@ -15,6 +15,7 @@ import TechSolutions from "./TechSolutions";
 import EmployerTestimonials from "./EmployerTestimonials";
 import CandidateTestimonials from "./CandidateTestimonials";
 import GetInTouchBanner from "./GetInTouchBanner";
+import CareerSolutions from "./CareerSolutions";
 
 function Homepage() {
   useEffect(() => {
@@ -27,6 +28,7 @@ function Homepage() {
       <WhyChooseUs />
       <StaffingSolutions />
       <Industries />
+      <CareerSolutions />
       <Vacancies />
       <TechSolutions />
       {/* <Services /> */}

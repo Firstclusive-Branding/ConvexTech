@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
         </p>
         <h2 className="whychooseus-heading">
           People <span>First</span>. Tech That <span>Works</span>. Growth That{" "}
-          <span>Lasts</span>
+          <span>Lasts!</span>
         </h2>
 
         <p className="whychooseus-text">
@@ -49,8 +49,7 @@ const WhyChooseUs = () => {
           business goals.
         </p>
         <p className="whychooseus-text">
-          We keep it simple. We focus on results. We stay with you for the long
-          run!
+          We keep it simple. We focus on results. We stay for the long term!
         </p>
         <button
           className="whychooseus-button"
