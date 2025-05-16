@@ -46,7 +46,7 @@
 .industries-grid {
   display: flex;
   justify-content: center;
-  /* align-items: stretch; */
+  align-items: stretch;
   gap: 1.5rem;
   max-width: 1600px;
   width: 100%;
@@ -69,20 +69,23 @@
 }
 
 .industries-card {
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   text-align: left;
   border-radius: 10px;
-  padding: 1.5rem;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
   position: relative;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   margin: 1rem 0;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 12px #1a1a18;
   flex: 1;
+  background-size: cover !important;
+  background-position: center !important;
+  will-change: transform, box-shadow;
 }
 
 .industries-card::before {
@@ -94,15 +97,15 @@
     rgba(54, 48, 138, 0.6),
     rgba(62, 212, 239, 0.6)
   );
-  z-index: 0;
+  z-index: -1;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  transition: background-color 0.3s ease;
+  border-radius: 10px;
 }
 
 .industries-card:hover {
   transform: translateY(-10px) !important;
-  box-shadow: 0 0 32px #1a1a18;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 .industries-icon {

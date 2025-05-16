@@ -19,7 +19,8 @@ import CareerSolutions from "./CareerSolutions";
 
 function Homepage() {
   useEffect(() => {
-    window.document.title = "ConvexTech - Smart Tech Solutions";
+    window.document.title =
+      "ConvexTech | Powering Businesses with Next-Gen Solutions";
   }, []);
 
   return (

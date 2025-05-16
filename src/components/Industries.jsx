@@ -94,8 +94,6 @@ const Industries = () => {
       key={index}
       style={{
         backgroundImage: `url(${item.img})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
       }}
     >
       <div className="industries-icon">
