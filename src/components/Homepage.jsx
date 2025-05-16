@@ -4,7 +4,7 @@ import HeroSection from "./Hero";
 // import WhoWeAre from "./WhoWeAre";
 import ClientTestimonials from "./ClientTestimonials";
 import StatsCounter from "./StatsCounter";
-// import ServicesCarousel from "./ServicesCarousel";
+import ServicesCarousel from "./ServicesCarousel";
 import "../styles/Homepage.css";
 // import Presence from "./Presence";
 import WhyChooseUs from "./WhyChooseUs";

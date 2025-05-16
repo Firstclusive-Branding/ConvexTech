@@ -15,6 +15,7 @@ import healthcareImg from "../assets/Navbar assets/healthcare-nav.png";
 import nonItImg from "../assets/Navbar assets/non-it-nav.png";
 import logoimg from "../assets/Navbar assets/logo.png";
 import marketingimg from "../assets/Navbar assets/marketing.png";
+import webdesignimg from "../assets/Navbar assets/web-design.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,27 +73,27 @@ const Navbar = () => {
 
   const techSolutionsLinks = [
     {
-      name: "Logo",
-      path: "/tech-solutions/logo",
+      name: "Logo & Branding",
+      path: "/tech-solutions/logo-and-branding",
       img: logoimg,
     },
     {
-      name: "Branding",
-      path: "/tech-solutions/branding",
-      img: brandingImg,
+      name: "Web Design",
+      path: "/tech-solutions/web-design",
+      img: webdesignimg,
     },
     {
-      name: "Marketing",
-      path: "/tech-solutions/marketing",
-      img: marketingimg,
-    },
-    {
-      name: "Websites",
-      path: "/tech-solutions/websites",
+      name: "Web Developement",
+      path: "/tech-solutions/web-development",
       img: softwareDevImg,
     },
     {
-      name: "SAP",
+      name: "Digital Marketing",
+      path: "/tech-solutions/digital-marketing",
+      img: marketingimg,
+    },
+    {
+      name: "SAP Consulting & Solutions",
       path: "/tech-solutions/sap",
       img: sapSolutionsImg,
     },

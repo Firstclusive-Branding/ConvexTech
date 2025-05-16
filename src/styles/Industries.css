@@ -1,21 +1,107 @@
 .industries-wrapper {
-  position: relative;
   padding: 60px 20px;
   text-align: center;
-  z-index: 1;
+  background-color: #f4f4f4;
+  position: relative;
   overflow: hidden;
 }
 
-.industries-wrapper::before {
-  content: "";
+.wavy-thread-container {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  inset: 0;
-  background: url("../assets/texture-bg.png") no-repeat center center/cover;
-  opacity: 0.4;
-  z-index: -1;
+  top: 0;
+  left: 0;
+  user-select: none;
+  pointer-events: none;
 }
 
-.industries-header .industries-subtitle {
+.wavy-thread-svg {
+  width: 400px;
+  height: 100%;
+  position: absolute;
+  top: -150px;
+  left: 150px;
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+
+.wavy-thread-path {
+  fill: none;
+  stroke: #3ed4ef;
+  stroke-width: 2;
+  stroke-dasharray: 6 10;
+  stroke-linecap: round;
+  animation: worm-wave 20s linear infinite;
+}
+
+@keyframes worm-wave {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 1500;
+  }
+}
+
+.industries-bg-card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 400px;
+  z-index: 1;
+  animation: bgCardAnimation 2s infinite ease-in-out;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes bgCardAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.industries-star-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  animation: star-blink 1.5s infinite ease-in-out;
+  user-select: none;
+  pointer-events: none;
+}
+.industries-star-icon img {
+  width: 40px;
+}
+
+@keyframes star-blink {
+  0% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(0.6);
+  }
+}
+
+.industries-header {
+  margin-bottom: 40px;
+}
+
+.industries-heading {
   color: #3ed4ef;
   font-weight: 500;
   letter-spacing: 1px;
@@ -28,7 +114,7 @@
   position: relative;
 }
 
-.industries-header .industries-subtitle span {
+.industries-heading-tag {
   height: 5px;
   width: 25px;
   border-radius: 10px;
@@ -40,191 +126,192 @@
 }
 
 .industries-title {
-  font-size: 32px;
-  color: #1a1a18;
+  font-size: 2rem;
   margin: 40px auto;
-  text-align: center;
+  color: #000;
   font-weight: 500;
 }
 
-.industries-title span {
+.industries-highlight {
   color: #3ed4ef;
 }
 
-.industries-card-container {
+.industries-swiper {
   max-width: 80%;
-  margin: auto;
+  padding: 0 10px;
 }
 
-.industries-cards {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  gap: 24px;
-  padding-bottom: 200px;
+.industries-swiper .swiper-wrapper {
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+.industries-swiper .swiper-slide {
+  height: auto !important;
 }
 
-.industry-card {
-  background: url("../assets/card-bg.png") no-repeat center center/cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  padding: 24px;
+.industries-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
   text-align: left;
-  transition: transform 0.6s ease;
-  border: 2px solid #ffffff;
-}
-
-.industry-card:hover {
-  transform: translateY(-15px) !important;
-}
-
-.icon-wrapper {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  margin-bottom: 16px;
   display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.industries-card:hover {
+  transform: scale(1.02) !important;
+}
+
+.industries-img {
+  width: 100%;
+}
+
+.industries-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  user-select: text !important;
+  pointer-events: auto;
+}
+
+.industries-icon {
+  background-color: #3ed4ef;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  padding: 12px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-top: -12%;
+  transform: translateY(-30%);
+}
+
+.industries-icon img {
+  width: 100%;
+  filter: invert(1);
+}
+
+.industries-name {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.industries-desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.industries-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.industries-dots {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  cursor: grab;
+}
+.industries-dots span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: -4px 6px;
+  color: #666;
+  user-select: none;
+}
+.industries-btn {
+  background-color: #eee;
+  display: inline-flex;
+  border: none;
+  border-radius: 50%;
+  padding: 4px 12px;
+  font-size: 2rem;
+  color: #555;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.industries-btn:hover {
+  transform: scale(1.1);
+  background-color: #3ed4ef;
+  color: #fff;
+}
+.industries-swiper .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 30px;
+}
+.industries-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #44444e;
+  opacity: 1;
+  border: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.industries-swiper .swiper-pagination-bullet-active {
   background-color: #3ed4ef;
 }
-
-.icon-wrapper img {
-  min-width: 40px;
-  max-width: 40px;
-}
-
-.industry-card h3 {
-  font-size: 2rem;
-  color: #1a1a18;
-  margin-bottom: 5px;
-}
-
-.industry-card hr {
-  background: linear-gradient(to right, #3ed4ef, transparent);
-  margin: 0;
-  border: none;
-  height: 2px;
-  width: 25%;
-  border-radius: 0 0 10% 0;
-  margin-bottom: 12px;
-}
-
-.industry-card p {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 16px;
-}
-
-.industry-card-img {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  transform: translateY(10%);
-  margin-bottom: -30%;
-  transition: transform 0.6s ease;
-}
-
-.industry-card:hover .industry-card-img {
-  transform: translateY(0) !important;
+.industries-swiper .swiper-pagination-bullet-active::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #3ed4ef;
 }
 
 @media (max-width: 1024px) {
-  .industries-cards {
-    max-width: 100%;
-    justify-content: center;
-    gap: 20px;
-  }
-  .industries-card-container {
+  .industries-swiper {
     max-width: 100%;
   }
-
-  .industry-card h3 {
-    font-size: 1.5rem;
+  .industries-bg-card {
+    height: 300px;
   }
-
-  .industry-card p {
-    font-size: 14px;
+  .industries-title {
+    font-size: 1.8rem;
   }
 }
 
 @media (max-width: 768px) {
-  .industries-wrapper {
-    padding-bottom: 0;
-  }
-
-  .industries-cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 180px;
-  }
-
-  .industry-card {
-    width: 80%;
-    padding: 20px;
-  }
-
-  .industry-card-img {
-    width: 100%;
-  }
-
   .industries-title {
-    font-size: 26px;
-  }
-
-  .industries-header .industries-subtitle {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .industry-card h3 {
-    font-size: 1.8rem;
-  }
-
-  .industry-card p {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
   .industries-wrapper {
     padding: 40px 10px;
-    padding-bottom: 0;
   }
-
+  .industries-swiper {
+    max-width: 90%;
+  }
   .industries-title {
-    font-size: 22px;
-  }
-
-  .industries-header .industries-subtitle {
-    font-size: 12px;
-    padding: 6px 10px;
-  }
-
-  .industries-cards {
-    gap: 140px;
-  }
-
-  .industry-card {
-    width: 90%;
-    padding: 16px;
-  }
-
-  .icon-wrapper {
-    height: 50px;
-    width: 50px;
-  }
-
-  .icon-wrapper img {
-    min-width: 35px;
-    max-width: 35px;
-  }
-
-  .industry-card h3 {
     font-size: 1.2rem;
   }
 
-  .industry-card p {
-    font-size: 14px;
+  .industries-star-icon,
+  .industries-bg-card,
+  .wavy-thread-container {
+    display: none;
+  }
+  .industries-swiper .swiper-pagination {
+    gap: 5px;
+  }
+  .industries-swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
   }
 }

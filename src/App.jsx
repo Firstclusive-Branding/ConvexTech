@@ -36,10 +36,10 @@ import HealthcareAndClinical from "./components/HealthcareAndClinical";
 import NonITServices from "./components/NonITServices";
 
 // Tech Solutions
-import TSLogo from "./components/TSLogo";
-import TSBranding from "./components/TSBranding";
-import TSMarketing from "./components/TSMarketing";
-import TSWebsites from "./components/TSWebsites";
+import TSLogoBranding from "./components/TSLogoBranding";
+import TSWebDesign from "./components/TSWebDesign";
+import TSWebDevelopment from "./components/TSWebDevelopment";
+import TSDigitalMarketing from "./components/TSDigitalMarketing";
 import TSSAP from "./components/TSSAP";
 
 // Admin Pages
@@ -111,10 +111,13 @@ const router = createBrowserRouter([
       { path: "staffing-services/non-it", element: <NonITServices /> },
 
       // Tech Solutions Routes
-      { path: "tech-solutions/logo", element: <TSLogo /> },
-      { path: "tech-solutions/branding", element: <TSBranding /> },
-      { path: "tech-solutions/marketing", element: <TSMarketing /> },
-      { path: "tech-solutions/websites", element: <TSWebsites /> },
+      { path: "tech-solutions/logo-and-branding", element: <TSLogoBranding /> },
+      { path: "tech-solutions/web-design", element: <TSWebDesign /> },
+      {
+        path: "tech-solutions/digital-marketing",
+        element: <TSDigitalMarketing />,
+      },
+      { path: "tech-solutions/web-development", element: <TSWebDevelopment /> },
       { path: "tech-solutions/sap", element: <TSSAP /> },
     ],
   },
