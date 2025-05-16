@@ -19,10 +19,12 @@ import bankingimg from "../assets/Industries Assets/banking.png";
 import educationimg from "../assets/Industries Assets/education.png";
 import legalimg from "../assets/Industries Assets/legal.png";
 import telecomimg from "../assets/Industries Assets/telecom.png";
+import { Link } from "react-router-dom";
 
 const industries = [
   {
     title: "Information Technology (IT)",
+    path: "/staffing-solutions/it",
     icon: iticon,
     img: itimg,
     description:
@@ -30,6 +32,7 @@ const industries = [
   },
   {
     title: "Non-IT & Core Industries",
+    path: "/staffing-solutions/non-it",
     icon: noniticon,
     img: nonitimg,
     description:
@@ -37,6 +40,7 @@ const industries = [
   },
   {
     title: "Healthcare & Pharmaceuticals",
+    path: "/staffing-solutions/healthcare",
     icon: healthcareicon,
     img: healthcareimg,
     description:
@@ -44,6 +48,7 @@ const industries = [
   },
   {
     title: "Retail & E-Commerce Sector",
+    path: "/staffing-solutions/e-commerce",
     icon: ecommerceicon,
     img: ecommerceimg,
     description:
@@ -51,6 +56,7 @@ const industries = [
   },
   {
     title: "Banking, Finance & Insurance",
+    path: "/staffing-solutions/banking",
     icon: bankingicon,
     img: bankingimg,
     description:
@@ -58,6 +64,7 @@ const industries = [
   },
   {
     title: "Education & EdTech Sector",
+    path: "/staffing-solutions/education",
     icon: educationicon,
     img: educationimg,
     description:
@@ -65,6 +72,7 @@ const industries = [
   },
   {
     title: "Legal & Compliance Sector",
+    path: "/staffing-solutions/legal",
     icon: legalicon,
     img: legalimg,
     description:
@@ -72,6 +80,7 @@ const industries = [
   },
   {
     title: "Telecom & Network Services",
+    path: "/staffing-solutions/telecom",
     icon: telecomicon,
     img: telecomimg,
     description:
@@ -96,11 +105,13 @@ const Industries = () => {
         backgroundImage: `url(${item.img})`,
       }}
     >
-      <div className="industries-icon">
-        <img src={item.icon} alt={item.title} />
-      </div>
-      <h3 className="industries-name">{item.title}</h3>
-      <p className="industries-desc">{item.description}</p>
+      <Link to={item.path}>
+        <div className="industries-icon">
+          <img src={item.icon} alt={item.title} />
+        </div>
+        <h3 className="industries-name">{item.title}</h3>
+        <p className="industries-desc">{item.description}</p>
+      </Link>
     </motion.div>
   );
 

@@ -83,7 +83,7 @@ const TechSolutions = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Our Core Tech Solutions
+        Our Core Tech Offerings
       </motion.h2>
       <div className="techsolutions-grid">
         {techServices.map((service, index) => (

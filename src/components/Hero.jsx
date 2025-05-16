@@ -5,6 +5,7 @@ import heroimage from "../assets/Hero Assets/hero-image.png";
 import heroimageMobile from "../assets/Hero Assets/hero-image.jpg";
 import heroslash from "../assets/Hero Assets/hero-slash.png";
 import springcircle from "../assets/Hero Assets/spring-circle.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [startAnimation, setStartAnimation] = useState(false);
@@ -88,9 +89,9 @@ const Hero = () => {
           Whether you're hiring talent, growing your brand, marketing your
           business or looking for your next job; we’re here to help.
         </p>
-        <button className="hero-button" onClick={handleScrollToServices}>
+        <Link to="/contact-us" className="hero-button">
           Let's Talk
-        </button>
+        </Link>
       </motion.div>
 
       <div className="hero-right">

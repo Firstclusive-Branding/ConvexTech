@@ -150,10 +150,10 @@ const Contact = () => {
                 className="find-talent-checkbox-label"
               >
                 By checking this box, I consent to receive text messages related
-                to conversations and follow-ups from Cadila Global. You can
-                reply ‘STOP’ at any time to opt out. Message and data rates may
-                apply. Message frequency may vary; text HELP for assistance. For
-                more information, please visit our{" "}
+                to conversations and follow-ups from ConvexTech. You can reply
+                ‘STOP’ at any time to opt out. Message and data rates may apply.
+                Message frequency may vary; text HELP for assistance. For more
+                information, please visit our{" "}
                 <a href="/privacy-policy">Privacy Policy</a> and{" "}
                 <a href="/terms-and-conditions">Terms and Conditions</a>.
               </label>

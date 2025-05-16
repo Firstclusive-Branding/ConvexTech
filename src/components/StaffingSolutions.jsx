@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/StaffingSolutions.css";
 import staffingBg from "../assets/Staffing Solutions Assets/staffing-solutions.jpg";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const StaffingSolutions = () => {
   const boxVariants = {
@@ -65,12 +66,9 @@ const StaffingSolutions = () => {
           </motion.div>
         </motion.div>
 
-        <button
-          className="staffing-button"
-          onClick={() => (window.location.href = "/contact-us")}
-        >
-          Get in Touch
-        </button>
+        <Link className="staffing-button" to="/staffing-solutions">
+          Know More
+        </Link>
       </motion.div>
     </section>
   );

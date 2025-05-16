@@ -9,18 +9,110 @@ import {
   FiLinkedin,
   FiCheckCircle,
   FiCpu,
+  FiTool,
   FiSettings,
   FiDatabase,
   FiActivity,
   FiBriefcase,
   FiUserCheck,
   FiFacebook,
+  FiShoppingCart,
+  FiCreditCard,
+  FiBookOpen,
+  FiShield,
+  FiWifi,
 } from "react-icons/fi";
-import { FaHeart } from "react-icons/fa";
 import { BsInstagram, BsTwitterX } from "react-icons/bs";
+import { FaHeart } from "react-icons/fa";
 
 import logo2 from "../assets/ConvexTech Logo white.png";
 import footerBg from "../assets/Footer Assets/footer-bg.png";
+
+const staffingSolutions = [
+  {
+    name: "Information Technology (IT)",
+    path: "/staffing-solutions/it",
+    icon: <FiCpu />,
+  },
+  {
+    name: "Non-IT & Core Industries",
+    path: "/staffing-solutions/non-it",
+    icon: <FiTool />,
+  },
+  {
+    name: "Healthcare & Pharmaceuticals",
+    path: "/staffing-solutions/healthcare",
+    icon: <FiUserCheck />,
+  },
+  {
+    name: "Retail & E-Commerce Sector",
+    path: "/staffing-solutions/e-commerce",
+    icon: <FiShoppingCart />,
+  },
+  {
+    name: "Banking, Finance & Insurance",
+    path: "/staffing-solutions/banking",
+    icon: <FiCreditCard />,
+  },
+  {
+    name: "Education & EdTech Sector",
+    path: "/staffing-solutions/education",
+    icon: <FiBookOpen />,
+  },
+  {
+    name: "Legal & Compliance Sector",
+    path: "/staffing-solutions/legal",
+    icon: <FiShield />,
+  },
+  {
+    name: "Telecom & Network Services",
+    path: "/staffing-solutions/telecom",
+    icon: <FiWifi />,
+  },
+];
+
+const techSolutions = [
+  {
+    name: "Logo & Branding",
+    path: "/tech-solutions/logo-and-branding",
+    icon: <FiCheckCircle />,
+  },
+  {
+    name: "Web Design",
+    path: "/tech-solutions/web-design",
+    icon: <FiCpu />,
+  },
+  {
+    name: "Web Development",
+    path: "/tech-solutions/web-development",
+    icon: <FiDatabase />,
+  },
+  {
+    name: "Digital Marketing",
+    path: "/tech-solutions/digital-marketing",
+    icon: <FiActivity />,
+  },
+  {
+    name: "SAP Consulting",
+    path: "/tech-solutions/sap",
+    icon: <FiSettings />,
+  },
+  {
+    name: "AI Solutions",
+    path: "/tech-solutions/ai",
+    icon: <FiCpu />,
+  },
+  {
+    name: "Data Science",
+    path: "/tech-solutions/data-science",
+    icon: <FiDatabase />,
+  },
+  {
+    name: "E-Commerce Development",
+    path: "/tech-solutions/e-commerce-development",
+    icon: <FiBriefcase />,
+  },
+];
 
 const Footer = () => {
   return (
@@ -34,6 +126,7 @@ const Footer = () => {
       }}
     >
       <div className="footer-wrapper">
+        {/* Newsletter */}
         <motion.div
           className="newsletter-container"
           initial={{ y: -100, opacity: 0 }}
@@ -50,126 +143,108 @@ const Footer = () => {
           </div>
         </motion.div>
 
-        <div className="footer-top">
-          {/* Services Section */}
-          <motion.div
-            className="footer-brand"
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ amount: 0.4 }}
-          >
+        {/* Footer Grid */}
+        <div className="footer-grid">
+          {/* Logo & About */}
+          <div className="footer-brand">
             <Link to="/">
               <img src={logo2} alt="ConvexTech Logo" className="footer-logo" />
             </Link>
-            <h3>Our Services</h3>
-            <ul className="footer-services">
-              <li>
-                <FiCheckCircle /> <Link to="/services/sap">SAP Solutions</Link>
-              </li>
-              <li>
-                <FiSettings />{" "}
-                <Link to="/services/software">Software Development</Link>
-              </li>
-              <li>
-                <FiCpu /> <Link to="/services/ai">Artificial Intelligence</Link>
-              </li>
-              <li>
-                <FiDatabase />{" "}
-                <Link to="/services/data-science">Data Science</Link>
-              </li>
-              <li>
-                <FiActivity />{" "}
-                <Link to="/services/branding">
-                  Branding & Digital Marketing
-                </Link>
-              </li>
-              <li>
-                <FiUserCheck />{" "}
-                <Link to="/services/healthcare">Healthcare & Clinical</Link>
-              </li>
-              <li>
-                <FiBriefcase />{" "}
-                <Link to="/services/non-it">Non-IT Services</Link>
-              </li>
+            <p className="footer-intro">
+              We deliver tailored staffing and tech solutions to help businesses
+              grow faster, scale smarter and operate more efficiently.
+            </p>
+          </div>
+
+          {/* Staffing Solutions Links */}
+          <div className="footer-links">
+            <h3>Staffing Solutions</h3>
+            <ul>
+              {staffingSolutions.map((item, index) => (
+                <li key={index}>
+                  {item.icon} <Link to={item.path}>{item.name}</Link>
+                </li>
+              ))}
             </ul>
-          </motion.div>
+          </div>
 
-          {/* Contact Details Section */}
-          <motion.div
-            className="footer-columns"
-            initial={{ x: 100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ amount: 0.4 }}
-          >
-            {/* United States Office */}
-            <div className="footer-office">
-              <h3>United States</h3>
-              <h5>Texas</h5>
-              <div className="footer-office-details">
-                <p>
-                  <FiPhone /> <a href="tel:+13463671777">+1 346 367 1777</a>
-                </p>
-                <p>
-                  <FiMail />{" "}
-                  <a href="mailto:info@convextech.com">info@convextech.com</a>
-                </p>
-                <p>
-                  <FiMapPin /> 11200 Broadway Suite
-                  <br />
-                  2743 Pearland, TX 77584
-                </p>
-              </div>
-            </div>
+          {/* Tech Solutions Links */}
+          <div className="footer-links">
+            <h3>Tech Solutions</h3>
+            <ul>
+              {techSolutions.map((item, index) => (
+                <li key={index}>
+                  {item.icon} <Link to={item.path}>{item.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-            {/* Hyderabad Office */}
-            <div className="footer-office">
-              <h3>India</h3>
-              <h5>Hyderabad</h5>
-              <div className="footer-office-details">
-                <p>
-                  <FiPhone />{" "}
-                  <a href="tel:+914029994717">+91 (040) 2999 4717</a>
-                </p>
-                <p>
-                  <FiMail />{" "}
-                  <a href="mailto:info@convextech.com">info@convextech.com</a>
-                </p>
-                <p>
-                  <FiMapPin /> 115A, First Floor, Downtown Mall,
-                  <br />
-                  Beside Lotus Hospital, Lakdikapul,
-                  <br />
-                  Hyderabad 500-004
-                </p>
-              </div>
+          {/* Office 1 */}
+          <div className="footer-office">
+            <h3>United States</h3>
+            <h5>Texas</h5>
+            <div className="footer-office-details">
+              <p>
+                <FiPhone />
+                <a href="tel:+13463671777">+1 346 367 1777</a>
+              </p>
+              <p>
+                <FiMail />
+                <a href="mailto:info@convextech.com">info@convextech.com</a>
+              </p>
+              <p>
+                <FiMapPin />
+                11200 Broadway Suite 2743 <br /> Pearland, TX 77584
+              </p>
             </div>
+          </div>
 
-            {/* Noida Office */}
-            <div className="footer-office">
-              <h3>India</h3>
-              <h5>Noida</h5>
-              <div className="footer-office-details">
-                <p>
-                  <FiPhone />{" "}
-                  <a href="tel:+914029994717">+91 (040) 2999 4717</a>
-                </p>
-                <p>
-                  <FiMail />{" "}
-                  <a href="mailto:info@convextech.com">info@convextech.com</a>
-                </p>
-                <p>
-                  <FiMapPin /> Jav Tower H17 2nd Floor,
-                  <br />
-                  S-01 Sector 63 Noida 201301
-                </p>
-              </div>
+          {/* Office 2 */}
+          <div className="footer-office">
+            <h3>India</h3>
+            <h5>Hyderabad</h5>
+            <div className="footer-office-details">
+              <p>
+                <FiPhone />
+                <a href="tel:+914029994717">+91 (040) 2999 4717</a>
+              </p>
+              <p>
+                <FiMail />
+                <a href="mailto:info@convextech.com">info@convextech.com</a>
+              </p>
+              <p>
+                <FiMapPin />
+                115A, First Floor, Downtown Mall <br />
+                Beside Lotus Hospital, Lakdikapul <br />
+                Hyderabad 500-004
+              </p>
             </div>
-          </motion.div>
+          </div>
+
+          {/* Office 3 */}
+          <div className="footer-office">
+            <h3>India</h3>
+            <h5>Noida</h5>
+            <div className="footer-office-details">
+              <p>
+                <FiPhone />
+                <a href="tel:+914029994717">+91 (040) 2999 4717</a>
+              </p>
+              <p>
+                <FiMail />
+                <a href="mailto:info@convextech.com">info@convextech.com</a>
+              </p>
+              <p>
+                <FiMapPin />
+                Jav Tower H17, 2nd Floor <br />
+                S-01 Sector 63, Noida 201301
+              </p>
+            </div>
+          </div>
         </div>
 
-        {/* Footer Bottom */}
+        {/* Social and Legal */}
         <div className="footer-bottom">
           <div className="footer-social">
             <p>Follow us on</p>
@@ -196,32 +271,24 @@ const Footer = () => {
           </div>
 
           <div className="footer-legal">
-            <a href="/terms-and-conditions">Terms and Conditions</a>
+            <Link to="/terms-and-conditions">Terms and Conditions</Link>
             <span>|</span>
-            <a href="/privacy-policy">Privacy Policy</a>
+            <Link to="/privacy-policy">Privacy Policy</Link>
             <span>|</span>
             <a href="#">Unsubscribe</a>
           </div>
         </div>
 
-        {/* Footer Attribution */}
+        {/* Attribution */}
         <div className="footer-attribution">
           <p>Powered by ConvexTech © 2011 - 2025.</p>
-
-          <div>
-            <p>
-              Made with{" "}
-              <FaHeart style={{ color: "#3ed4ef", verticalAlign: "middle" }} />{" "}
-              by{" "}
-              <a
-                href="https://firstclusive.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Firstclusive
-              </a>
-            </p>
-          </div>
+          <p>
+            Made with{" "}
+            <FaHeart style={{ color: "#3ed4ef", verticalAlign: "middle" }} /> by{" "}
+            <a href="https://firstclusive.com" target="_blank" rel="noreferrer">
+              Firstclusive
+            </a>
+          </p>
         </div>
       </div>
     </footer>

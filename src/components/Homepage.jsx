@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
+import "../styles/Homepage.css";
 import HeroSection from "./Hero";
 // import Services from "./Services";
 // import WhoWeAre from "./WhoWeAre";
 import ClientTestimonials from "./ClientTestimonials";
 import StatsCounter from "./StatsCounter";
 // import ServicesCarousel from "./ServicesCarousel";
-import "../styles/Homepage.css";
 // import Presence from "./Presence";
 import WhyChooseUs from "./WhyChooseUs";
 import StaffingSolutions from "./StaffingSolutions";
@@ -16,6 +16,7 @@ import EmployerTestimonials from "./EmployerTestimonials";
 import CandidateTestimonials from "./CandidateTestimonials";
 import GetInTouchBanner from "./GetInTouchBanner";
 import CareerSolutions from "./CareerSolutions";
+import TechSolutionComponent from "./TechSolutionComponent";
 
 function Homepage() {
   useEffect(() => {
@@ -31,6 +32,7 @@ function Homepage() {
       <Industries />
       <CareerSolutions />
       <Vacancies />
+      <TechSolutionComponent />
       <TechSolutions />
       {/* <Services /> */}
       {/* <WhoWeAre /> */}

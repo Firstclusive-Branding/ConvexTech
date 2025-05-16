@@ -87,7 +87,9 @@
   background-position: center !important;
   will-change: transform, box-shadow;
 }
-
+.industries-card * {
+  text-decoration: none;
+}
 .industries-card::before {
   content: "";
   position: absolute;

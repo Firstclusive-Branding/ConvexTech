@@ -55,6 +55,14 @@ import AdminSignup from "./Admin/components/AdminSignup";
 import ManageProjectEnquiry from "./Admin/components/ManageProjectEnquiry";
 import ManageTerms from "./Admin/components/ManageTerms";
 import ManagePolicies from "./Admin/components/ManagePolicies";
+import StaffingSolutionsPage from "./components/StaffingSolutionsPage";
+import ITServices from "./components/ITServices";
+import Ecommerce from "./components/Ecommerce";
+import Banking from "./components/Banking";
+import Education from "./components/Education";
+import Legal from "./components/Legal";
+import Telecom from "./components/Telecom";
+import TechSolutionPage from "./components/TechSolutionPage";
 
 // Route Protection
 const ProtectedRoute = ({ element, roleKey }) => {
@@ -88,12 +96,19 @@ const router = createBrowserRouter([
       { path: "contact-us", element: <Contact /> },
       { path: "terms-and-conditions", element: <TermsAndCondition /> },
       { path: "privacy-policy", element: <PrivacyPage /> },
+      { path: "staffing-solutions", element: <StaffingSolutionsPage /> },
       { path: "staffing-solutions/sap", element: <SAPSolutions /> },
+      { path: "staffing-solutions/legal", element: <Legal /> },
+      { path: "staffing-solutions/education", element: <Education /> },
+      { path: "staffing-solutions/telecom", element: <Telecom /> },
+
       {
         path: "staffing-solutions/software-development",
         element: <SoftwareDevelopment />,
       },
       { path: "staffing-solutions/ai", element: <ArtificialIntelligence /> },
+      { path: "staffing-solutions/e-commerce", element: <Ecommerce /> },
+      { path: "staffing-solutions/banking", element: <Banking /> },
       { path: "staffing-solutions/data-science", element: <DataScience /> },
       {
         path: "staffing-solutions/branding",
@@ -107,7 +122,9 @@ const router = createBrowserRouter([
         path: "staffing-solutions/healthcare",
         element: <HealthcareAndClinical />,
       },
+      { path: "staffing-solutions/it", element: <ITServices /> },
       { path: "staffing-solutions/non-it", element: <NonITServices /> },
+      { path: "tech-solutions", element: <TechSolutionPage /> },
       { path: "tech-solutions/logo-and-branding", element: <TSLogoBranding /> },
       { path: "tech-solutions/web-design", element: <TSWebDesign /> },
       {

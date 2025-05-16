@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/CareerSolutions.css";
 import careerBg from "../assets/Career Solutions Assets/career-solutions.jpg";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const CareerSolutions = () => {
   const boxVariants = {
@@ -64,12 +65,9 @@ const CareerSolutions = () => {
           </motion.div>
         </motion.div>
 
-        <button
-          className="career-solutions-button"
-          onClick={() => (window.location.href = "/contact-us")}
-        >
-          Get in Touch
-        </button>
+        <Link className="career-solutions-button" to={"/find-jobs"}>
+          Know More
+        </Link>
       </motion.div>
     </section>
   );

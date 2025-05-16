@@ -7,10 +7,10 @@ import statsBgImage from "../assets/Stats Counter Assets/stats-counter-image.png
 
 const StatsCounter = () => {
   const statsData = [
-    { target: 390, label: "Projects Completed", suffix: "+" },
-    { target: 12, label: "Our Happy Clients", suffix: "M" },
-    { target: 67, label: "All Time Active Users", suffix: "k+" },
-    { target: 67, label: "Upcoming Projects", suffix: "k" },
+    { target: 390, label: "Projects Delivered", suffix: "+" },
+    { target: 120, label: "Happy Clients", suffix: "+" },
+    { target: 18000, label: "Professionals Placed", suffix: "+" },
+    { target: 600, label: "Open Opportunities", suffix: "+" },
   ];
 
   const [counts, setCounts] = useState([0, 0, 0, 0]);
