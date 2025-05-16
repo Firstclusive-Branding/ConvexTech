@@ -13,6 +13,8 @@ import {
 import "../styles/AdminSidebar.css";
 import Logo from "../../assets/ConvexTech Logo white.png";
 import profilePic from "../../assets/profile-pic.png";
+import { IoMdDocument } from "react-icons/io";
+import { MdOutlinePolicy } from "react-icons/md";
 
 const AdminSidebar = ({ role }) => {
   const isAdmin = role === "admin";
@@ -74,27 +76,6 @@ const AdminSidebar = ({ role }) => {
           </Link>
         </li>
 
-        {/* {role !== "recruiter" && (
-          <>
-            <li>
-              <Link to="/admin/contact-forms">
-                <FaEnvelope /> Contact Us Form
-              </Link>
-            </li>
-            <li>
-              <Link to="/admin/recruiter-forms">
-                <FaUserTie /> Find Talent Form
-              </Link>
-            </li>
-            <li>
-              <Link to="/admin/users">
-                <FaUserFriends />
-                {isAdmin ? "Users" : "Recruiters"}
-              </Link>
-            </li>
-          </>
-        )} */}
-
         {role !== "recruiter" && (
           <>
             <li>
@@ -123,6 +104,21 @@ const AdminSidebar = ({ role }) => {
               </Link>
             </li>
           </>
+        )}
+
+        {isAdmin && (
+          <li>
+            <Link to="/admin/manage-terms">
+              <IoMdDocument /> Terms & Conditions
+            </Link>
+          </li>
+        )}
+        {isAdmin && (
+          <li>
+            <Link to="/admin/manage-policies">
+              <MdOutlinePolicy /> Privacy Policy
+            </Link>
+          </li>
         )}
       </ul>
 

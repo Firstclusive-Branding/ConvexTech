@@ -32,7 +32,7 @@
   grid-template-columns: repeat(3, 1fr);
   align-self: center;
   gap: 40px;
-  width: 100%;
+  width: 90%;
   padding: 0 20px;
   place-items: center;
 }
@@ -59,7 +59,9 @@
 }
 
 .careers-card-content {
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
   color: #1a1a18;
   width: 80%;
   display: flex;
@@ -72,6 +74,7 @@
   justify-self: flex-end;
   position: relative;
   transition: transform 0.8s ease;
+  z-index: 10;
 }
 .careers-card-wrapper:hover .careers-card-content {
   transform: translateY(-40%);
@@ -133,6 +136,7 @@
   .careers-section-wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    width: 95%;
   }
 }
 
@@ -161,6 +165,7 @@
   .careers-section-wrapper {
     grid-template-columns: 1fr;
     gap: 25px;
+    width: 100%;
   }
 }
 

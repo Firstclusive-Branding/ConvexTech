@@ -1,14 +1,6 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import { motion } from "framer-motion";
-
-import "swiper/css";
-import "swiper/css/pagination";
+import React, { useState } from "react";
 import "../styles/Industries.css";
-
-import bgcard from "../assets/Services Carousel Assets/bg-card.png";
-import twinklestar from "../assets/Services Carousel Assets/twinkle.png";
+import { motion } from "framer-motion";
 
 import iticon from "../assets/Industries Assets/Industries icons/it.svg";
 import noniticon from "../assets/Industries Assets/Industries icons/non-it.svg";
@@ -18,7 +10,6 @@ import bankingicon from "../assets/Industries Assets/Industries icons/banking.sv
 import educationicon from "../assets/Industries Assets/Industries icons/education.svg";
 import legalicon from "../assets/Industries Assets/Industries icons/legal.svg";
 import telecomicon from "../assets/Industries Assets/Industries icons/telecom.svg";
-// ----------------------------------------------------------------------------
 
 import itimg from "../assets/Industries Assets/it.png";
 import nonitimg from "../assets/Industries Assets/non-it.png";
@@ -28,8 +19,6 @@ import bankingimg from "../assets/Industries Assets/banking.png";
 import educationimg from "../assets/Industries Assets/education.png";
 import legalimg from "../assets/Industries Assets/legal.png";
 import telecomimg from "../assets/Industries Assets/telecom.png";
-
-// ----------------------------------------------------------------------------
 
 const industries = [
   {
@@ -91,30 +80,37 @@ const industries = [
 ];
 
 const Industries = () => {
-  return (
-    <section className="industries-wrapper">
-      <div className="wavy-thread-container">
-        <svg
-          className="wavy-thread-svg"
-          viewBox="0 0 200 1000"
-          preserveAspectRatio="none"
-        >
-          <path
-            className="wavy-thread-path"
-            d="M100,0 C50,100 150,200 100,300 C50,400 150,500 100,600 C50,700 150,800 100,900 C50,950 150,1050 100,1100"
-          />
-        </svg>
+  const [showAll, setShowAll] = useState(false);
+  const firstFour = industries.slice(0, 4);
+  const remaining = industries.slice(4);
+
+  const renderCard = (item, index) => (
+    <motion.div
+      className="industries-card"
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+      viewport={{ once: false }}
+      key={index}
+      style={{
+        backgroundImage: `url(${item.img})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="industries-icon">
+        <img src={item.icon} alt={item.title} />
       </div>
+      <h3 className="industries-name">{item.title}</h3>
+      <p className="industries-desc">{item.description}</p>
+    </motion.div>
+  );
 
-      <img src={bgcard} alt="background" className="industries-bg-card" />
-      <span className="industries-star-icon">
-        <img src={twinklestar} alt="twinkle" />
-      </span>
-
+  return (
+    <section className="industries-container">
       <div className="industries-header">
         <p className="industries-heading">
-          <span className="industries-heading-tag"></span>
-          INDUSTRIES
+          <span></span>INDUSTRIES
         </p>
         <h2 className="industries-title">
           Industry-Focused Staffing{" "}
@@ -122,55 +118,22 @@ const Industries = () => {
         </h2>
       </div>
 
-      <Swiper
-        modules={[Pagination]}
-        pagination={{ clickable: true }}
-        loop={true}
-        spaceBetween={20}
-        breakpoints={{
-          1400: { slidesPerView: 4 },
-          1024: { slidesPerView: 3 },
-          768: { slidesPerView: 2 },
-          480: { slidesPerView: 1 },
-        }}
-        className="industries-swiper"
-      >
-        {industries.map((industry, index) => (
-          <SwiperSlide key={index}>
-            <motion.div
-              className="industries-card"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-            >
-              <img
-                src={industry.img}
-                alt={industry.title}
-                className="industries-img"
-              />
-              <div className="industries-content">
-                <div className="industries-icon">
-                  <img src={industry.icon} alt="icon" />
-                </div>
-                <h3 className="industries-name">{industry.title}</h3>
-                <p className="industries-desc">{industry.description}</p>
+      <div className="industries-grid">
+        {firstFour.map((item, index) => renderCard(item, index))}
+      </div>
 
-                <div className="industries-footer">
-                  <button className="industries-btn">+</button>
-                  <div className="industries-dots">
-                    <span>.</span>
-                    <span>.</span>
-                    <span>.</span>
-                    <span>.</span>
-                    <span>.</span>
-                    <span>.</span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className={`industries-extra-container ${showAll ? "show" : ""}`}>
+        <div className="industries-grid">
+          {remaining.map((item, index) => renderCard(item, index))}
+        </div>
+      </div>
+
+      <button
+        className="industries-toggle-btn"
+        onClick={() => setShowAll(!showAll)}
+      >
+        {showAll ? "HIDE INDUSTRIES" : "SHOW ALL INDUSTRIES"}
+      </button>
     </section>
   );
 };

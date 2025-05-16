@@ -2,12 +2,10 @@ import React, { useEffect } from "react";
 import {
   createBrowserRouter,
   RouterProvider,
-  Outlet,
-  useLocation,
   Navigate,
   useNavigate,
 } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./styles/toastifyCustom.css";
 
@@ -54,6 +52,8 @@ import RecruiterForm from "./Admin/components/RecruiterForm";
 import ForgotPassword from "./Admin/components/ForgotPassword";
 import AdminSignup from "./Admin/components/AdminSignup";
 import ManageProjectEnquiry from "./Admin/components/ManageProjectEnquiry";
+import ManageTerms from "./Admin/components/ManageTerms";
+import ManagePolicies from "./Admin/components/ManagePolicies";
 
 // Route Protection
 const ProtectedRoute = ({ element, roleKey }) => {
@@ -87,8 +87,6 @@ const router = createBrowserRouter([
       { path: "contact-us", element: <Contact /> },
       { path: "terms-and-conditions", element: <TermsAndCondition /> },
       { path: "privacy-policy", element: <PrivacyPage /> },
-
-      // Service Routes
       { path: "staffing-services/sap", element: <SAPSolutions /> },
       {
         path: "staffing-services/software-development",
@@ -109,8 +107,6 @@ const router = createBrowserRouter([
         element: <HealthcareAndClinical />,
       },
       { path: "staffing-services/non-it", element: <NonITServices /> },
-
-      // Tech Solutions Routes
       { path: "tech-solutions/logo-and-branding", element: <TSLogoBranding /> },
       { path: "tech-solutions/web-design", element: <TSWebDesign /> },
       {
@@ -275,6 +271,24 @@ const router = createBrowserRouter([
                     ? "adminAuthenticated"
                     : "managerAuthenticated"
                 }
+              />
+            ),
+          },
+          {
+            path: "manage-terms",
+            element: (
+              <ProtectedRoute
+                element={<ManageTerms />}
+                roleKey="adminAuthenticated"
+              />
+            ),
+          },
+          {
+            path: "manage-policies",
+            element: (
+              <ProtectedRoute
+                element={<ManagePolicies />}
+                roleKey="adminAuthenticated"
               />
             ),
           },

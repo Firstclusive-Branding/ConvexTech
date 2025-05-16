@@ -11,37 +11,37 @@ import sapicon from "../assets/Tech Solutions Icons/ts-sap-icon.png";
 
 const techServices = [
   {
-    title: "Logo",
+    title: "Logo & Branding",
     description:
-      "Custom-designed logos that capture your brand essence and make a lasting impression.",
+      "Crafting unique brand identities and logos that reflect your business vision and build recognition.",
     icon: logoicon,
-    link: "/tech-solutions/logo",
+    link: "/tech-solutions/logo-and-branding",
   },
   {
-    title: "Branding",
+    title: "Web Design",
     description:
-      "Complete branding systems that define your company’s personality, voice, and presence.",
-    icon: brandingicon,
-    link: "/tech-solutions/branding",
-  },
-  {
-    title: "Marketing",
-    description:
-      "Performance-driven marketing strategies that attract, engage, and convert your audience.",
-    icon: marketingicon,
-    link: "/tech-solutions/marketing",
-  },
-  {
-    title: "Website",
-    description:
-      "Modern, responsive websites that load fast, look great, and work flawlessly across devices.",
+      "Designing visually striking, user-focused websites that elevate your brand and drive engagement.",
     icon: websiteicon,
-    link: "/tech-solutions/websites",
+    link: "/tech-solutions/web-design",
   },
   {
-    title: "SAP",
+    title: "Web Development",
     description:
-      "Smart SAP integration and support services tailored to complex enterprise workflows.",
+      "Building fast, secure, and scalable websites with clean code and seamless functionality.",
+    icon: websiteicon,
+    link: "/tech-solutions/web-development",
+  },
+  {
+    title: "Digital Marketing",
+    description:
+      "Strategic digital campaigns that grow your reach, increase traffic, and convert leads into customers.",
+    icon: marketingicon,
+    link: "/tech-solutions/digital-marketing",
+  },
+  {
+    title: "SAP Consulting & Solutions",
+    description:
+      "Expert SAP consulting and custom solutions that streamline processes and power enterprise growth.",
     icon: sapicon,
     link: "/tech-solutions/sap",
   },
