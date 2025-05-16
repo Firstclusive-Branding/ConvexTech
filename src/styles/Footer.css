@@ -258,7 +258,6 @@
   background-color: #ffffff;
   padding: 5px 10px;
   border-radius: 8px;
-  flex-wrap: wrap;
 }
 
 .newsletter-form input {
@@ -299,7 +298,6 @@
   .newsletter-form input,
   .newsletter-form button {
     width: 100%;
-    max-width: 300px;
   }
 }
 

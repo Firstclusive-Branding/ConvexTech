@@ -294,7 +294,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <div className={`mobile-menu-overlay ${isMenuOpen ? "open" : ""}`}>
+      {/* <div className={`mobile-menu-overlay ${isMenuOpen ? "open" : ""}`}>
         <div
           className={`mobile-menu ${isMenuOpen ? "open" : ""}`}
           ref={menuRef}
@@ -427,6 +427,114 @@ const Navbar = () => {
               SAP
             </Link>
           </div>
+          <Link
+            to="/find-talent"
+            onClick={() => setIsMenuOpen(false)}
+            className="mobile-menu-link"
+          >
+            Find Talent
+          </Link>
+          <Link
+            to="/find-jobs"
+            onClick={() => setIsMenuOpen(false)}
+            className="mobile-menu-link"
+          >
+            Find Jobs
+          </Link>
+          <Link
+            to="/project-enquiry"
+            onClick={() => setIsMenuOpen(false)}
+            className="mobile-menu-link"
+          >
+            Project Enquiry
+          </Link>
+          <Link
+            to="/contact-us"
+            onClick={() => setIsMenuOpen(false)}
+            className="mobile-menu-link"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </div> */}
+      <div className={`mobile-menu-overlay ${isMenuOpen ? "open" : ""}`}>
+        <div
+          className={`mobile-menu ${isMenuOpen ? "open" : ""}`}
+          ref={menuRef}
+        >
+          <Link
+            to="/"
+            onClick={() => setIsMenuOpen(false)}
+            className="mobile-menu-link"
+          >
+            Home
+          </Link>
+          <Link
+            to="/about-us"
+            onClick={() => setIsMenuOpen(false)}
+            className="mobile-menu-link"
+          >
+            About Us
+          </Link>
+
+          {/* Staffing Solutions Toggle */}
+          <div
+            className="mobile-menu-link"
+            onClick={() => {
+              setIsMobileTechSolutionsOpen(false);
+              setIsMobileServicesOpen(!isMobileServicesOpen);
+            }}
+          >
+            <span>Staffing Solutions</span>
+            <IoIosArrowDown
+              className={`dropdown-icon ${isMobileServicesOpen ? "open" : ""}`}
+            />
+          </div>
+          <div
+            className={`mobile-submenu ${isMobileServicesOpen ? "open" : ""}`}
+          >
+            {staffingSolutions.map((item, index) => (
+              <Link
+                key={index}
+                to={item.path}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+          {/* Tech Solutions Toggle */}
+          <div
+            className="mobile-menu-link"
+            onClick={() => {
+              setIsMobileServicesOpen(false);
+              setIsMobileTechSolutionsOpen(!isMobileTechSolutionsOpen);
+            }}
+          >
+            <span>Tech Solutions</span>
+            <IoIosArrowDown
+              className={`dropdown-icon ${
+                isMobileTechSolutionsOpen ? "open" : ""
+              }`}
+            />
+          </div>
+          <div
+            className={`mobile-submenu ${
+              isMobileTechSolutionsOpen ? "open" : ""
+            }`}
+          >
+            {techSolutionsLinks.map((item, index) => (
+              <Link
+                key={index}
+                to={item.path}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
           <Link
             to="/find-talent"
             onClick={() => setIsMenuOpen(false)}
