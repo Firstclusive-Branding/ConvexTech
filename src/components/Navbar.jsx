@@ -9,14 +9,17 @@ import sapSolutionsImg from "../assets/Navbar assets/sap-solutions-nav.png";
 import softwareDevImg from "../assets/Navbar assets/software-development-nav.png";
 import aiImg from "../assets/Navbar assets/artificial-intelligence-nav.png";
 import dataScienceImg from "../assets/Navbar assets/data-science-nav.png";
-import brandingImg from "../assets/Navbar assets/branding-nav.png";
-import staffingImg from "../assets/Navbar assets/staffing-nav.png";
 import healthcareImg from "../assets/Navbar assets/healthcare-nav.png";
 import nonItImg from "../assets/Navbar assets/non-it-nav.png";
 import logoimg from "../assets/Navbar assets/logo.png";
 import marketingimg from "../assets/Navbar assets/marketing.png";
 import webdesignimg from "../assets/Navbar assets/web-design.png";
 import ecommerceImg from "../assets/Navbar assets/ecommerce.png";
+import bankingImg from "../assets/Navbar assets/banking.png";
+import legalImg from "../assets/Navbar assets/legal.png";
+import educationImg from "../assets/Navbar assets/education.png";
+import telecomImg from "../assets/Navbar assets/telecom.png";
+import { testValueType } from "framer-motion";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,78 +30,50 @@ const Navbar = () => {
   const menuRef = useRef();
   const location = useLocation();
   const currentPath = location.pathname;
-  const [hoveredService, setHoveredService] = useState(sapSolutionsImg);
+  const [hoveredService, setHoveredService] = useState(softwareDevImg);
 
-  const serviceLinks = [
+  const staffingSolutions = [
     {
-      name: "SAP Solutions",
-      path: "/staffing-services/sap",
-      img: sapSolutionsImg,
-    },
-    {
-      name: "Software Development",
-      path: "/staffing-services/software-development",
+      name: "Information Technology (IT)",
+      path: "/staffing-solutions/it",
       img: softwareDevImg,
     },
     {
-      name: "Artificial Intelligence",
-      path: "/staffing-services/ai",
-      img: aiImg,
+      name: "Non-IT & Core Industries",
+      path: "/staffing-solutions/non-it",
+      img: nonItImg,
     },
     {
-      name: "Data Science",
-      path: "/staffing-services/data-science",
-      img: dataScienceImg,
-    },
-    {
-      name: "Branding & Digital Marketing",
-      path: "/staffing-services/branding",
-      img: brandingImg,
-    },
-    {
-      name: "Staffing & Recruitment",
-      path: "/staffing-services/staffing",
-      img: staffingImg,
-    },
-    {
-      name: "Healthcare & Clinical",
-      path: "/staffing-services/healthcare",
+      name: "Healthcare & Pharmaceuticals",
+      path: "/staffing-solutions/healthcare",
       img: healthcareImg,
     },
     {
-      name: "Non-IT Services",
-      path: "/staffing-services/non-it",
-      img: nonItImg,
+      name: "Retail & E-Commerce Sector",
+      path: "/staffing-solutions/e-commerce",
+      img: ecommerceImg,
+    },
+    {
+      name: "Banking, Finance & Insurance",
+      path: "/staffing-solutions/banking",
+      img: bankingImg,
+    },
+    {
+      name: "Education & EdTech Sector",
+      path: "/staffing-solutions/education",
+      img: educationImg,
+    },
+    {
+      name: "Legal & Compliance Sector",
+      path: "/staffing-solutions/legal",
+      img: legalImg,
+    },
+    {
+      name: "Telecom & Network Services",
+      path: "/staffing-solutions/telecom",
+      img: telecomImg,
     },
   ];
-
-  // const techSolutionsLinks = [
-  //   {
-  //     name: "Logo & Branding",
-  //     path: "/tech-solutions/logo-and-branding",
-  //     img: logoimg,
-  //   },
-  //   {
-  //     name: "Web Design",
-  //     path: "/tech-solutions/web-design",
-  //     img: webdesignimg,
-  //   },
-  //   {
-  //     name: "Web Developement",
-  //     path: "/tech-solutions/web-development",
-  //     img: softwareDevImg,
-  //   },
-  //   {
-  //     name: "Digital Marketing",
-  //     path: "/tech-solutions/digital-marketing",
-  //     img: marketingimg,
-  //   },
-  //   {
-  //     name: "SAP Consulting & Solutions",
-  //     path: "/tech-solutions/sap",
-  //     img: sapSolutionsImg,
-  //   },
-  // ];
 
   const techSolutionsLinks = [
     {
@@ -197,7 +172,7 @@ const Navbar = () => {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              Staffing Services
+              Staffing Solutions
               <IoIosArrowDown
                 className={`dropdown-icon ${isDropdownOpen ? "open" : ""}`}
               />
@@ -206,12 +181,12 @@ const Navbar = () => {
                 onMouseEnter={() => setIsDropdownOpen(false)}
               >
                 <ul className="dropdown-links">
-                  {serviceLinks.map((service, index) => (
+                  {staffingSolutions.map((service, index) => (
                     <li key={index}>
                       <Link
                         to={service.path}
                         onMouseEnter={() => setHoveredService(service.img)}
-                        onMouseLeave={() => setHoveredService(sapSolutionsImg)}
+                        onMouseLeave={() => setHoveredService(softwareDevImg)}
                       >
                         {service.name}
                       </Link>
