@@ -5,21 +5,24 @@ import heroimage from "../assets/Hero Assets/hero-image.png";
 import heroimageMobile from "../assets/Hero Assets/hero-image.jpg";
 import heroslash from "../assets/Hero Assets/hero-slash.png";
 import springcircle from "../assets/Hero Assets/spring-circle.png";
-// import SplitText from "./SplitText";
 
 const Hero = () => {
   const [startAnimation, setStartAnimation] = useState(false);
+
   const words = [
     "Staffing,",
-    "Software",
+    "SAP",
+    "Consulting,",
+    "Web",
+    "Development,",
+    "Branding",
     "&",
     "Marketing",
-    "that",
-    "actually",
-    "Delivers",
+    "That",
+    "Works",
   ];
 
-  const highlightWords = ["delivers"];
+  const highlightWords = ["That", "Works"];
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -28,15 +31,6 @@ const Hero = () => {
 
     return () => clearTimeout(timer);
   }, []);
-
-  const wordVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, delay: 1 + i * 0.2 },
-    }),
-  };
 
   const handleScrollToServices = () => {
     const servicesSection = document.getElementById("services-section");
@@ -69,29 +63,20 @@ const Hero = () => {
       >
         <img src={springcircle} alt="spring-circle" className="spring-circle" />
 
-        <p className="tagline">Build Teams. Build Tech.</p>
-
-        {/* <SplitText
-          as="h1"
-          delay={60}
-          start={startAnimation}
-          className="hero-heading"
-        >
-          {"Empower "}
-          <span className="highlight">Businesses</span>
-          {" with Smart Tech"}
-        </SplitText> */}
+        <p className="tagline">
+          Build Strong Teams. Launch Better Tech. Grow Real Careers.
+        </p>
 
         <motion.h1 className="hero-heading">
           {words.map((word, index) => (
             <motion.span
               key={index}
               className={`hero-word ${
-                highlightWords.includes(word.toLowerCase()) ? "highlight" : ""
+                highlightWords.includes(word) ? "highlight" : ""
               }`}
               initial={{ opacity: 0, y: 50 }}
               animate={startAnimation ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.3 }}
+              transition={{ duration: 0.6, delay: 0.2 + index * 0.2 }}
             >
               {word}
               {index < words.length - 1 && " "}
@@ -100,7 +85,8 @@ const Hero = () => {
         </motion.h1>
 
         <p className="subtext">
-          From scaling teams to launching tech, we’ve got you covered.
+          Whether you're hiring talent, growing your brand, marketing your
+          business or looking for your next job; we’re here to help.
         </p>
         <button className="hero-button" onClick={handleScrollToServices}>
           Let's Talk

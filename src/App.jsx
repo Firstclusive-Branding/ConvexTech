@@ -39,6 +39,7 @@ import TSWebDesign from "./components/TSWebDesign";
 import TSWebDevelopment from "./components/TSWebDevelopment";
 import TSDigitalMarketing from "./components/TSDigitalMarketing";
 import TSSAP from "./components/TSSAP";
+import TSEcommerce from "./components/TSEcommerce";
 
 // Admin Pages
 import AdminLogin from "./Admin/components/AdminLogin";
@@ -115,6 +116,12 @@ const router = createBrowserRouter([
       },
       { path: "tech-solutions/web-development", element: <TSWebDevelopment /> },
       { path: "tech-solutions/sap", element: <TSSAP /> },
+      { path: "tech-solutions/ai", element: <ArtificialIntelligence /> },
+      { path: "tech-solutions/data-science", element: <DataScience /> },
+      {
+        path: "tech-solutions/e-commerce-development",
+        element: <TSEcommerce />,
+      },
     ],
   },
   {

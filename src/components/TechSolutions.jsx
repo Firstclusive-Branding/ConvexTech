@@ -3,13 +3,37 @@ import "../styles/TechSolutions.css";
 import { motion } from "framer-motion";
 
 import { Link } from "react-router-dom";
-import logoicon from "../assets/Tech Solutions Icons/ts-logo-icon.png";
-import brandingicon from "../assets/Tech Solutions Icons/ts-branding-icon.png";
-import marketingicon from "../assets/Tech Solutions Icons/ts-marketing-icon.png";
-import websiteicon from "../assets/Tech Solutions Icons/ts-website-icon.png";
-import sapicon from "../assets/Tech Solutions Icons/ts-sap-icon.png";
+import sapicon from "../assets/Tech Solutions Icons/sap.svg";
+import aiicon from "../assets/Tech Solutions Icons/artificial-intelligence.svg";
+import dataicon from "../assets/Tech Solutions Icons/data-science.svg";
+import logoicon from "../assets/Tech Solutions Icons/logo.svg";
+import webdesignicon from "../assets/Tech Solutions Icons/web-design.svg";
+import websiteicon from "../assets/Tech Solutions Icons/website.svg";
+import ecommerceicon from "../assets/Tech Solutions Icons/e-commerce.svg";
+import marketingicon from "../assets/Tech Solutions Icons/digital-marketing.svg";
 
 const techServices = [
+  {
+    title: "SAP Consulting",
+    description:
+      "Tailored SAP consulting services that simplify complex business processes and drive operational excellence.",
+    icon: sapicon,
+    link: "/tech-solutions/sap",
+  },
+  {
+    title: "Artificial Intelligence",
+    description:
+      "AI solutions that automate tasks, extract insights, and elevate decision-making across your business.",
+    icon: aiicon,
+    link: "/tech-solutions/ai",
+  },
+  {
+    title: "Data Science",
+    description:
+      "Unlock business intelligence with data-driven strategies, predictive models, and deep analytics.",
+    icon: dataicon,
+    link: "/tech-solutions/data-science",
+  },
   {
     title: "Logo & Branding",
     description:
@@ -18,10 +42,10 @@ const techServices = [
     link: "/tech-solutions/logo-and-branding",
   },
   {
-    title: "Web Design",
+    title: "UI/UX & Web Design",
     description:
-      "Designing visually striking, user-focused websites that elevate your brand and drive engagement.",
-    icon: websiteicon,
+      "Designing intuitive, user-centered interfaces that boost engagement and improve customer experience.",
+    icon: webdesignicon,
     link: "/tech-solutions/web-design",
   },
   {
@@ -32,18 +56,18 @@ const techServices = [
     link: "/tech-solutions/web-development",
   },
   {
+    title: "E-Commerce Development",
+    description:
+      "Creating robust e-commerce platforms that enhance user experience and drive conversions.",
+    icon: ecommerceicon,
+    link: "/tech-solutions/e-commerce-development",
+  },
+  {
     title: "Digital Marketing",
     description:
       "Strategic digital campaigns that grow your reach, increase traffic, and convert leads into customers.",
     icon: marketingicon,
     link: "/tech-solutions/digital-marketing",
-  },
-  {
-    title: "SAP Consulting & Solutions",
-    description:
-      "Expert SAP consulting and custom solutions that streamline processes and power enterprise growth.",
-    icon: sapicon,
-    link: "/tech-solutions/sap",
   },
 ];
 

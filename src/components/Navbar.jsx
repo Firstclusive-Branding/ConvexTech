@@ -16,6 +16,7 @@ import nonItImg from "../assets/Navbar assets/non-it-nav.png";
 import logoimg from "../assets/Navbar assets/logo.png";
 import marketingimg from "../assets/Navbar assets/marketing.png";
 import webdesignimg from "../assets/Navbar assets/web-design.png";
+import ecommerceImg from "../assets/Navbar assets/ecommerce.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,31 +72,74 @@ const Navbar = () => {
     },
   ];
 
+  // const techSolutionsLinks = [
+  //   {
+  //     name: "Logo & Branding",
+  //     path: "/tech-solutions/logo-and-branding",
+  //     img: logoimg,
+  //   },
+  //   {
+  //     name: "Web Design",
+  //     path: "/tech-solutions/web-design",
+  //     img: webdesignimg,
+  //   },
+  //   {
+  //     name: "Web Developement",
+  //     path: "/tech-solutions/web-development",
+  //     img: softwareDevImg,
+  //   },
+  //   {
+  //     name: "Digital Marketing",
+  //     path: "/tech-solutions/digital-marketing",
+  //     img: marketingimg,
+  //   },
+  //   {
+  //     name: "SAP Consulting & Solutions",
+  //     path: "/tech-solutions/sap",
+  //     img: sapSolutionsImg,
+  //   },
+  // ];
+
   const techSolutionsLinks = [
+    {
+      name: "SAP Consulting",
+      path: "/tech-solutions/sap",
+      img: sapSolutionsImg,
+    },
+    {
+      name: "Artificial Intelligence",
+      path: "/tech-solutions/ai",
+      img: aiImg,
+    },
+    {
+      name: "Data Science",
+      path: "/tech-solutions/data-science",
+      img: dataScienceImg,
+    },
     {
       name: "Logo & Branding",
       path: "/tech-solutions/logo-and-branding",
       img: logoimg,
     },
     {
-      name: "Web Design",
+      name: "UI/UX & Web Design",
       path: "/tech-solutions/web-design",
       img: webdesignimg,
     },
     {
-      name: "Web Developement",
+      name: "Web Development",
       path: "/tech-solutions/web-development",
       img: softwareDevImg,
+    },
+    {
+      name: "E-Commerce Development",
+      path: "/tech-solutions/e-commerce-development",
+      img: ecommerceImg,
     },
     {
       name: "Digital Marketing",
       path: "/tech-solutions/digital-marketing",
       img: marketingimg,
-    },
-    {
-      name: "SAP Consulting & Solutions",
-      path: "/tech-solutions/sap",
-      img: sapSolutionsImg,
     },
   ];
 

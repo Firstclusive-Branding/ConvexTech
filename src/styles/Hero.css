@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   background-color: #36308a;
-  /* background-color: #05004d; */
   height: 90vh;
   overflow: hidden;
   color: #fff;
@@ -21,22 +20,30 @@
   position: relative;
   z-index: 2;
   background-color: #36308a;
-  /* background-color: #05004d; */
 }
 
 .tagline {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   letter-spacing: 1px;
   margin-bottom: 1rem;
   color: #3ed4ef;
   font-weight: 600;
   text-transform: uppercase;
+  width: 80%;
 }
 
+/* .hero-left h1 {
+  font-size: 4rem;
+  width: 90%;
+  line-height: 1.4;
+  margin: 1rem 0;
+  text-align: left !important;
+} */
+
 .hero-left h1 {
-  font-size: 5rem;
-  width: 80%;
-  line-height: 1.2;
+  font-size: 4vw;
+  width: 90%;
+  line-height: 1.4;
   margin: 1rem 0;
   text-align: left !important;
 }
@@ -72,9 +79,11 @@
 }
 
 .subtext {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
   color: #d1d1d1;
+  width: 60%;
+  line-height: 1.5;
 }
 
 .hero-button {
@@ -181,7 +190,12 @@
   }
 
   .hero-left h1 {
-    font-size: 3.5rem;
+    font-size: 3vw;
+  }
+
+  .tagline {
+    font-size: 1.3rem;
+    width: 60%;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -208,7 +222,7 @@
   }
 
   .hero-left h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .hero-image {
@@ -222,6 +236,19 @@
 
   .subtext {
     font-size: 1rem;
+  }
+}
+@media screen and (max-width: 950px) {
+  .hero-left {
+    padding: 2rem;
+  }
+  .hero-right {
+    right: -15%;
+  }
+
+  .slash-mask {
+    left: 70%;
+    transform: translateX(-70%);
   }
 }
 
@@ -247,22 +274,25 @@
   }
 
   .hero-left h1 {
-    font-size: 2.5rem;
+    font-size: 6vw;
     width: 100%;
     margin: 0;
   }
 
   .tagline {
     font-size: 1rem;
+    width: 100%;
   }
 
   .subtext {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     margin: 15px 0;
+    width: 100%;
   }
 
   .hero-right {
     position: relative;
+    right: 0;
   }
 
   .hero-image {
@@ -304,16 +334,19 @@
   }
 
   .hero-left h1 {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     text-align: left !important;
+    line-height: 1.6;
   }
 
   .tagline {
     font-size: 1rem;
+    line-height: 1.6;
   }
 
   .subtext {
     font-size: 1rem;
+    line-height: 1.6;
   }
 
   .spring-circle {
