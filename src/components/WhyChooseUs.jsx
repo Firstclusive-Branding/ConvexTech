@@ -43,10 +43,11 @@ const WhyChooseUs = () => {
         </h2>
 
         <p className="whychooseus-text">
-          At ConvexTech, we help you build strong teams first. From hiring top
-          talent to running complex SAP projects to building websites and
-          running digital campaigns; everything we do is built around your
-          business goals.
+          At ConvexTech, we help you build strong teams first. We specialise in
+          IT and Non-IT Staffing, SAP Consulting, Branding, Corporate Website
+          Design, Custom and E-Commerce Web Development and Complete Digital
+          Marketing Solutions viz. SEO, Social Media Marketing and Performance
+          Marketing. Everything we do is built around your business goals.
         </p>
         <p className="whychooseus-text">
           We keep it simple. We focus on results. We stay for the long term!

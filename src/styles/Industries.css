@@ -46,22 +46,26 @@
 .industries-grid {
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  /* align-items: stretch; */
   gap: 1.5rem;
   max-width: 1600px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0;
 }
 
 .industries-extra-container {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.8s ease-out;
+  transition: max-height 0.8s ease-in-out;
+  display: block;
+  width: 100%;
 }
 
 .industries-extra-container.show {
   overflow: visible;
   max-height: 600px;
-  transition: max-height 0.8s ease-out;
+  transition: max-height 1s ease-out;
 }
 
 .industries-card {
@@ -73,11 +77,12 @@
   padding: 1.5rem;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   margin: 1rem 0;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 12px #1a1a18;
+  flex: 1;
 }
 
 .industries-card::before {
@@ -157,6 +162,7 @@
   .industries-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    max-width: 95%;
   }
 
   .industries-extra-container.show {
