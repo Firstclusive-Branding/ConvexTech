@@ -20,10 +20,10 @@ const Hero = () => {
     "Development,",
     "Branding",
     "and",
-    "Marketing",
+    "Marketing.",
   ];
 
-  const highlightWords = ["and", "Marketing"];
+  const highlightWords = ["Staffing,", "Marketing."];
 
   useEffect(() => {
     const timer = setTimeout(() => {

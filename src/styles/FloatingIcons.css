@@ -33,12 +33,6 @@
   background-color: #25d366;
   position: fixed;
   bottom: 20px;
-  left: 20px;
-}
-
-.tawkto {
-  position: fixed;
-  bottom: 20px;
   right: 20px;
 }
 
@@ -49,21 +43,17 @@
 /* Mobile responsiveness */
 @media (max-width: 480px) {
   .floating-icon {
-    width: 42px;
-    height: 42px;
+    width: 60px;
+    height: 60px;
   }
 
   .icon-size {
-    font-size: 20px;
+    font-size: 40px;
   }
 
   .whatsapp {
-    left: 15px;
-    bottom: 15px;
-  }
-
-  .tawkto {
     right: 15px;
     bottom: 15px;
+    padding: 8px;
   }
 }
