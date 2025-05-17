@@ -11,61 +11,60 @@ import webdesignicon from "../../assets/Tech Solutions Icons/web-design.svg";
 import websiteicon from "../../assets/Tech Solutions Icons/website.svg";
 import ecommerceicon from "../../assets/Tech Solutions Icons/e-commerce.svg";
 import marketingicon from "../../assets/Tech Solutions Icons/digital-marketing.svg";
-
 const techServices = [
   {
     title: "SAP Consulting",
     description:
-      "Tailored SAP consulting services that simplify complex business processes and drive operational excellence.",
+      "Implementation, integration and support services designed for enterprise reliability and scale.",
     icon: sapicon,
     link: "/tech-solutions/sap",
   },
   {
     title: "Artificial Intelligence",
     description:
-      "AI solutions that automate tasks, extract insights, and elevate decision-making across your business.",
+      "Tailored AI solutions that optimise operations, automate tasks and power smarter decisions.",
     icon: aiicon,
     link: "/tech-solutions/ai",
   },
   {
     title: "Data Science",
     description:
-      "Unlock business intelligence with data-driven strategies, predictive models, and deep analytics.",
+      "Insight-driven analytics and predictive modelling that help you move from data to direction.",
     icon: dataicon,
     link: "/tech-solutions/data-science",
   },
   {
     title: "Logo & Branding",
     description:
-      "Crafting unique brand identities and logos that reflect your business vision and build recognition.",
+      "Strategic brand identity systems that build recognition, trust and long-term value.",
     icon: logoicon,
     link: "/tech-solutions/logo-and-branding",
   },
   {
     title: "UI/UX & Web Design",
     description:
-      "Designing intuitive, user-centered interfaces that boost engagement and improve customer experience.",
+      "User-first design for web and digital platforms, focused on clarity, conversion and experience.",
     icon: webdesignicon,
     link: "/tech-solutions/web-design",
   },
   {
     title: "Web Development",
     description:
-      "Building fast, secure, and scalable websites with clean code and seamless functionality.",
+      "Custom development built on clean code, fast performance and scalable architecture.",
     icon: websiteicon,
     link: "/tech-solutions/web-development",
   },
   {
     title: "E-Commerce Development",
     description:
-      "Creating robust e-commerce platforms that enhance user experience and drive conversions.",
+      "End-to-end e-commerce platforms designed for growth, reliability and seamless customer journeys.",
     icon: ecommerceicon,
     link: "/tech-solutions/e-commerce-development",
   },
   {
     title: "Digital Marketing",
     description:
-      "Strategic digital campaigns that grow your reach, increase traffic, and convert leads into customers.",
+      "Full-funnel marketing execution across SEO, social media and paid performance campaigns.",
     icon: marketingicon,
     link: "/tech-solutions/digital-marketing",
   },
@@ -75,7 +74,7 @@ const TechSolutions = () => {
   return (
     <section className="techsolutions-section">
       <p className="techsolutions-label">
-        <span className="techsolutions-thread"></span>TECH SOLUTIONS
+        <span className="techsolutions-thread"></span>TECH OFFERINGS
       </p>
       <motion.h2
         className="techsolutions-heading"
@@ -83,7 +82,7 @@ const TechSolutions = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Our Core Tech Offerings
+        What We <span className="techsolutions-highlight">Deliver</span>
       </motion.h2>
       <div className="techsolutions-grid">
         {techServices.map((service, index) => (

@@ -16,7 +16,7 @@ const GetInTouchBanner = () => {
         >
           <p className="getintouch-text">
             <FaQuoteLeft className="getintouch-quote-icon" />
-            The best connections in business don’t start with a pitch - they
+            The best connections in business do not start with a pitch. They
             start with a conversation.
             <FaQuoteRight className="getintouch-quote-icon" />
           </p>

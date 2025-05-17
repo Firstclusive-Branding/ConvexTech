@@ -34,7 +34,9 @@
   color: #1a1a18;
   font-weight: 600;
 }
-
+.techsolutions-highlight {
+  color: #3ed4ef;
+}
 .techsolutions-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
