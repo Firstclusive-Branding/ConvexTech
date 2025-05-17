@@ -7,6 +7,12 @@ const FloatingIcons = () => {
   const location = useLocation();
 
   useEffect(() => {
+    // Prevent auto-open
+    window.Tawk_API = window.Tawk_API || {};
+    window.Tawk_API.onLoad = function () {
+      window.Tawk_API.minimize(); // Ensures it stays minimized
+    };
+
     const script = document.createElement("script");
     script.async = true;
     script.src = "https://embed.tawk.to/682833bb3aaa97190d8790e0/1iregk5ro";
@@ -14,14 +20,7 @@ const FloatingIcons = () => {
     script.setAttribute("crossorigin", "*");
     document.body.appendChild(script);
 
-    const checkTawkLoaded = setInterval(() => {
-      if (window.Tawk_API) {
-        clearInterval(checkTawkLoaded);
-      }
-    }, 500);
-
     return () => {
-      clearInterval(checkTawkLoaded);
       document.body.removeChild(script);
     };
   }, []);
@@ -48,11 +47,13 @@ const FloatingIcons = () => {
         <FaWhatsapp className="icon-size" />
       </a>
 
-      {/* <button
-        className="floating-icon tawkto"
+      <button
         onClick={openChat}
+        className="floating-icon tawkto"
         aria-label="Live Chat"
-      ></button> */}
+      >
+        <FaComments className="icon-size" />
+      </button>
     </div>
   );
 };
