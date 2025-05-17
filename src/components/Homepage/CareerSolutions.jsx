@@ -29,16 +29,18 @@ const CareerSolutions = () => {
           <span></span>Career Solutions
         </p>
         <h2 className="career-solutions-heading">
-          Find the Right Job. Without the Runaround.
+          Move Forward. On Your Terms.
         </h2>
-        <h4 className="career-solutions-sub-heading">
+        {/* <h4 className="career-solutions-sub-heading">
           Tired of applying and hearing nothing back? We get it.
-        </h4>
+        </h4> */}
 
         <p className="career-solutions-text">
-          At ConvexTech, we connect you to roles that match your skills, goals
-          and lifestyle – not just your resume. Looking for full-time, part-time
-          or freelance work? Problem solved.
+          We connect skilled professionals with roles that align with their
+          strengths, goals and career path; not just their resume. Whether you
+          are looking for a full-time position, project-based work or a flexible
+          opportunity, we help you find what fits; with clarity, speed and
+          purpose.
         </p>
 
         <motion.div
@@ -55,10 +57,10 @@ const CareerSolutions = () => {
           }}
         >
           <motion.div className="career-solutions-box" variants={boxVariants}>
-            Honest Guidance
+            Meaningful Roles
           </motion.div>
           <motion.div className="career-solutions-box" variants={boxVariants}>
-            Real Opportunities
+            Clear Process
           </motion.div>
           <motion.div className="career-solutions-box" variants={boxVariants}>
             Faster Offers
