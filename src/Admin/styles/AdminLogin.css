@@ -196,3 +196,18 @@
 .admin-sign-up a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 480px) {
+  .admin-login-container {
+    padding: 20px 10px;
+  }
+
+  .admin-login-logo-container img {
+    height: 50px;
+  }
+
+  .admin-login-home-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}

@@ -12,7 +12,7 @@
 .terms-container h1 {
   font-size: 2.2rem;
   margin-bottom: 10px;
-  color: #24245c;
+  color: #36308a;
 }
 
 .terms-container .updated-date {
@@ -23,7 +23,7 @@
 
 .terms-container h2 {
   margin-top: 30px;
-  color: #24245c;
+  color: #36308a;
   font-size: 1.3rem;
 }
 
@@ -39,6 +39,28 @@
 
 .terms-container p {
   margin-top: 10px;
+}
+
+.terms-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.terms-loader-container .spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #e0e0e0;
+  border-top: 5px solid #3ed4ef;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 1024px) {

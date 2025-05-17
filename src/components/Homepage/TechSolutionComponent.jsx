@@ -29,17 +29,18 @@ const TechSolutionComponent = () => {
           <span></span>Tech Solutions
         </p>
         <h2 className="tech-heading">
-          Launch Smarter. Scale Faster. Build with Confidence.
+          Purpose-Built Technology. Delivered With Precision.
         </h2>
-        <h4 className="tech-sub-heading">
+        {/* <h4 className="tech-sub-heading">
           Need expert help with tech, branding or digital growth? We’ve got you.
-        </h4>
+        </h4> */}
 
         <p className="tech-text">
-          At ConvexTech, we deliver end-to-end solutions across SAP Consulting,
-          Artificial Intelligence, Data Science, Branding, Corporate Website
-          Design, Custom and E-Commerce Web Development, and Digital Marketing —
-          including SEO, Social Media Marketing and Performance Marketing.
+          At ConvexTech, we help businesses turn ideas into digital platforms
+          that perform and scale. From SAP Consulting, Artificial Intelligence
+          and Data Science to Branding, Web Development and Digital Marketing,
+          our solutions are built to move fast, stay reliable and create
+          long-term impact.
         </p>
 
         <motion.div
@@ -56,18 +57,18 @@ const TechSolutionComponent = () => {
           }}
         >
           <motion.div className="highlight-box" variants={boxVariants}>
-            Smart Strategy
+            Enterprise Logic
           </motion.div>
           <motion.div className="highlight-box" variants={boxVariants}>
-            Strong Execution
+            Modern Design
           </motion.div>
           <motion.div className="highlight-box" variants={boxVariants}>
-            Business Impact
+            Real-World Results
           </motion.div>
         </motion.div>
 
-        <Link className="tech-button" to="/tech-solutions">
-          Get in Touch
+        <Link className="tech-button" to="/project-enquiry">
+          Talk to Us
         </Link>
       </motion.div>
     </section>

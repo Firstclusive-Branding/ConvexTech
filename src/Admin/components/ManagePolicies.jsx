@@ -318,7 +318,7 @@ const ManagePolicies = () => {
                 }
               />
             )}
-            <input
+            {/* <input
               className="MP-input"
               type="text"
               placeholder="Title"
@@ -326,7 +326,7 @@ const ManagePolicies = () => {
               onChange={(e) =>
                 setNewPolicy({ ...newPolicy, title: e.target.value })
               }
-            />
+            /> */}
             <span>(For sub-points use dash -)</span>
             <textarea
               className="MP-textarea"
