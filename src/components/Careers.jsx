@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../styles/Careers.css";
 import careersImage from "../assets/Careers Assets/careers-img.png";
 import axios from "axios";
-import CareerSolutions from "./CareerSolutions";
+import CareerSolutions from "./Homepage/CareerSolutions";
 
 const baseURL = import.meta.env.VITE_API_URL;
 

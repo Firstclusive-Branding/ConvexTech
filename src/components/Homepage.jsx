@@ -1,22 +1,24 @@
 import React, { useEffect } from "react";
 import "../styles/Homepage.css";
-import HeroSection from "./Hero";
+import HeroSection from "./Homepage/Hero";
+import WhyChooseUs from "./Homepage/WhyChooseUs";
+import StaffingSolutions from "./Homepage/StaffingSolutions";
+import Industries from "./Homepage/Industries";
+import CareerSolutions from "./Homepage/CareerSolutions";
+import Vacancies from "./Homepage/Vacancies";
+import TechSolutionComponent from "./Homepage/TechSolutionComponent";
+import TechSolutions from "./Homepage/TechSolutions";
+import StatsCounter from "./Homepage/StatsCounter";
+import EmployerTestimonials from "./Homepage/EmployerTestimonials";
+import CandidateTestimonials from "./Homepage/CandidateTestimonials";
+import ClientTestimonials from "./Homepage/ClientTestimonials";
+import GetInTouchBanner from "./Homepage/GetInTouchBanner";
+
+// --------------------------------------------------------
 // import Services from "./Services";
 // import WhoWeAre from "./WhoWeAre";
-import ClientTestimonials from "./ClientTestimonials";
-import StatsCounter from "./StatsCounter";
 // import ServicesCarousel from "./ServicesCarousel";
 // import Presence from "./Presence";
-import WhyChooseUs from "./WhyChooseUs";
-import StaffingSolutions from "./StaffingSolutions";
-import Industries from "./Industries";
-import Vacancies from "./Vacancies";
-import TechSolutions from "./TechSolutions";
-import EmployerTestimonials from "./EmployerTestimonials";
-import CandidateTestimonials from "./CandidateTestimonials";
-import GetInTouchBanner from "./GetInTouchBanner";
-import CareerSolutions from "./CareerSolutions";
-import TechSolutionComponent from "./TechSolutionComponent";
 
 function Homepage() {
   useEffect(() => {
@@ -34,15 +36,15 @@ function Homepage() {
       <Vacancies />
       <TechSolutionComponent />
       <TechSolutions />
-      {/* <Services /> */}
-      {/* <WhoWeAre /> */}
-      {/* <ServicesCarousel /> */}
       <StatsCounter />
       <EmployerTestimonials />
       <CandidateTestimonials />
       <ClientTestimonials />
-      {/* <Presence /> */}
       <GetInTouchBanner />
+      {/* <Services /> */}
+      {/* <WhoWeAre /> */}
+      {/* <ServicesCarousel /> */}
+      {/* <Presence /> */}
     </div>
   );
 }

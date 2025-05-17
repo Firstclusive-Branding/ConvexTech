@@ -9,7 +9,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./styles/toastifyCustom.css";
 
-// Main Site Pages
+/* ---------- Public Pages ---------- */
 import Layout from "./components/Layout";
 import Homepage from "./components/Homepage";
 import AboutUs from "./components/AboutUs";
@@ -18,39 +18,37 @@ import FindTalent from "./components/FindTalent";
 import Contact from "./components/Contact";
 import ErrorPage from "./components/ErrorPage";
 import JobDetails from "./components/JobDetails";
+import JobApply from "./components/JobApply";
 import TermsAndCondition from "./components/TermsAndCondition";
 import PrivacyPage from "./components/PrivacyPage";
-import JobApply from "./components/JobApply";
 import ProjectEnquiry from "./components/ProjectEnquiry";
 
-// Services
-import SAPSolutions from "./components/SAPSolutions";
-import SoftwareDevelopment from "./components/SoftwareDevelopment";
-import ArtificialIntelligence from "./components/ArtificialIntelligence";
-import DataScience from "./components/DataScience";
-import BrandingAndDigitalMarketing from "./components/BrandingAndDigitalMarketing";
-import StaffingAndRecruitment from "./components/StaffingAndRecruitment";
-import HealthcareAndClinical from "./components/HealthcareAndClinical";
-import NonITServices from "./components/NonITServices";
+/* ---------- Staffing Services ---------- */
+import StaffingSolutionsPage from "./components/Staffing Solutions/StaffingSolutionsPage";
+import ITServices from "./components/Staffing Solutions/ITServices";
+import NonITServices from "./components/Staffing Solutions/NonITServices";
+import HealthcareAndClinical from "./components/Staffing Solutions/HealthcareAndClinical";
+import Ecommerce from "./components/Staffing Solutions/Ecommerce";
+import Banking from "./components/Staffing Solutions/Banking";
+import Education from "./components/Staffing Solutions/Education";
+import Legal from "./components/Staffing Solutions/Legal";
+import Telecom from "./components/Staffing Solutions/Telecom";
 
-// Tech Solutions
-import TSLogoBranding from "./components/TSLogoBranding";
-import TSWebDesign from "./components/TSWebDesign";
-import TSWebDevelopment from "./components/TSWebDevelopment";
-import TSDigitalMarketing from "./components/TSDigitalMarketing";
-import TSSAP from "./components/TSSAP";
-import TSEcommerce from "./components/TSEcommerce";
-import StaffingSolutionsPage from "./components/StaffingSolutionsPage";
-import ITServices from "./components/ITServices";
-import Ecommerce from "./components/Ecommerce";
-import Banking from "./components/Banking";
-import Education from "./components/Education";
-import Legal from "./components/Legal";
-import Telecom from "./components/Telecom";
-import TechSolutionPage from "./components/TechSolutionPage";
+/* ---------- Tech Solutions ---------- */
+import TechSolutionPage from "./components/Tech Solutions/TechSolutionPage";
+import TSSAP from "./components/Tech Solutions/TSSAP";
+import ArtificialIntelligence from "./components/Tech Solutions/ArtificialIntelligence";
+import DataScience from "./components/Tech Solutions/DataScience";
+import TSLogoBranding from "./components/Tech Solutions/TSLogoBranding";
+import TSWebDesign from "./components/Tech Solutions/TSWebDesign";
+import TSWebDevelopment from "./components/Tech Solutions/TSWebDevelopment";
+import TSEcommerce from "./components/Tech Solutions/TSEcommerce";
+import TSDigitalMarketing from "./components/Tech Solutions/TSDigitalMarketing";
 
-// Admin Pages
+/* ---------- Admin Pages ---------- */
 import AdminLogin from "./Admin/components/AdminLogin";
+import AdminSignup from "./Admin/components/AdminSignup";
+import ForgotPassword from "./Admin/components/ForgotPassword";
 import AdminLayout from "./Admin/components/AdminLayout";
 import AdminDashboard from "./Admin/components/AdminDashboard";
 import ManageJobs from "./Admin/components/ManageJobs";
@@ -58,13 +56,11 @@ import ManageJobApplicants from "./Admin/components/ManageJobApplicants";
 import AdminUsers from "./Admin/components/AdminUsers";
 import ContactForms from "./Admin/components/ContactForms";
 import RecruiterForm from "./Admin/components/RecruiterForm";
-import ForgotPassword from "./Admin/components/ForgotPassword";
-import AdminSignup from "./Admin/components/AdminSignup";
 import ManageProjectEnquiry from "./Admin/components/ManageProjectEnquiry";
 import ManageTerms from "./Admin/components/ManageTerms";
 import ManagePolicies from "./Admin/components/ManagePolicies";
 
-// Route Protection
+/* ---------- Route Protection ---------- */
 const ProtectedRoute = ({ element, roleKey }) => {
   const isAuthenticated = localStorage.getItem(roleKey) === "true";
   const navigate = useNavigate();
@@ -80,6 +76,7 @@ const ProtectedRoute = ({ element, roleKey }) => {
   );
 };
 
+/* ---------- Router Setup ---------- */
 const router = createBrowserRouter([
   {
     path: "/",
@@ -96,51 +93,49 @@ const router = createBrowserRouter([
       { path: "contact-us", element: <Contact /> },
       { path: "terms-and-conditions", element: <TermsAndCondition /> },
       { path: "privacy-policy", element: <PrivacyPage /> },
-      { path: "staffing-solutions", element: <StaffingSolutionsPage /> },
-      { path: "staffing-solutions/sap", element: <SAPSolutions /> },
-      { path: "staffing-solutions/legal", element: <Legal /> },
-      { path: "staffing-solutions/education", element: <Education /> },
-      { path: "staffing-solutions/telecom", element: <Telecom /> },
 
-      {
-        path: "staffing-solutions/software-development",
-        element: <SoftwareDevelopment />,
-      },
-      { path: "staffing-solutions/ai", element: <ArtificialIntelligence /> },
-      { path: "staffing-solutions/e-commerce", element: <Ecommerce /> },
-      { path: "staffing-solutions/banking", element: <Banking /> },
-      { path: "staffing-solutions/data-science", element: <DataScience /> },
-      {
-        path: "staffing-solutions/branding",
-        element: <BrandingAndDigitalMarketing />,
-      },
-      {
-        path: "staffing-solutions/staffing",
-        element: <StaffingAndRecruitment />,
-      },
+      /* ---------- Staffing Solutions Pages ---------- */
+      { path: "staffing-solutions", element: <StaffingSolutionsPage /> },
+      { path: "staffing-solutions/it", element: <ITServices /> },
+      { path: "staffing-solutions/non-it", element: <NonITServices /> },
       {
         path: "staffing-solutions/healthcare",
         element: <HealthcareAndClinical />,
       },
-      { path: "staffing-solutions/it", element: <ITServices /> },
-      { path: "staffing-solutions/non-it", element: <NonITServices /> },
+      { path: "staffing-solutions/e-commerce", element: <Ecommerce /> },
+      { path: "staffing-solutions/banking", element: <Banking /> },
+      { path: "staffing-solutions/education", element: <Education /> },
+      { path: "staffing-solutions/legal", element: <Legal /> },
+      { path: "staffing-solutions/telecom", element: <Telecom /> },
+
+      // ---------- Extra Staffing Routes ----------
+      // { path: "staffing-solutions/sap", element: <SAPSolutions /> },
+      // { path: "staffing-solutions/software-development", element: <SoftwareDevelopment /> },
+      // { path: "staffing-solutions/ai", element: <ArtificialIntelligence /> },
+      // { path: "staffing-solutions/data-science", element: <DataScience /> },
+      // { path: "staffing-solutions/branding", element: <BrandingAndDigitalMarketing /> },
+      // { path: "staffing-solutions/staffing", element: <StaffingAndRecruitment /> },
+
+      /* ---------- Tech Solutions Pages ---------- */
       { path: "tech-solutions", element: <TechSolutionPage /> },
-      { path: "tech-solutions/logo-and-branding", element: <TSLogoBranding /> },
-      { path: "tech-solutions/web-design", element: <TSWebDesign /> },
-      {
-        path: "tech-solutions/digital-marketing",
-        element: <TSDigitalMarketing />,
-      },
-      { path: "tech-solutions/web-development", element: <TSWebDevelopment /> },
       { path: "tech-solutions/sap", element: <TSSAP /> },
       { path: "tech-solutions/ai", element: <ArtificialIntelligence /> },
       { path: "tech-solutions/data-science", element: <DataScience /> },
+      { path: "tech-solutions/logo-and-branding", element: <TSLogoBranding /> },
+      { path: "tech-solutions/web-design", element: <TSWebDesign /> },
+      { path: "tech-solutions/web-development", element: <TSWebDevelopment /> },
       {
         path: "tech-solutions/e-commerce-development",
         element: <TSEcommerce />,
       },
+      {
+        path: "tech-solutions/digital-marketing",
+        element: <TSDigitalMarketing />,
+      },
     ],
   },
+
+  /* ---------- Admin Routes ---------- */
   {
     path: "/admin",
     children: [
@@ -148,6 +143,7 @@ const router = createBrowserRouter([
       { path: "sign-up", element: <AdminSignup /> },
       { path: "password-reset", element: <ForgotPassword /> },
       { path: "*", element: <Navigate to="/admin" replace /> },
+
       {
         element: <AdminLayout />,
         children: [
@@ -232,6 +228,7 @@ const router = createBrowserRouter([
               />
             ),
           },
+
           {
             path: "project-enquiries",
             element: (
@@ -269,7 +266,6 @@ const router = createBrowserRouter([
             ),
           },
 
-          // Recruiter Forms - Admin & Manager only
           {
             path: "recruiter-forms",
             element: (
@@ -284,7 +280,6 @@ const router = createBrowserRouter([
             ),
           },
 
-          // Contact Forms - Admin & Manager only
           {
             path: "contact-forms",
             element: (
@@ -298,6 +293,7 @@ const router = createBrowserRouter([
               />
             ),
           },
+
           {
             path: "manage-terms",
             element: (
@@ -307,6 +303,7 @@ const router = createBrowserRouter([
               />
             ),
           },
+
           {
             path: "manage-policies",
             element: (
@@ -322,6 +319,7 @@ const router = createBrowserRouter([
   },
 ]);
 
+/* ---------- App Component ---------- */
 const App = () => (
   <>
     <RouterProvider router={router} />
@@ -338,4 +336,5 @@ const App = () => (
     />
   </>
 );
+
 export default App;

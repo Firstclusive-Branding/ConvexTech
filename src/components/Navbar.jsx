@@ -19,7 +19,8 @@ import bankingImg from "../assets/Navbar assets/banking.png";
 import legalImg from "../assets/Navbar assets/legal.png";
 import educationImg from "../assets/Navbar assets/education.png";
 import telecomImg from "../assets/Navbar assets/telecom.png";
-import { testValueType } from "framer-motion";
+import marineImg from "../assets/Navbar assets/marine.png";
+import hospitalityImg from "../assets/Navbar assets/hospitality.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,9 +50,14 @@ const Navbar = () => {
       img: healthcareImg,
     },
     {
-      name: "Retail & E-Commerce Sector",
-      path: "/staffing-solutions/e-commerce",
-      img: ecommerceImg,
+      name: "Marine & Offshore",
+      path: "/staffing-solutions/marine",
+      img: marineImg,
+    },
+    {
+      name: "Hospitality & Tourism",
+      path: "/staffing-solutions/hospitality",
+      img: hospitalityImg,
     },
     {
       name: "Banking, Finance & Insurance",
@@ -59,12 +65,17 @@ const Navbar = () => {
       img: bankingImg,
     },
     {
-      name: "Education & EdTech Sector",
+      name: "Retail & E-Commerce",
+      path: "/staffing-solutions/e-commerce",
+      img: ecommerceImg,
+    },
+    {
+      name: "Education & EdTech",
       path: "/staffing-solutions/education",
       img: educationImg,
     },
     {
-      name: "Legal & Compliance Sector",
+      name: "Legal & Compliance",
       path: "/staffing-solutions/legal",
       img: legalImg,
     },

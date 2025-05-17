@@ -5,9 +5,9 @@ const useNavigateWithTransition = (startTransition, delay = 1000) => {
   const navigate = useNavigate();
 
   const navigateWithTransition = (path) => {
-    startTransition(); // trigger curtain animation
+    startTransition();
     setTimeout(() => {
-      navigate(path); // change the route after animation completes
+      navigate(path);
     }, delay);
   };
 

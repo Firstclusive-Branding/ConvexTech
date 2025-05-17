@@ -1,0 +1,69 @@
+.floating-icons-container {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.floating-icon {
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: none;
+}
+
+.floating-icon:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp {
+  background-color: #25d366;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.tawkto {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.icon-size {
+  font-size: 40px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .floating-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .icon-size {
+    font-size: 20px;
+  }
+
+  .whatsapp {
+    left: 15px;
+    bottom: 15px;
+  }
+
+  .tawkto {
+    right: 15px;
+    bottom: 15px;
+  }
+}

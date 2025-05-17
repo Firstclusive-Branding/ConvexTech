@@ -21,6 +21,8 @@ import {
   FiBookOpen,
   FiShield,
   FiWifi,
+  FiAnchor,
+  FiCoffee,
 } from "react-icons/fi";
 import { BsInstagram, BsTwitterX } from "react-icons/bs";
 import { FaHeart } from "react-icons/fa";
@@ -45,9 +47,14 @@ const staffingSolutions = [
     icon: <FiUserCheck />,
   },
   {
-    name: "Retail & E-Commerce Sector",
-    path: "/staffing-solutions/e-commerce",
-    icon: <FiShoppingCart />,
+    name: "Marine & Offshore",
+    path: "/staffing-solutions/marine",
+    icon: <FiAnchor />,
+  },
+  {
+    name: "Hospitality & Tourism",
+    path: "/staffing-solutions/hospitality",
+    icon: <FiCoffee />,
   },
   {
     name: "Banking, Finance & Insurance",
@@ -55,12 +62,17 @@ const staffingSolutions = [
     icon: <FiCreditCard />,
   },
   {
-    name: "Education & EdTech Sector",
+    name: "Retail & E-Commerce",
+    path: "/staffing-solutions/e-commerce",
+    icon: <FiShoppingCart />,
+  },
+  {
+    name: "Education & EdTech",
     path: "/staffing-solutions/education",
     icon: <FiBookOpen />,
   },
   {
-    name: "Legal & Compliance Sector",
+    name: "Legal & Compliance",
     path: "/staffing-solutions/legal",
     icon: <FiShield />,
   },
