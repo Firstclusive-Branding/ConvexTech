@@ -38,7 +38,7 @@ const FloatingIcons = () => {
   return (
     <div className="floating-icons-container">
       <a
-        href="https://wa.me/914029994717"
+        href="https://wa.me/+13463671777"
         target="_blank"
         rel="noopener noreferrer"
         className="floating-icon whatsapp"
