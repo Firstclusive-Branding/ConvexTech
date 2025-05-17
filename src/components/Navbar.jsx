@@ -5,6 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import "../styles/Navbar.css";
 import logo2 from "../assets/ConvexTech Logo 2.png";
 
+import solutionsImg from "../assets/Navbar assets/solutions.png";
 import sapSolutionsImg from "../assets/Navbar assets/sap-solutions-nav.png";
 import softwareDevImg from "../assets/Navbar assets/software-development-nav.png";
 import aiImg from "../assets/Navbar assets/artificial-intelligence-nav.png";
@@ -31,7 +32,7 @@ const Navbar = () => {
   const menuRef = useRef();
   const location = useLocation();
   const currentPath = location.pathname;
-  const [hoveredService, setHoveredService] = useState(softwareDevImg);
+  const [hoveredService, setHoveredService] = useState(solutionsImg);
 
   const staffingSolutions = [
     {
@@ -197,7 +198,7 @@ const Navbar = () => {
                       <Link
                         to={service.path}
                         onMouseEnter={() => setHoveredService(service.img)}
-                        onMouseLeave={() => setHoveredService(softwareDevImg)}
+                        onMouseLeave={() => setHoveredService(solutionsImg)}
                       >
                         {service.name}
                       </Link>
@@ -237,7 +238,7 @@ const Navbar = () => {
                       <Link
                         to={service.path}
                         onMouseEnter={() => setHoveredService(service.img)}
-                        onMouseLeave={() => setHoveredService(sapSolutionsImg)}
+                        onMouseLeave={() => setHoveredService(solutionsImg)}
                       >
                         {service.name}
                       </Link>

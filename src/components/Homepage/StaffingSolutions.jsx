@@ -29,17 +29,18 @@ const StaffingSolutions = () => {
           <span></span>Staffing Solutions
         </p>
         <h2 className="staffing-heading">
-          Hire the Right People. Without the Headache
+          Hire the Right People. Without the Guesswork.
         </h2>
         <h4 className="staffing-sub-heading">
-          Struggling to fill key roles? We make it easy
+          Finding the right talent should not slow you down.
         </h4>
 
         <p className="staffing-text">
-          At ConvexTech, we help you scale fast with skilled professionals who
-          match your technical, cultural and business needs. Whether it’s
-          contract hiring, permanent staffing or project-based roles, we bring
-          the right people to your table — quickly, efficiently and reliably.
+          At ConvexTech, we help you scale with professionals who fit your
+          technical needs, company culture and business goals. Whether it is
+          contract hiring, full-time staffing or project-based roles, we move
+          fast, stay precise and deliver people you can count on; across every
+          major industry.
         </p>
 
         <motion.div
@@ -59,10 +60,10 @@ const StaffingSolutions = () => {
             Swift Hiring
           </motion.div>
           <motion.div className="highlight-box" variants={boxVariants}>
-            Smooth Process
+            Seamless Process
           </motion.div>
           <motion.div className="highlight-box" variants={boxVariants}>
-            Skilled Candidates
+            Reliable Talent
           </motion.div>
         </motion.div>
 
