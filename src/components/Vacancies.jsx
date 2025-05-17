@@ -18,6 +18,7 @@ const Vacancies = () => {
   const swiperRef = useRef(null);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchJobs = async () => {
@@ -28,6 +29,8 @@ const Vacancies = () => {
         }
       } catch (err) {
         console.error("Error fetching jobs:", err);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -59,59 +62,64 @@ const Vacancies = () => {
           </button>
         </div>
       </div>
-
-      <Swiper
-        ref={swiperRef}
-        modules={[Navigation, Pagination]}
-        spaceBetween={20}
-        pagination={{ clickable: true }}
-        loop={true}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
-        breakpoints={{
-          1025: { slidesPerView: 4 },
-          1024: { slidesPerView: 3 },
-          768: { slidesPerView: 2 },
-          480: { slidesPerView: 1 },
-        }}
-        className="vacancies-swiper"
-      >
-        {jobs.map((job, index) => (
-          <SwiperSlide key={job._id}>
-            <motion.div
-              className="vacancy-card"
-              initial={{ scaleY: 0 }}
-              whileInView={{ scaleY: 1 }}
-              transition={{
-                duration: 0.3,
-                ease: "easeOut",
-              }}
-            >
-              <div className="vacancy-card-content">
-                <h3>{job.jobtitle}</h3>
-                <div className="vacancy-details">
-                  <span>
-                    <FaBriefcase /> {job.experience}
-                  </span>
-                  <span>
-                    <FaLocationDot /> {job.location}
-                  </span>
+      {loading ? (
+        <div className="vancancies-loader-container">
+          <div className="vancancies-spinner" />
+        </div>
+      ) : (
+        <Swiper
+          ref={swiperRef}
+          modules={[Navigation, Pagination]}
+          spaceBetween={20}
+          pagination={{ clickable: true }}
+          loop={true}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          breakpoints={{
+            1025: { slidesPerView: 4 },
+            1024: { slidesPerView: 3 },
+            768: { slidesPerView: 2 },
+            480: { slidesPerView: 1 },
+          }}
+          className="vacancies-swiper"
+        >
+          {jobs.map((job, index) => (
+            <SwiperSlide key={job._id}>
+              <motion.div
+                className="vacancy-card"
+                initial={{ scaleY: 0 }}
+                whileInView={{ scaleY: 1 }}
+                transition={{
+                  duration: 0.3,
+                  ease: "easeOut",
+                }}
+              >
+                <div className="vacancy-card-content">
+                  <h3>{job.jobtitle}</h3>
+                  <div className="vacancy-details">
+                    <span>
+                      <FaBriefcase /> {job.experience}
+                    </span>
+                    <span>
+                      <FaLocationDot /> {job.location}
+                    </span>
+                  </div>
+                  <Link
+                    to={`/job/${job.jobtitle
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}/${job._id}`}
+                    className="vacancy-view-btn"
+                  >
+                    View Details
+                  </Link>
                 </div>
-                <Link
-                  to={`/job/${job.jobtitle
-                    .replace(/\s+/g, "-")
-                    .toLowerCase()}/${job._id}`}
-                  className="vacancy-view-btn"
-                >
-                  View Details
-                </Link>
-              </div>
-            </motion.div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+              </motion.div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
     </section>
   );
 };

@@ -40,6 +40,14 @@ import TSWebDevelopment from "./components/TSWebDevelopment";
 import TSDigitalMarketing from "./components/TSDigitalMarketing";
 import TSSAP from "./components/TSSAP";
 import TSEcommerce from "./components/TSEcommerce";
+import StaffingSolutionsPage from "./components/StaffingSolutionsPage";
+import ITServices from "./components/ITServices";
+import Ecommerce from "./components/Ecommerce";
+import Banking from "./components/Banking";
+import Education from "./components/Education";
+import Legal from "./components/Legal";
+import Telecom from "./components/Telecom";
+import TechSolutionPage from "./components/TechSolutionPage";
 
 // Admin Pages
 import AdminLogin from "./Admin/components/AdminLogin";
@@ -55,14 +63,6 @@ import AdminSignup from "./Admin/components/AdminSignup";
 import ManageProjectEnquiry from "./Admin/components/ManageProjectEnquiry";
 import ManageTerms from "./Admin/components/ManageTerms";
 import ManagePolicies from "./Admin/components/ManagePolicies";
-import StaffingSolutionsPage from "./components/StaffingSolutionsPage";
-import ITServices from "./components/ITServices";
-import Ecommerce from "./components/Ecommerce";
-import Banking from "./components/Banking";
-import Education from "./components/Education";
-import Legal from "./components/Legal";
-import Telecom from "./components/Telecom";
-import TechSolutionPage from "./components/TechSolutionPage";
 
 // Route Protection
 const ProtectedRoute = ({ element, roleKey }) => {

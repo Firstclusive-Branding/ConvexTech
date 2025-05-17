@@ -146,7 +146,7 @@ const Footer = () => {
         {/* Footer Grid */}
         <div className="footer-grid">
           {/* Logo & About */}
-          <div className="footer-brand">
+          <div className="footer-card footer-brand">
             <Link to="/">
               <img src={logo2} alt="ConvexTech Logo" className="footer-logo" />
             </Link>
@@ -157,7 +157,7 @@ const Footer = () => {
           </div>
 
           {/* Staffing Solutions Links */}
-          <div className="footer-links">
+          <div className="footer-card footer-links">
             <h3>Staffing Solutions</h3>
             <ul>
               {staffingSolutions.map((item, index) => (
@@ -169,7 +169,7 @@ const Footer = () => {
           </div>
 
           {/* Tech Solutions Links */}
-          <div className="footer-links">
+          <div className="footer-card footer-links">
             <h3>Tech Solutions</h3>
             <ul>
               {techSolutions.map((item, index) => (
@@ -181,7 +181,7 @@ const Footer = () => {
           </div>
 
           {/* Office 1 */}
-          <div className="footer-office">
+          <div className="footer-card footer-office">
             <h3>United States</h3>
             <h5>Texas</h5>
             <div className="footer-office-details">
@@ -201,7 +201,7 @@ const Footer = () => {
           </div>
 
           {/* Office 2 */}
-          <div className="footer-office">
+          <div className="footer-card footer-office">
             <h3>India</h3>
             <h5>Hyderabad</h5>
             <div className="footer-office-details">
@@ -223,7 +223,7 @@ const Footer = () => {
           </div>
 
           {/* Office 3 */}
-          <div className="footer-office">
+          <div className="footer-card footer-office">
             <h3>India</h3>
             <h5>Noida</h5>
             <div className="footer-office-details">
